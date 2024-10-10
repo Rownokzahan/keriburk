@@ -3,9 +3,17 @@
 @tailwind utilities;
 
 .container {
-  @apply max-w-[1920px] mx-auto mt-14 md:mt-16 lg:mt-20 px-[5%] lg:px-[6%];
+  @apply max-w-[1920px] mx-auto mt-12 md:mt-16 lg:mt-20 px-[5%] lg:px-[6%];
 }
 
 .mt-responsive {
-  @apply mt-14 md:mt-16 lg:mt-20;
+  @apply mt-12 md:mt-16 lg:mt-20;
+}
+
+.mb-responsive {
+  @apply mb-12 md:mb-16 lg:mb-20;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-ui-green;
 }
