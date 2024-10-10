@@ -7,7 +7,7 @@ const GreenerWorldBanner = () => {
       className="h-screen bg-cover bg-center overflow-hidden relative z-0"
       style={{ backgroundImage: `url('${bgImage.src}')` }}
     >
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-center">
+      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-center">
         <h2 className="text-2xl md:text-5xl font-bold bg-ui-white bg-opacity-80 p-8 w-max mx-auto">
           Creating a Greener World <br /> With Every Spice
         </h2>

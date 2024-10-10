@@ -1,9 +1,11 @@
 import instaImage from "@/public/images/insta.jpg";
 import facebookImage from "@/public/images/insta.jpg";
 import tiktokImage from "@/public/images/insta.jpg";
+import youtubeImage from "@/public/images/insta.jpg";
 import instaIcon from "@/public/icons/instagram.svg";
 import facebookIcon from "@/public/icons/facebook.svg";
 import tiktokIcon from "@/public/icons/tiktok.svg";
+import youtubeIcon from "@/public/icons/youtube.svg";
 
 const socialItems = [
   {
@@ -37,6 +39,18 @@ const socialItems = [
     icon: {
       src: tiktokIcon.src,
       alt: "TikTok icon",
+    },
+  },
+
+  {
+    id: "04",
+    image: {
+      src: youtubeImage.src,
+      alt: "Youtube",
+    },
+    icon: {
+      src: youtubeIcon.src,
+      alt: "Youtube icon",
     },
   },
 ];

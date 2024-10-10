@@ -1,8 +1,8 @@
 "use client";
+
 import Image from "next/image";
 import Slider from "react-slick";
 import socialItems from "./socialItems";
-
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
 
 // Custom Arrow Component
@@ -10,11 +10,11 @@ const PrevArrow = (props) => {
   const { style, onClick } = props;
   return (
     <button
-      className={"!absolute top-1/2 -left-0 !z-20"}
+      className={"!absolute top-1/2 -left-3 !z-20"}
       style={style}
       onClick={onClick}
     >
-      <IoIosArrowDropleftCircle className="text-2xl text-ui-green" />
+      <IoIosArrowDropleftCircle className="text-4xl text-ui-green" />
     </button>
   );
 };
@@ -23,11 +23,11 @@ const NextArrow = (props) => {
   const { style, onClick } = props;
   return (
     <button
-      className={"!absolute top-1/2 right-0 !z-20"}
+      className={"!absolute top-1/2 -right-3 !z-20"}
       style={style}
       onClick={onClick}
     >
-      <IoIosArrowDroprightCircle className="text-2xl text-ui-green" />
+      <IoIosArrowDroprightCircle className="text-4xl text-ui-green" />
     </button>
   );
 };
@@ -53,12 +53,12 @@ const SocialsMobile = () => {
         <Slider {...settings} className="w-full">
           {socialItems.map((item, index) => (
             <div key={index} className="relative w-full pt-6 px-6">
-              <figure className="h-52 relative">
+              <figure className="h-[72vh] relative">
                 <Image
                   fill
                   src={item.image.src}
                   alt={item.image.alt}
-                  className="object-cover h-52 rounded-3xl"
+                  className="object-cover rounded-3xl"
                 />
               </figure>
               <Image
