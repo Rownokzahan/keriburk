@@ -49,7 +49,7 @@ const InfiniteImageSlider = () => {
         <div className="overflow-hidden">
           <div className="flex gap-12 animate-infinite-slider-left">
             {sliderImages1.map((image, index) => (
-              <figure key={index} className="min-w-[112px]">
+              <figure key={index} className="min-w-24 sm:min-w-[112px]">
                 <Image
                   width={112}
                   height={162}
@@ -60,7 +60,7 @@ const InfiniteImageSlider = () => {
               </figure>
             ))}
             {sliderImages1.map((image, index) => (
-              <figure key={index} className="min-w-[112px]">
+              <figure key={index} className="min-w-24 sm:min-w-[112px]">
                 <Image
                   width={112}
                   height={162}
@@ -77,7 +77,7 @@ const InfiniteImageSlider = () => {
         <div className="overflow-hidden mt-12">
           <div className="flex gap-12 animate-infinite-slider-right">
             {sliderImages2.map((image, index) => (
-              <figure key={index} className="min-w-[112px]">
+              <figure key={index} className="min-w-24 sm:min-w-[112px]">
                 <Image
                   width={112}
                   height={162}
@@ -87,7 +87,7 @@ const InfiniteImageSlider = () => {
               </figure>
             ))}
             {sliderImages2.map((image, index) => (
-              <figure key={index} className="min-w-[112px]">
+              <figure key={index} className="min-w-24 sm:min-w-[112px]">
                 <Image
                   width={112}
                   height={162}
