@@ -2,15 +2,15 @@ import Image from "next/image";
 
 const Logo = () => {
   return (
-    <div>
+    <figure>
       <Image
         width={200}
         height={100}
-        className="w-28"
+        className="w-16 md:w-28"
         src="/images/logo.png"
         alt="logo"
       />
-    </div>
+    </figure>
   );
 };
 

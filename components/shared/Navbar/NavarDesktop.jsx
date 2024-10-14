@@ -1,88 +1,48 @@
-"use client";
+"use client"; // Enables client-side rendering in Next.js
 
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "../Logo";
-import { PiMagnifyingGlass, PiShoppingCartSimpleLight } from "react-icons/pi";
-import { FiUser } from "react-icons/fi";
+import { usePathname } from "next/navigation";
+import { iconLinksData, navLinksData } from "./navbarData";
 
-export function NavarDesktop() {
+const NavarDesktop = () => {
   const pathname = usePathname();
 
   return (
     <div className="flex items-center justify-between py-2 container !mt-0">
       <Logo />
 
-      <nav>
-        <ul className="flex items-center space-x-4 font-medium text-ui-black-light">
-          <li>
-            <Link
-              className={`link ${pathname === "/" ? "text-ui-black" : ""}`}
-              href="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`link ${pathname === "/about" ? "text-ui-black" : ""}`}
-              href="/about"
-            >
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`link ${
-                pathname === "/products" ? "text-ui-black" : ""
-              }`}
-              href="/products"
-            >
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`link ${
-                pathname === "/recipes" ? "text-ui-black" : ""
-              }`}
-              href="/recipes"
-            >
-              Recipes
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`link ${pathname === "/blogs" ? "text-ui-black" : ""}`}
-              href="/blogs"
-            >
-              Blogs
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`link ${
-                pathname === "/contact" ? "text-ui-black" : ""
-              }`}
-              href="/contact"
-            >
-              Contact
-            </Link>
-          </li>
+      {/* Navigation menu */}
+      <div>
+        <ul className="flex items-center space-x-4 font-medium">
+          {navLinksData.map((link, index) => (
+            <li key={index}>
+              {/* Conditionally applying active class based on current path */}
+              <Link
+                href={link.href}
+                className={`${
+                  pathname === link.href
+                    ? "text-black" // Active link style
+                    : "text-ui-gray" // Inactive link style
+                }`}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
-      </nav>
+      </div>
 
-      <div className="flex items-center space-x-4 text-ui-black-light">
-        <Link href="/">
-          <PiMagnifyingGlass />
-        </Link>
-        <Link href="/">
-          <FiUser />
-        </Link>
-        <Link href="/">
-          <PiShoppingCartSimpleLight />
-        </Link>
+      {/* Icon links */}
+      <div className="flex items-center space-x-4 text-ui-gray">
+        {iconLinksData.map((link, index) => (
+          <Link key={index} href={link.href}>
+            <link.Icon /> {/* Rendering the icon for each link */}
+          </Link>
+        ))}
       </div>
     </div>
   );
-}
+};
+
+export default NavarDesktop;

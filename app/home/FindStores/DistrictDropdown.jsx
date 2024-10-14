@@ -57,19 +57,19 @@ const DistrictDropdown = ({
         onClick={toggleDropdown}
         disabled={disabled}
         aria-expanded={isOpen}
-        className="w-full px-4 py-2 rounded-md flex justify-between items-center  bg-ui-white"
+        className="w-full px-4 py-2 rounded-md flex justify-between items-center bg-ui-white"
       >
         {/* Display selected district or default text */}
         {selected ? (
           <span className="truncate">{selected}</span>
         ) : (
-          <span className="text-gray-400">{defaultText}</span>
+          <span className="text-ui-gray">{defaultText}</span>
         )}
 
         {/* Dropdown arrow icon */}
         <TiArrowSortedDown
           className={`${isOpen ? "rotate-180" : ""} ${
-            disabled ? "text-gray-400" : ""
+            disabled ? "text-ui-gray" : ""
           }`}
           aria-hidden="true"
         />
@@ -77,7 +77,7 @@ const DistrictDropdown = ({
 
       {/* Dropdown menu */}
       <div
-        className={`absolute right-0 z-20 w-full mt-1 origin-top bg-ui-white border border-dark-light rounded shadow-lg ${
+        className={`absolute right-0 z-20 w-full mt-1 origin-top bg-ui-white border border-ui-gray rounded shadow-lg ${
           isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0"
         } transition-transform duration-300 ${
           disabled ? "pointer-events-none" : ""
@@ -86,8 +86,8 @@ const DistrictDropdown = ({
         aria-hidden={!isOpen}
       >
         {/* Search input */}
-        <div className="px-4 py-2 mb-px border-b border-gray-300 flex items-start gap-2">
-          <div className="text-gray-400 text-xl">
+        <div className="px-4 py-2 mb-px border-b border-ui-gray flex items-start gap-2">
+          <div className="text-ui-gray text-xl">
             <HiOutlineSearch /> {/* Search icon */}
           </div>
           <input
@@ -108,8 +108,8 @@ const DistrictDropdown = ({
                   onClick={() => handleSelect(item)}
                   className={`block px-4 py-2 w-full text-left ${
                     item === selected
-                      ? "bg-primary-dark text-background-light"
-                      : "hover:bg-gray-300 hover:bg-opacity-30"
+                      ? "bg-ui-black text-ui-white"
+                      : "hover:bg-ui-gray hover:bg-opacity-10"
                   } ${disabled ? "cursor-not-allowed" : ""}`}
                   disabled={disabled}
                 >
@@ -118,7 +118,7 @@ const DistrictDropdown = ({
               </li>
             ))
           ) : (
-            <li className="px-4 py-2 text-gray-500">No districts found.</li>
+            <li className="px-4 py-2 text-ui-gray">No districts found.</li>
           )}
         </ul>
       </div>
