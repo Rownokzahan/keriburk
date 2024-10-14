@@ -17,3 +17,20 @@
 .slick-dots li.slick-active button:before {
   @apply text-ui-green;
 }
+
+.offer-carousel-container .slick-dots{
+  @apply text-ui-white bottom-4;
+}
+
+.offer-carousel-container .slick-dots li button:before{
+  @apply text-[10px]
+}
+
+.offer-carousel-container .slick-dots button:before {
+  @apply text-ui-white opacity-35;
+}
+
+.offer-carousel-container .slick-dots li.slick-active button:before {
+  @apply text-ui-white opacity-100;
+}
+
