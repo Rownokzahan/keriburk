@@ -4,7 +4,7 @@ import Socials from "./home/Socials";
 import FindStores from "./home/FindStores";
 import Banner from "./home/Banner";
 import Offers from "./home/Offers";
-import WhatToCook from "./home/WhatToCook/WhatToCook";
+import WhatToCook from "./home/WhatToCook";
 
 export default function Home() {
   return (
@@ -12,10 +12,10 @@ export default function Home() {
       {/* <Banner /> */}
       {/* <Offers /> */}
       <WhatToCook />
-      {/* <FindStores />
+      <FindStores />
       <Socials />
       <GreenerWorldBanner />
-      <InfiniteImageSlider /> */}
+      <InfiniteImageSlider />
     </>
   );
 }

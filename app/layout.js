@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`${roboto_flex.className} antialiased bg-ui-white`}>
         {/* <Navbar /> */}
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

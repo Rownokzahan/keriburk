@@ -10,8 +10,8 @@ const SocialsDesktop = () => {
     >
       <div className="container !mt-0 py-12">
         <h3 className="mb-12 text-5xl font-bold">Find Us On Socials</h3>
-        <div className="flex items-center">
-          <div className="w-52 me-[208px]">
+        <div className="max-w-xl flex items-center gap-[40%]">
+          <div className="w-max flex relative">
             <div className="relative">
               <figure className="w-full aspect-[5/6] rounded-3xl shadow-2xl overflow-hidden">
                 <Image
@@ -34,7 +34,7 @@ const SocialsDesktop = () => {
               </div>
             </div>
 
-            <div className="w-full ms-[80%] -mt-16 relative">
+            <div className="absolute w-full top-3/4 -right-1/2">
               <figure className="w-full aspect-[5/6] rounded-3xl shadow-2xl overflow-hidden">
                 <Image
                   width={224}
@@ -57,25 +57,49 @@ const SocialsDesktop = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <figure className="w-52 aspect-[3/5] rounded-3xl shadow-2xl overflow-hidden">
-              <Image
-                width={224}
-                height={400}
-                src={socialItems[2]?.image?.src}
-                alt={socialItems[2]?.image?.alt}
-                className="w-full h-full rounded-3xl object-cover hover:scale-110 duration-1000"
-              />
-            </figure>
+          <div className="w-max flex relative">
+            <div className="absolute w-full top-3/4 -left-1/2 z-10">
+              <figure className="w-full aspect-[5/6] rounded-3xl shadow-2xl overflow-hidden">
+                <Image
+                  width={224}
+                  height={400}
+                  src={socialItems[2]?.image?.src}
+                  alt={socialItems[2]?.image?.alt}
+                  className="w-full h-full rounded-3xl object-cover hover:scale-110 duration-1000"
+                />
+              </figure>
 
-            <div className="absolute -top-4 -right-4">
-              <Image
-                className="w-12"
-                width={96}
-                height={96}
-                src={socialItems[2]?.icon?.src}
-                alt={socialItems[2]?.icon?.alt}
-              />
+              <div className="absolute -top-4 -right-4">
+                <Image
+                  className="w-12 rounded-full"
+                  width={96}
+                  height={96}
+                  src={socialItems[2]?.icon?.src}
+                  alt={socialItems[2]?.icon?.alt}
+                />
+              </div>
+            </div>
+
+            <div className="relative">
+              <figure className="w-full aspect-[5/6] rounded-3xl shadow-2xl overflow-hidden">
+                <Image
+                  width={224}
+                  height={400}
+                  src={socialItems[3]?.image?.src}
+                  alt={socialItems[3]?.image?.alt}
+                  className="w-full h-full rounded-3xl object-cover hover:scale-110 duration-1000"
+                />
+              </figure>
+
+              <div className="absolute -top-4 -right-4">
+                <Image
+                  className="w-12"
+                  width={96}
+                  height={96}
+                  src={socialItems[3]?.icon?.src}
+                  alt={socialItems[3]?.icon?.alt}
+                />
+              </div>
             </div>
           </div>
         </div>

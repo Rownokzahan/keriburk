@@ -51,34 +51,36 @@ const FindStores = () => {
 
       {/* Modal for displaying stores */}
       <Modal isVisible={isModalVisible} onClose={handleCloseModal}>
-        <div className="border-b mb-4">
-          <div className="flex justify-center mb-2">
-            <Logo />
+        <div className="p-8">
+          <div className="border-b mb-4">
+            <div className="flex justify-center mb-2">
+              <Logo />
+            </div>
+
+            <h4 className="text-xl font-bold mb-4 text-center">
+              Stores in {selectedDistrict} {/* Display selected district */}
+            </h4>
           </div>
 
-          <h4 className="text-xl font-bold mb-4 text-center">
-            Stores in {selectedDistrict} {/* Display selected district */}
-          </h4>
+          {/* List of stores */}
+          <ul>
+            {stores?.map((store, index) => (
+              <li key={index} className="mb-2">
+                <h5 className="font-semibold">{store.name}</h5>
+                <div className="text-sm">
+                  <div className="flex gap-1 items-center">
+                    <RiMapPinLine />
+                    <p>Address: {store.address}</p>
+                  </div>
+                  <div className="flex gap-1 items-center">
+                    <HiOutlinePhone />
+                    <p>Phone: {store.phone}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        {/* List of stores */}
-        <ul>
-          {stores?.map((store, index) => (
-            <li key={index} className="mb-2">
-              <h5 className="font-semibold">{store.name}</h5>
-              <div className="text-sm">
-                <div className="flex gap-1 items-center">
-                  <RiMapPinLine />
-                  <p>Address: {store.address}</p>
-                </div>
-                <div className="flex gap-1 items-center">
-                  <HiOutlinePhone />
-                  <p>Phone: {store.phone}</p>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
       </Modal>
     </section>
   );

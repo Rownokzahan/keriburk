@@ -45,10 +45,12 @@ const Offers = () => {
       </section>
 
       <section>
-        <img
+        <Image
+          width={1024}
+          height={341}
           src={freeDelivery.src}
           alt=""
-          className="-mt-2 w-full h-[54vh] object-cover"
+          className="-mt-2 w-full object-fill"
         />
       </section>
     </>

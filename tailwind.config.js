@@ -27,7 +27,11 @@ module.exports = {
       colors: {
         ui: {
           green: {
+            light: "#5CBA47",
             DEFAULT: "#084327",
+          },
+          yellow: {
+            DEFAULT: "#fab433",
           },
           red: {
             DEFAULT: "#E31E26",
