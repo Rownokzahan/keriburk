@@ -31,7 +31,7 @@ module.exports = {
             DEFAULT: "#084327",
           },
           yellow: {
-            DEFAULT: "#fab433",
+            DEFAULT: "#FCB017",
           },
           red: {
             DEFAULT: "#E31E26",
