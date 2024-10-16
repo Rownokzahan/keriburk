@@ -17,7 +17,7 @@ const settings = {
   swipe: false,
 };
 
-const Banner = () => {
+const HeroBanner = () => {
   return (
     <section className="banner-carousel-container overflow-hidden">
       <Slider {...settings}>
@@ -65,4 +65,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default HeroBanner;

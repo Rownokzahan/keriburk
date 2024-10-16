@@ -37,7 +37,7 @@ const FooterMobile = () => {
   };
 
   return (
-    <div className="pb-5 container !mt-0 text-ui-white">
+    <div className="pb-5 container text-ui-white">
       <div className="flex justify-center mb-4">
         <Logo />
       </div>

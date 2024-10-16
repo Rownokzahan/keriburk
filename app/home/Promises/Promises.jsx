@@ -12,7 +12,7 @@ const Promises = () => {
       className="min-h-screen bg-cover xl:bg-right"
       style={{ backgroundImage: `url('${bgImage.src}')` }}
     >
-      <div className="container !mt-0 py-14">
+      <div className="container py-14">
         <div>
           <div className="hidden md:block">
             <Logo size="large" />

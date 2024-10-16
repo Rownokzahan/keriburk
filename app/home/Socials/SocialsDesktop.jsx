@@ -8,7 +8,7 @@ const SocialsDesktop = () => {
       className="min-h-screen bg-cover bg-left"
       style={{ backgroundImage: `url('${bgImage?.src}')` }}
     >
-      <div className="container !mt-0 py-12">
+      <div className="container py-12">
         <h3 className="mb-12 text-5xl font-bold">Find Us On Socials</h3>
         <div className="max-w-xl flex items-center gap-[40%]">
           <div className="w-max flex relative">

@@ -9,7 +9,7 @@ const NavarDesktop = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center justify-between py-2 container !mt-0">
+    <div className="flex items-center justify-between py-2 container">
       <Logo />
 
       {/* Navigation menu */}

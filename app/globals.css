@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container {
-  @apply max-w-[1920px] mx-auto mt-12 md:mt-16 lg:mt-20 px-[5%] lg:px-[6%];
+  @apply max-w-[1920px] mx-auto px-[5%] lg:px-[6%];
 }
 
 .mt-responsive {
