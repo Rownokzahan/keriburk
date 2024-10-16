@@ -1,10 +1,11 @@
 import Image from "next/image";
+import logo from "@/public/images/logo.png";
+import Link from "next/link";
 
 const Logo = ({ size = "large", position = "left" }) => {
   const sizes = {
-    small: "w-12",
-    medium: "w-20",
-    large: "w-28",
+    small: "w-[85px]",
+    large: "w-24",
   };
 
   const positions = {
@@ -14,15 +15,17 @@ const Logo = ({ size = "large", position = "left" }) => {
   };
 
   return (
-    <figure>
-      <Image
-        width={200}
-        height={100}
-        className={`${sizes[size]} ${positions[position]}`}
-        src="/images/logo.png"
-        alt="logo"
-      />
-    </figure>
+    <Link href={"/"}>
+      <figure>
+        <Image
+          width={113}
+          height={59}
+          className={`${sizes[size]} ${positions[position]}`}
+          src={logo.src}
+          alt="logo"
+        />
+      </figure>
+    </Link>
   );
 };
 

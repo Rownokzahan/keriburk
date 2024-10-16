@@ -10,14 +10,14 @@ import Promises from "./home/Promises/Promises";
 export default function Home() {
   return (
     <>
-      {/* <Banner /> */}
-      <Offers />
+      <Banner />
+      {/* <Offers />
       <WhatToCook />
       <Promises />
       <FindStores />
       <Socials />
       <GreenerWorldBanner />
-      <InfiniteImageSlider />
+      <InfiniteImageSlider /> */}
     </>
   );
 }

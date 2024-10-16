@@ -1,32 +1,28 @@
-import Link from "next/link";
+"use client";
+
 import Logo from "../../Logo";
 import { LuMenu } from "react-icons/lu";
 import Sidebar from "./Sidebar";
-import { iconLinksData } from "../navbarData";
+import { useState } from "react";
 
 const NavbarMobile = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <>
-      <div className="fixed border-b top-0 z-50 bg-ui-white grid grid-cols-3 items-center justify-between py-2 container !mt-0">
-        <button className="text-xl text-ui-black-light">
+      <div className="w-full px-4 py-3 border-b fixed top-0 z-50 bg-ui-white flex items-center justify-between">
+        <Logo size="small" />
+
+        <button className="text-2xl" onClick={toggleSidebar}>
           <LuMenu />
         </button>
-
-        <div className="mx-auto">
-          <Logo />
-        </div>
-
-        {/* Icon links */}
-        <div className="flex justify-end items-center space-x-4">
-          {iconLinksData.map((link, index) => (
-            <Link key={index} href={link.href}>
-              <link.Icon /> {/* Rendering the icon for each link */}
-            </Link>
-          ))}
-        </div>
       </div>
 
-      {/* <Sidebar /> */}
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </>
   );
 };
