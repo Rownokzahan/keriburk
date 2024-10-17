@@ -11,7 +11,7 @@ const OfferBanner1 = () => {
       className="h-screen sm:h-[50vh] container bg-cover bg-center relative flex"
       style={{ backgroundImage: `url('${bgImage.src}')` }} // Background image
     >
-      <div className="h-min self-center flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-8">
+      <div className="h-min self-center flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-8 sm:gap-0">
         <div className="sm:w-[40%] space-y-6">
           <h2 className="text-5xl sm:text-6xl font-bold text-ui-white text-center sm:text-left">
             Get Your Value Box Now!
@@ -28,13 +28,13 @@ const OfferBanner1 = () => {
         </div>
 
         {/* Product image */}
-        <figure>
+        <figure className="sm:h-[42vh] w-auto sm:me-12">
           <Image
-            width={384}
-            height={384}
+            width={1074}
+            height={770}
             src={packets.src}
             alt="products"
-            className="max-h-full w-full sm:max-w-96 aspect-square"
+            className="w-full h-full"
           />
         </figure>
       </div>
