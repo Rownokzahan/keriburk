@@ -13,7 +13,7 @@ import slideImage3Desktop from "@/public/images/banner/banner-1-desktop.jpg";
 
 import slideImage4Mobile from "@/public/images/banner/banner-1-mobile.jpg";
 import slideImage4Tablet from "@/public/images/banner/banner-1-tablet.jpg";
-import slideImage4Desktop from "@/public/images/banner/banner-1-tablet.jpg";
+import slideImage4Desktop from "@/public/images/banner/banner-1-desktop.jpg";
 
 import slideImage5Mobile from "@/public/images/banner/banner-1-mobile.jpg";
 import slideImage5Tablet from "@/public/images/banner/banner-1-tablet.jpg";

@@ -1,107 +1,59 @@
 import bgImage from "@/public/images/socials-bg.jpg";
 import Image from "next/image";
 import socialItems from "./socialItems";
+import clsx from "clsx";
 
 const SocialsDesktop = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-left"
+      className="h-screen container bg-cover bg-left"
       style={{ backgroundImage: `url('${bgImage?.src}')` }}
     >
-      <div className="container py-12">
+      <div className="py-16">
         <h3 className="mb-12 text-5xl font-bold">Find Us On Socials</h3>
-        <div className="max-w-xl flex items-center gap-[40%]">
-          <div className="w-max flex relative">
-            <div className="relative">
-              <figure className="w-full aspect-[5/6] rounded-3xl shadow-2xl overflow-hidden">
+        <div className="max-w-max h-full grid grid-cols-2 gap-y-10 gap-x-16">
+          {socialItems.map((item, index) => (
+            <div
+              key={index}
+              className={clsx(
+                "relative w-60 aspect-[5/4] border border-ui-white rounded-3xl", // Common classes for the figure
+                index === 2 && "left-8", // Conditional left positioning for 3rd item
+                index === 3 && "left-8"
+              )}
+
+              style={{ boxShadow: "4px 4px 12px 8px rgba(0,0,0,0.1),-4px -4px 12px 8px rgba(0,0,0,0.1)" }}
+            >
+              {/* Social Image */}
+              <figure className="w-full h-full rounded-3xl overflow-hidden">
                 <Image
                   width={224}
                   height={400}
-                  src={socialItems[0]?.image?.src}
-                  alt={socialItems[0]?.image?.alt}
-                  className="w-full h-full rounded-3xl object-cover hover:scale-110 duration-1000"
+                  src={item?.image?.src}
+                  alt={item?.image?.alt}
+                  className="w-full h-full object-cover hover:scale-110 duration-1000"
                 />
               </figure>
 
-              <div className="absolute -top-4 -right-4">
+              {/* Social Icon */}
+              <div
+                className={clsx(
+                  "absolute w-12 rounded-full",
+                  "-top-4", // Top positioning for all icons
+                  index === 0 && "-left-4",
+                  index === 1 && "-left-4",
+                  index === 2 && "-left-4",
+                  index === 3 && "-left-4"
+                )}
+              >
                 <Image
-                  className="w-12 rounded-full"
                   width={96}
                   height={96}
-                  src={socialItems[0]?.icon?.src}
-                  alt={socialItems[0]?.icon?.alt}
+                  src={item?.icon?.src}
+                  alt={item?.icon?.alt}
                 />
               </div>
             </div>
-
-            <div className="absolute w-full top-3/4 -right-1/2">
-              <figure className="w-full aspect-[5/6] rounded-3xl shadow-2xl overflow-hidden">
-                <Image
-                  width={224}
-                  height={400}
-                  src={socialItems[1]?.image?.src}
-                  alt={socialItems[1]?.image?.alt}
-                  className="w-full h-full rounded-3xl object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-
-              <div className="absolute -top-4 -right-4">
-                <Image
-                  className="w-12"
-                  width={96}
-                  height={96}
-                  src={socialItems[1]?.icon?.src}
-                  alt={socialItems[1]?.icon?.alt}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="w-max flex relative">
-            <div className="absolute w-full top-3/4 -left-1/2 z-10">
-              <figure className="w-full aspect-[5/6] rounded-3xl shadow-2xl overflow-hidden">
-                <Image
-                  width={224}
-                  height={400}
-                  src={socialItems[2]?.image?.src}
-                  alt={socialItems[2]?.image?.alt}
-                  className="w-full h-full rounded-3xl object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-
-              <div className="absolute -top-4 -right-4">
-                <Image
-                  className="w-12 rounded-full"
-                  width={96}
-                  height={96}
-                  src={socialItems[2]?.icon?.src}
-                  alt={socialItems[2]?.icon?.alt}
-                />
-              </div>
-            </div>
-
-            <div className="relative">
-              <figure className="w-full aspect-[5/6] rounded-3xl shadow-2xl overflow-hidden">
-                <Image
-                  width={224}
-                  height={400}
-                  src={socialItems[3]?.image?.src}
-                  alt={socialItems[3]?.image?.alt}
-                  className="w-full h-full rounded-3xl object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-
-              <div className="absolute -top-4 -right-4">
-                <Image
-                  className="w-12"
-                  width={96}
-                  height={96}
-                  src={socialItems[3]?.icon?.src}
-                  alt={socialItems[3]?.icon?.alt}
-                />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

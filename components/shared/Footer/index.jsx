@@ -5,8 +5,8 @@ import InfiniteImageSlider from "./InfiniteImageSlider";
 
 const Footer = () => {
   return (
-    <footer>
-      <InfiniteImageSlider/>
+    <footer className="min-h-screen">
+      <InfiniteImageSlider />
       <section
         className="hidden sm:block bg-cover bg-no-repeat bg-ui-white bg-opacity-5 bg-blend-overlay"
         style={{ backgroundImage: `url('${bgImage.src}')` }}
@@ -14,9 +14,7 @@ const Footer = () => {
         <FooterDesktop />
       </section>
 
-      <section
-        className="sm:hidden bg-cover bg-ui-green"
-      >
+      <section className="sm:hidden bg-cover bg-ui-green">
         <FooterMobile />
       </section>
 

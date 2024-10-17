@@ -14,7 +14,7 @@ const NavbarMobile = () => {
 
   return (
     <>
-      <div className="w-full px-4 py-3 border-b fixed top-0 z-50 bg-ui-white flex items-center justify-between">
+      <div className="w-full px-4 py-3 border-b bg-ui-white flex items-center justify-between">
         <Logo size="small" />
 
         <button className="text-2xl" onClick={toggleSidebar}>

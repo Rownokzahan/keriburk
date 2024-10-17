@@ -9,13 +9,13 @@ import OfferBanners from "./home/OfferBanners";
 export default function Home() {
   return (
     <>
-      {/* <HeroBanner /> */}
+      <HeroBanner />
       <OfferBanners />
-      {/* <WhatToCook />
+      <WhatToCook />
       <Promises />
       <FindStores />
       <Socials />
-      <GreenerWorldBanner /> */}
+      <GreenerWorldBanner />
     </>
   );
 }

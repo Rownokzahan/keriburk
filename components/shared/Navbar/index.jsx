@@ -8,7 +8,7 @@ const Navbar = () => {
         <NavarDesktop />
       </nav>
 
-      <nav className="md:hidden pt-[69px]">
+      <nav className="md:hidden">
         <NavbarMobile />
       </nav>
     </>

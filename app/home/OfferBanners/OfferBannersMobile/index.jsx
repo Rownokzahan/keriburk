@@ -18,7 +18,7 @@ const OfferBannersMobile = () => {
   }, [banners.length]);
 
   return (
-    <div className="relative h-full w-full">
+    <div className="relative h-screen w-full">
       {banners.map((banner, index) => (
         <div
           key={index}
