@@ -1,23 +1,23 @@
 // Import all 5 images with version names
-import slideImage1Mobile from "@/public/images/banner-1.jpg";
-import slideImage1Tablet from "@/public/images/banner-2.jpg";
-import slideImage1Desktop from "@/public/images/banner-1.jpg";
+import slideImage1Mobile from "@/public/images/banner/banner-1-mobile.jpg";
+import slideImage1Tablet from "@/public/images/banner/banner-1-tablet.jpg";
+import slideImage1Desktop from "@/public/images/banner/banner-1-desktop.jpg";
 
-import slideImage2Mobile from "@/public/images/banner-1.jpg";
-import slideImage2Tablet from "@/public/images/banner-1.jpg";
-import slideImage2Desktop from "@/public/images/banner-1.jpg";
+import slideImage2Mobile from "@/public/images/banner/banner-1-mobile.jpg";
+import slideImage2Tablet from "@/public/images/banner/banner-1-tablet.jpg";
+import slideImage2Desktop from "@/public/images/banner/banner-2.jpg";
 
-import slideImage3Mobile from "@/public/images/banner-1.jpg";
-import slideImage3Tablet from "@/public/images/banner-1.jpg";
-import slideImage3Desktop from "@/public/images/banner-1.jpg";
+import slideImage3Mobile from "@/public/images/banner/banner-1-mobile.jpg";
+import slideImage3Tablet from "@/public/images/banner/banner-1-tablet.jpg";
+import slideImage3Desktop from "@/public/images/banner/banner-1-desktop.jpg";
 
-import slideImage4Mobile from "@/public/images/banner-1.jpg";
-import slideImage4Tablet from "@/public/images/banner-1.jpg";
-import slideImage4Desktop from "@/public/images/banner-1.jpg";
+import slideImage4Mobile from "@/public/images/banner/banner-1-mobile.jpg";
+import slideImage4Tablet from "@/public/images/banner/banner-1-tablet.jpg";
+import slideImage4Desktop from "@/public/images/banner/banner-1-tablet.jpg";
 
-import slideImage5Mobile from "@/public/images/banner-1.jpg";
-import slideImage5Tablet from "@/public/images/banner-1.jpg";
-import slideImage5Desktop from "@/public/images/banner-1.jpg";
+import slideImage5Mobile from "@/public/images/banner/banner-1-mobile.jpg";
+import slideImage5Tablet from "@/public/images/banner/banner-1-tablet.jpg";
+import slideImage5Desktop from "@/public/images/banner/banner-1-desktop.jpg";
 
 // Dataset for images with three versions (mobile, tablet, desktop)
 const images = [

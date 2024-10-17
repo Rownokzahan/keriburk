@@ -1,10 +1,12 @@
 import bgImage from "@/public/images/footer-bg.jpg";
 import FooterDesktop from "./FooterDesktop";
 import FooterMobile from "./FooterMobile";
+import InfiniteImageSlider from "./InfiniteImageSlider";
 
 const Footer = () => {
   return (
     <footer>
+      <InfiniteImageSlider/>
       <section
         className="hidden sm:block bg-cover bg-no-repeat bg-ui-white bg-opacity-5 bg-blend-overlay"
         style={{ backgroundImage: `url('${bgImage.src}')` }}

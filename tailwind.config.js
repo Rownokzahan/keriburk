@@ -11,6 +11,7 @@ module.exports = {
       animation: {
         "infinite-slider-left": "infiniteSliderLeft 12s linear infinite",
         "infinite-slider-right": "infiniteSliderRight 12s linear infinite",
+        "spin-slow": "spin-slow 60s linear infinite",
       },
 
       keyframes: {

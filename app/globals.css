@@ -29,3 +29,12 @@
 .banner-carousel-container .slick-dots li.slick-active button:before {
   @apply text-ui-white opacity-100;
 }
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Logo from "../Logo";
 import {
   companyLinks,
   socialLinks,
   supportLinks,
-} from "./footerData";
+} from "../footerData";
 import { FiChevronDown, FiChevronUp, FiMapPin } from "react-icons/fi";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
+import Logo from "../../Logo";
 
 const AccordionSection = ({ title, children, isOpen, toggle }) => {
   return (
