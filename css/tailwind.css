@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply max-w-full mx-auto px-[5%] lg:px-[6%];
+}
+
+.mt-responsive {
+  @apply mt-12 md:mt-16 lg:mt-20;
+}
+
+.mb-responsive {
+  @apply mb-12 md:mb-16 lg:mb-20;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-ui-green;
+}
+
+.banner-carousel-container .slick-dots {
+  @apply bottom-4;
+}
+
+.banner-carousel-container .slick-dots li button:before {
+  @apply text-[10px];
+}
+
+.banner-carousel-container .slick-dots li.slick-active button:before {
+  @apply text-ui-white opacity-100;
+}

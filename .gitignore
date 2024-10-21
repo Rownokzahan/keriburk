@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Tailwind's output CSS file (auto-generated, no need to track)
+output.css
+
+# Lock files (specific to your environment, not necessary to track)
+package-lock.json
+yarn.lock
+
+# Mac system files (if on MacOS)
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore build directories (if you have a build process)
+dist/
+build/
+
+# Any temporary files or IDE-related settings
+*.tmp
+*.swp
+.idea/
+.vscode/
