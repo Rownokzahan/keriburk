@@ -103,16 +103,10 @@
         </div>
 
         <!-- Overlay -->
-        <div
-          id="overlay"
-          class="fixed inset-0 bg-ui-white bg-opacity-50 z-40 hidden"
-        ></div>
+        <div id="overlay" class="overlay hidden"></div>
 
         <!-- Mobile Sidebar - Hidden by default -->
-        <div
-          id="sidebar"
-          class="w-64 h-screen overflow-y-auto bg-ui-white shadow-lg fixed top-0 left-0 -translate-x-full transition-transform transform z-50"
-        >
+        <div id="sidebar" class="sidebar sidebar-closed">
           <div class="flex items-center justify-between px-4 py-3 border-b">
             <!-- Mobile Sidebar Logo -->
             <a href="/">
@@ -160,6 +154,202 @@
     </header>
 
     <main>
+      <!-- Offer banners section start -->
+      <!-- Mobile Offer Banners Section -->
+      <section class="sm:hidden h-screen w-full relative">
+        <!-- First Mobile Offer Banner -->
+        <div class="mobile-offer-banner">
+          <div
+            class="h-screen sm:h-[50vh] container bg-cover bg-center relative flex"
+            style="
+              background-image: url('./assets/images/background/red-bg.png');
+            "
+          >
+            <div
+              class="h-min self-center flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-8 sm:gap-0"
+            >
+              <div class="sm:w-[40%] space-y-6">
+                <h2
+                  class="text-5xl sm:text-6xl font-bold text-ui-white text-center sm:text-left"
+                >
+                  Get Your Value Box Now!
+                </h2>
+                <a
+                  class="w-max mx-auto sm:ms-0 sm:me-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
+                  href="/"
+                >
+                  <span>Go to Offers</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+              <figure class="sm:h-[42vh] w-auto sm:me-12">
+                <img
+                  alt="products"
+                  loading="lazy"
+                  class="w-full h-full"
+                  src="./assets/images/offer-1-packets.png"
+                />
+              </figure>
+            </div>
+            <!-- Discount Ribbon -->
+            <div class="absolute top-0 right-6">
+              <div class="w-24 relative">
+                <img
+                  alt="Ribbon icon"
+                  loading="lazy"
+                  src="./assets/icons/ribbon.svg"
+                />
+                <h5
+                  class="absolute bottom-9 left-1/2 -translate-x-1/2 font-bold text-3xl text-center text-ui-red uppercase"
+                >
+                  20% Off
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Mobile Offer Banner -->
+        <div class="mobile-offer-banner active">
+          <div
+            class="h-screen sm:h-[50vh] container flex items-center overflow-hidden"
+          >
+            <div
+              class="w-full flex flex-col sm:flex-row items-center justify-between"
+            >
+              <div class="w-max relative h-full">
+                <figure class="h-[50vh] aspect-square">
+                  <img
+                    alt="Product Showcase Image"
+                    class="w-full h-full product-showcase-image"
+                    src="./assets/images/product-showcase/Achari-Fish-Tikka.png"
+                  />
+                </figure>
+                <div
+                  class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                >
+                  <div class="w-[5000px] h-[5000px] animate-spin-slow">
+                    <img
+                      alt="swirl background"
+                      class="w-full h-full rounded-full"
+                      src="./assets/icons/swirl.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="max-w-xl flex-1 space-y-6 flex flex-col items-end">
+                <h3
+                  class="text-4xl sm:text-5xl text-ui-white font-bold text-center"
+                >
+                  Get Free Delivery On Orders Above 500 Tk
+                </h3>
+                <a
+                  class="w-max mx-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
+                  href="/"
+                  ><span>Go to Products</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Desktop Offer Banners Section -->
+      <section class="hidden sm:block">
+        <!-- First Desktop Offer Banner -->
+        <div
+          class="h-screen sm:h-[50vh] container bg-cover bg-center relative flex"
+          style="background-image: url('./assets/images/background/red-bg.png')"
+        >
+          <div
+            class="h-min self-center flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-8 sm:gap-0"
+          >
+            <div class="sm:w-[40%] space-y-6">
+              <h2
+                class="text-5xl sm:text-6xl font-bold text-ui-white text-center sm:text-left"
+              >
+                Get Your Value Box Now!
+              </h2>
+              <a
+                class="w-max mx-auto sm:ms-0 sm:me-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
+                href="/"
+              >
+                <span>Go to Offers</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <figure class="sm:h-[42vh] w-auto sm:me-12">
+              <img
+                alt="products"
+                loading="lazy"
+                class="w-full h-full"
+                src="./assets/images/offer-1-packets.png"
+              />
+            </figure>
+          </div>
+          <!-- Discount Ribbon -->
+          <div class="absolute top-0 right-6">
+            <div class="w-24 relative">
+              <img
+                alt="Ribbon icon"
+                loading="lazy"
+                src="./assets/icons/ribbon.svg"
+              />
+              <h5
+                class="absolute bottom-9 left-1/2 -translate-x-1/2 font-bold text-3xl text-center text-ui-red uppercase"
+              >
+                20% Off
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Desktop Offer Banner -->
+        <div
+          class="h-screen sm:h-[50vh] container flex items-center overflow-hidden"
+        >
+          <div
+            class="w-full flex flex-col sm:flex-row items-center justify-between"
+          >
+            <div class="w-max relative h-full">
+              <figure class="h-[50vh] aspect-square">
+                <img
+                  alt="Product Showcase Image"
+                  class="w-full h-full product-showcase-image"
+                  src="./assets/images/product-showcase/Achari-Fish-Tikka.png"
+                />
+              </figure>
+              <div
+                class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              >
+                <div class="w-[5000px] h-[5000px] animate-spin-slow">
+                  <img
+                    alt="swirl background"
+                    class="w-full h-full rounded-full"
+                    src="./assets/icons/swirl.svg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="max-w-xl flex-1 space-y-6 flex flex-col items-end">
+              <h3
+                class="text-4xl sm:text-5xl text-ui-white font-bold text-center"
+              >
+                Get Free Delivery On Orders Above 500 Tk
+              </h3>
+              <a
+                class="w-max mx-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
+                href="/"
+                ><span>Go to Products</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Offer banners section end -->
+
       <!-- Promises section start -->
       <section
         class="min-h-screen container bg-cover xl:bg-right"
@@ -413,5 +603,6 @@
 
     <!-- Link to your external JavaScript file -->
     <script src="js/sidebar.js"></script>
+    <script src="js/offer-banners.js"></script>
   </body>
 </html>
