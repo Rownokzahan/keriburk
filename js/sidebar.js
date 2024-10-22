@@ -3,14 +3,12 @@ $(function () {
   const $overlay = $("#overlay");
 
   function openSidebar() {
-    $sidebar.removeClass("-translate-x-full");
-    $sidebar.addClass("translate-x-0");
+    $sidebar.removeClass("sidebar-closed").addClass("sidebar-open");
     $overlay.removeClass("hidden");
   }
 
   function closeSidebar() {
-    $sidebar.removeClass("translate-x-0");
-    $sidebar.addClass("-translate-x-full");
+    $sidebar.removeClass("sidebar-open").addClass("sidebar-closed");
     $overlay.addClass("hidden");
   }
 

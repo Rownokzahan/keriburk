@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.sidebar {
+  @apply w-64 h-screen overflow-y-auto bg-ui-white shadow-lg fixed top-0 left-0 transition-transform transform duration-300 z-50;
+}
+
+.sidebar-open {
+  @apply -translate-x-0; /* Sidebar fully visible */
+}
+
+.sidebar-closed {
+  @apply -translate-x-full; /* Sidebar hidden */
+}
+
+.overlay {
+  @apply fixed inset-0 bg-ui-white bg-opacity-50 z-40;
+}
+
+.mobile-offer-banner {
+  @apply absolute inset-0 transition-opacity duration-1000 opacity-0;
+}
+
+.mobile-offer-banner.active {
+  @apply opacity-100;
+}
+
 .container {
   @apply max-w-full mx-auto px-[5%] lg:px-[6%];
 }
