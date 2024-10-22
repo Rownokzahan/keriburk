@@ -18,6 +18,19 @@
   @apply fixed inset-0 bg-ui-white bg-opacity-50 z-40;
 }
 
+#hero-slider .slick-dots {
+  @apply bottom-4;
+}
+
+#hero-slider .slick-dots li button:before {
+  @apply text-[10px];
+}
+
+#hero-slider .slick-dots li.slick-active button:before {
+  @apply text-ui-white opacity-100;
+}
+
+
 .mobile-offer-banner {
   @apply absolute inset-0 transition-opacity duration-1000 opacity-0;
 }
@@ -38,18 +51,3 @@
   @apply mb-12 md:mb-16 lg:mb-20;
 }
 
-.slick-dots li.slick-active button:before {
-  @apply text-ui-green;
-}
-
-.banner-carousel-container .slick-dots {
-  @apply bottom-4;
-}
-
-.banner-carousel-container .slick-dots li button:before {
-  @apply text-[10px];
-}
-
-.banner-carousel-container .slick-dots li.slick-active button:before {
-  @apply text-ui-white opacity-100;
-}
