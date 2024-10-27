@@ -948,6 +948,136 @@
       </section>
       <!-- Promises section end -->
 
+      <!-- Find Stores section start -->
+      <section
+        class="container md:h-screen py-12 bg-cover bg-center flex overflow-hidden"
+        style="
+          background-image: url('./assets/images/background/find-store-bg.jpg');
+        "
+      >
+        <div
+          class="self-center w-full flex flex-col sm:flex-row justify-between items-center"
+        >
+          <!-- Left Section -->
+          <div class="flex-1 lg:flex-none">
+            <h3
+              class="mb-6 text-3xl sm:text-4xl font-bold uppercase text-ui-white"
+            >
+              Find The Nearest Store <br />
+              With Keriburk Products
+            </h3>
+
+            <!-- District Selection Dropdown -->
+            <div class="relative">
+              <div class="flex gap-4 items-center">
+                <!-- Dropdown Toggle Button-->
+                <button
+                  id="select-district-btn"
+                  type="button"
+                  class="w-full px-4 py-2 rounded-full flex-1 flex justify-between items-center bg-ui-red text-ui-white relative z-20"
+                  aria-expanded="false"
+                  aria-controls="district-dropdown"
+                >
+                  <span class="uppercase text-sm font-medium"
+                    >Select Your District</span
+                  >
+                  <i class="w-6">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path fill="none" d="M0 0h24v24H0V0z"></path>
+                      <path
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      ></path>
+                    </svg>
+                  </i>
+                </button>
+
+                <div
+                  class="bg-ui-red text-ui-white w-10 h-10 rounded-full flex items-center justify-center"
+                >
+                  <i class="bi bi-search text-lg"></i>
+                </div>
+              </div>
+
+              <!-- Dropdown Menu-->
+              <div id="district-dropdown" class="closed">
+                <div
+                  class="px-4 py-2 border-b border-black/40 shadow flex items-center gap-2"
+                >
+                  <div class="text-ui-black/40">
+                    <i class="bi bi-search"></i>
+                  </div>
+                  <input
+                    id="district-search"
+                    type="text"
+                    placeholder="Search District..."
+                    class="flex-1 bg-transparent placeholder:text-ui-black/40 focus:outline-none"
+                  />
+                </div>
+                <ul
+                  id="district-list"
+                  class="max-h-44 -mt-px list-none overflow-y-auto"
+                ></ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <figure class="flex-1">
+            <img
+              alt="Map showing store locations"
+              loading="lazy"
+              src="./assets/images/map.png"
+              class="w-full"
+            />
+          </figure>
+        </div>
+
+        <!-- Stores Modal -->
+        <div
+          id="stores-modal"
+          class="fixed inset-0 bg-[#0a0909] bg-opacity-70 z-50 hidden"
+          role="dialog"
+          aria-labelledby="stores-modal-title"
+          aria-hidden="true"
+        >
+          <div
+            class="w-full md:w-96 max-h-screen mx-2 overflow-y-auto bg-ui-white absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+          >
+            <div class="p-4 pt-6 border-b relative">
+              <figure class="flex justify-center mb-2">
+                <img
+                  alt="Keriburk Logo"
+                  loading="lazy"
+                  src="./assets/images/logo.png"
+                  class="w-24"
+                />
+              </figure>
+
+              <h4 id="stores-modal-title" class="text-xl font-bold text-center">
+                Stores in <span id="stores-modal-district">Bandarban</span>
+              </h4>
+
+              <button
+                id="stores-modal-close-btn"
+                class="absolute top-3 right-3"
+                aria-label="Close stores modal"
+              >
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+
+            <ul id="store-list" class="p-6 pt-4 space-y-2"></ul>
+          </div>
+        </div>
+      </section>
+      <!-- Find Stores section end -->
+
       <!-- Grenner world banner section start -->
       <section
         class="h-screen bg-cover bg-center overflow-hidden relative z-0"
@@ -990,6 +1120,7 @@
     <script src="js/sidebar.js"></script>
     <script src="./js/slider.js"></script>
     <script src="js/offer-banners.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="js/recipe-modal.js"></script>
+    <script type="module" src="js/find-stores.js"></script>
   </body>
 </html>

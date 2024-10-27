@@ -1,23 +1,27 @@
+/* Tailwind base setup */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Sidebar styles */
 .sidebar {
-  @apply w-64 h-screen overflow-y-auto bg-ui-white shadow-lg fixed top-0 left-0 transition-transform transform duration-300 z-50;
+  @apply fixed top-0 left-0 w-64 h-screen bg-ui-white shadow-lg overflow-y-auto transform transition-transform duration-300 z-50;
 }
 
 .sidebar-open {
-  @apply -translate-x-0; /* Sidebar fully visible */
+  @apply -translate-x-0; /* Sidebar visible */
 }
 
 .sidebar-closed {
   @apply -translate-x-full; /* Sidebar hidden */
 }
 
+/* Overlay styles */
 .overlay {
   @apply fixed inset-0 bg-ui-white bg-opacity-50 z-40;
 }
 
+/* Hero slider styles */
 #hero-slider .slick-dots {
   @apply bottom-4;
 }
@@ -30,7 +34,7 @@
   @apply text-ui-white opacity-100;
 }
 
-
+/* Mobile offer banner transition */
 .mobile-offer-banner {
   @apply absolute inset-0 transition-opacity duration-1000 opacity-0;
 }
@@ -39,10 +43,25 @@
   @apply opacity-100;
 }
 
+/* Dropdown menu styles */
+#district-dropdown {
+  @apply absolute top-12 w-full z-10 bg-ui-white/60 backdrop-blur-md shadow-lg rounded-lg overflow-hidden transition-all duration-300;
+}
+
+#district-dropdown.closed {
+  @apply max-h-0;
+}
+
+#district-dropdown.open {
+  @apply max-h-56;
+}
+
+/* Container adjustments for responsiveness */
 .container {
   @apply max-w-full mx-auto px-[5%] lg:px-[6%];
 }
 
+/* Responsive margin utilities */
 .mt-responsive {
   @apply mt-12 md:mt-16 lg:mt-20;
 }
@@ -50,4 +69,3 @@
 .mb-responsive {
   @apply mb-12 md:mb-16 lg:mb-20;
 }
-
