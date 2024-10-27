@@ -21,7 +21,7 @@
   @apply fixed inset-0 bg-ui-white bg-opacity-50 z-40;
 }
 
-/* Hero slider styles */
+/* Hero slider dots styles */
 #hero-slider .slick-dots {
   @apply bottom-4;
 }
@@ -43,7 +43,7 @@
   @apply opacity-100;
 }
 
-/* Dropdown menu styles */
+/* District Dropdown styles */
 #district-dropdown {
   @apply absolute top-12 w-full z-10 bg-ui-white/60 backdrop-blur-md shadow-lg rounded-lg overflow-hidden transition-all duration-300;
 }
@@ -54,6 +54,19 @@
 
 #district-dropdown.open {
   @apply max-h-56;
+}
+
+/* Socials slider dots styles */
+#socials-slider .slick-dots {
+  @apply -bottom-10;
+}
+
+#socials-slider .slick-dots li button:before {
+  @apply text-[8px];
+}
+
+#socials-slider .slick-dots li.slick-active button:before {
+  @apply text-ui-green opacity-100;
 }
 
 /* Container adjustments for responsiveness */
