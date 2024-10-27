@@ -1,4 +1,4 @@
-import { stores } from "./storeData.js";
+import { stores } from "./stores-data.js";
 
 // Variables
 const districts = stores.map((item) => item.district);

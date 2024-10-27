@@ -3,6 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Container adjustments for responsiveness */
+.container {
+  @apply max-w-full mx-auto px-[5%] lg:px-[6%];
+}
+
+/* Responsive margin utilities */
+.mt-responsive {
+  @apply mt-12 md:mt-16 lg:mt-20;
+}
+
+.mb-responsive {
+  @apply mb-12 md:mb-16 lg:mb-20;
+}
+
 /* Sidebar styles */
 .sidebar {
   @apply fixed top-0 left-0 w-64 h-screen bg-ui-white shadow-lg overflow-y-auto transform transition-transform duration-300 z-50;
@@ -69,16 +83,26 @@
   @apply text-ui-green opacity-100;
 }
 
-/* Container adjustments for responsiveness */
-.container {
-  @apply max-w-full mx-auto px-[5%] lg:px-[6%];
+#footer-accordion {
+  @apply pb-5 container text-ui-white bg-ui-green;
 }
 
-/* Responsive margin utilities */
-.mt-responsive {
-  @apply mt-12 md:mt-16 lg:mt-20;
+#footer-accordion .accordion-item {
+  @apply border-b border-ui-white;
 }
 
-.mb-responsive {
-  @apply mb-12 md:mb-16 lg:mb-20;
+#footer-accordion .accordion-title {
+  @apply w-full py-2 border-b -mb-px flex justify-between items-center;
+}
+
+#footer-accordion .accordion-content {
+  @apply overflow-hidden transition-all duration-400;
+}
+
+#footer-accordion .accordion-content.closed {
+  @apply max-h-0;
+}
+
+#footer-accordion .accordion-content.open {
+  @apply max-h-screen;
 }
