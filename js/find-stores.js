@@ -1,10 +1,55 @@
 import { stores } from "./stores-data.js";
 
-// Variables
+// Get a list of districts and initialize main UI elements
 const districts = stores.map((item) => item.district);
+const districtDropdown = $("#district-dropdown");
 const storesModal = $("#stores-modal");
 
-// Function to open the stores modal for a given district
+// Display the list of districts in the dropdown
+function displayDistricts(districts) {
+  const districtList = $("#district-list");
+  districtList.empty();
+
+  if (districts.length === 0) {
+    districtList.append(
+      `<li class="block px-4 py-2 w-full text-left border-t border-ui-black">No District Found</li>`
+    );
+  } else {
+    districts.forEach((district) => {
+      districtList.append(`
+        <li>
+          <button class="block px-4 py-2 w-full text-left border-t border-ui-black" data-district="${district}">
+            ${district}
+          </button>
+        </li>
+      `);
+    });
+  }
+}
+
+displayDistricts(districts); // Initial display of districts
+
+// Open the district dropdown menu
+function openDistrictDropdown() {
+  districtDropdown.removeClass("closed").addClass("open");
+}
+
+// Close the district dropdown menu
+function closeDistrictDropdown() {
+  districtDropdown.removeClass("open").addClass("closed");
+}
+
+// Get selected district name
+function getDistrictName() {
+  return $("#district-name").text().trim();
+}
+
+// Set selected district name in the UI
+function setDistrictName(districtName) {
+  $("#district-name").text(districtName);
+}
+
+// Open the stores modal for the selected district
 function openStoresModal(districtName) {
   const district = stores.find((item) => item.district === districtName);
   const districtStores = district?.stores || [];
@@ -37,63 +82,48 @@ function openStoresModal(districtName) {
   }
 }
 
-// Function to close the stores modal
-function closeStoresModal() {
-  storesModal.addClass("hidden");
-  $("body").removeClass("overflow-hidden");
-}
+// Toggle district dropdown visibility on button click
+$("#select-district-btn").on("click", function () {
+  districtDropdown.hasClass("open")
+    ? closeDistrictDropdown()
+    : openDistrictDropdown();
+});
 
-// Function to display the list of districts
-function displayDistricts(districts) {
-  const districtList = $("#district-list");
-  districtList.empty();
-
-  if (districts.length === 0) {
-    districtList.append(
-      `<li class="block px-4 py-2 w-full text-left border-t border-ui-black">No District Found</li>`
-    );
-  } else {
-    districts.forEach((district) => {
-      districtList.append(`
-        <li>
-          <button class="block px-4 py-2 w-full text-left border-t border-ui-black" data-district="${district}">
-            ${district}
-          </button>
-        </li>
-      `);
-    });
-  }
-}
-
-// Initialize the districts display
-displayDistricts(districts);
-
-// Event handler for district search input
+// Filter and display districts based on search input
 $("#district-search").on("input", function () {
   const searchQuery = $(this).val().toLowerCase();
-
   const filteredDistricts = districts.filter((district) =>
     district.toLowerCase().includes(searchQuery)
   );
   displayDistricts(filteredDistricts);
 });
 
-// Event handler for clicking on district in the list
+// Close the stores modal and reset district name
+function closeStoresModal() {
+  storesModal.addClass("hidden");
+  $("body").removeClass("overflow-hidden");
+  setDistrictName("Select Your District");
+}
+
+$("#stores-modal-close-btn").on("click", closeStoresModal); // Close modal button
+
+// Set selected district name from dropdown and close dropdown
 $("#district-list").on("click", function (event) {
   const districtName = $(event.target).data("district");
   if (districtName) {
-    openStoresModal(districtName);
+    setDistrictName(districtName);
+    closeDistrictDropdown();
+    $("#select-district-error").addClass("hidden");
   }
 });
 
-// Event handler for closing the stores modal
-$("#stores-modal-close-btn").on("click", closeStoresModal);
-
-$("#select-district-btn").on("click", function () {
-  const districtDropdown = $("#district-dropdown");
-  if (districtDropdown.hasClass("open")) {
-    districtDropdown.removeClass("open").addClass("closed");
+// Open stores modal if a district is selected
+$("#search-store-btn").on("click", function () {
+  const districtName = getDistrictName();
+  if (districtName && districtName != "Select Your District") {
+    openStoresModal(districtName);
+    $("#select-district-error").addClass("hidden");
   } else {
-    districtDropdown.removeClass("closed").addClass("open");
+    $("#select-district-error").removeClass("hidden");
   }
 });

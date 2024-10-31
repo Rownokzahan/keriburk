@@ -59,7 +59,7 @@
 
 /* District Dropdown styles */
 #district-dropdown {
-  @apply absolute top-12 w-full z-10 bg-ui-white/60 backdrop-blur-md shadow-lg rounded-lg overflow-hidden transition-all duration-300;
+  @apply w-full shadow-lg rounded-lg absolute top-12 z-10 bg-ui-white/60 backdrop-blur-md overflow-hidden transition-all duration-300;
 }
 
 #district-dropdown.closed {
@@ -83,6 +83,8 @@
   @apply text-ui-green opacity-100;
 }
 
+/* Footer accordion styles */
+
 #footer-accordion {
   @apply pb-5 container text-ui-white bg-ui-green;
 }
@@ -96,7 +98,7 @@
 }
 
 #footer-accordion .accordion-content {
-  @apply overflow-hidden transition-all duration-400;
+  @apply overflow-hidden transition-all duration-500;
 }
 
 #footer-accordion .accordion-content.closed {

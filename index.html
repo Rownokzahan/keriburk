@@ -956,84 +956,97 @@
         "
       >
         <div
-          class="self-center w-full flex flex-col sm:flex-row justify-between items-center"
+          class="self-center w-full flex flex-col sm:flex-row justify-between"
         >
           <!-- Left Section -->
-          <div class="flex-1 lg:flex-none">
+          <div class="my-10 lg:flex-grow xl:self-center">
             <h3
-              class="mb-6 text-3xl sm:text-4xl font-bold uppercase text-ui-white"
+              class="max-w-4xl mb-6 text-4xl xl:text-5xl font-bold uppercase text-ui-white"
             >
-              Find The Nearest Store <br />
-              With Keriburk Products
+              Find The Nearest Store With Keriburk Products
             </h3>
 
             <!-- District Selection Dropdown -->
-            <div class="relative">
-              <div class="flex gap-4 items-center">
-                <!-- Dropdown Toggle Button-->
-                <button
-                  id="select-district-btn"
-                  type="button"
-                  class="w-full px-4 py-2 rounded-full flex-1 flex justify-between items-center bg-ui-red text-ui-white relative z-20"
-                  aria-expanded="false"
-                  aria-controls="district-dropdown"
-                >
-                  <span class="uppercase text-sm font-medium"
-                    >Select Your District</span
+            <div class="max-w-lg min-w-max lg:w-9/12 flex gap-4 items-center">
+              <div class="flex-1 relative">
+                <div class="relative">
+                  <!-- Dropdown Toggle Button-->
+                  <button
+                    id="select-district-btn"
+                    type="button"
+                    class="w-full px-4 py-2 rounded-full flex-1 flex justify-between items-center bg-ui-red text-ui-white relative z-20"
+                    aria-expanded="false"
+                    aria-controls="district-dropdown"
                   >
-                  <i class="w-6">
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      stroke-width="0"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      id="district-name"
+                      class="uppercase text-sm font-medium"
                     >
-                      <path fill="none" d="M0 0h24v24H0V0z"></path>
-                      <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                      ></path>
-                    </svg>
-                  </i>
-                </button>
+                      Select Your District
+                    </span>
+                    <i class="w-6">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z"></path>
+                        <path
+                          d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        ></path>
+                      </svg>
+                    </i>
+                  </button>
 
-                <div
-                  class="bg-ui-red text-ui-white w-10 h-10 rounded-full flex items-center justify-center"
-                >
-                  <i class="bi bi-search text-lg"></i>
+                  <p
+                    id="select-district-error"
+                    class="text-ui-red font-bold absolute left-4 top-[calc(100%+6px)] flex items-center gap-1 capitalize text-sm hidden"
+                  >
+                    <i class="bi bi-exclamation-circle"></i>
+                    <span>Please select a district first</span>
+                  </p>
                 </div>
-              </div>
 
-              <!-- Dropdown Menu-->
-              <div id="district-dropdown" class="closed">
-                <div
-                  class="px-4 py-2 border-b border-black/40 shadow flex items-center gap-2"
-                >
-                  <div class="text-ui-black/40">
-                    <i class="bi bi-search"></i>
+                <!-- Dropdown Menu-->
+                <div id="district-dropdown" class="closed">
+                  <div
+                    class="px-4 py-2 border-b border-black/40 shadow flex items-center gap-2"
+                  >
+                    <div class="text-ui-black/40">
+                      <i class="bi bi-search"></i>
+                    </div>
+                    <input
+                      id="district-search"
+                      type="text"
+                      placeholder="Search District..."
+                      class="flex-1 bg-transparent placeholder:text-ui-black/40 focus:outline-none"
+                    />
                   </div>
-                  <input
-                    id="district-search"
-                    type="text"
-                    placeholder="Search District..."
-                    class="flex-1 bg-transparent placeholder:text-ui-black/40 focus:outline-none"
-                  />
+                  <ul
+                    id="district-list"
+                    class="max-h-44 -mt-px list-none overflow-y-auto"
+                  ></ul>
                 </div>
-                <ul
-                  id="district-list"
-                  class="max-h-44 -mt-px list-none overflow-y-auto"
-                ></ul>
               </div>
+
+              <button
+                id="search-store-btn"
+                class="bg-ui-red text-ui-white w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="bi bi-search text-lg"></i>
+              </button>
             </div>
           </div>
 
           <!-- Right Section -->
-          <figure class="flex-1">
+          <figure class="w-max xl:h-[90vh] aspect-square">
             <img
               alt="Map showing store locations"
               loading="lazy"
               src="./assets/images/map.png"
-              class="w-full"
+              class="h-full"
             />
           </figure>
         </div>
@@ -1321,7 +1334,7 @@
     </main>
 
     <!-- Footer start -->
-    <footer class="sm:min-h-screen bg-ui-green flex flex-col justify-between">
+    <footer class="bg-ui-green flex flex-col justify-between">
       <!-- Infinite image sliders -->
       <section
         class="py-12 flex-1 flex flex-col gap-12 justify-center overflow-hidden"
