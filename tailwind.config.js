@@ -6,6 +6,7 @@ module.exports = {
     "./css/**/*.css", // Match all CSS files in the css directory (if applicable)
     // Add other specific directories or file patterns as needed
   ],
+  safelist: ["border-ui-black"],
   plugins: [],
   theme: {
     extend: {

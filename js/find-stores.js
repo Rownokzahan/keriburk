@@ -119,6 +119,7 @@ $("#district-list").on("click", function (event) {
 
 // Open stores modal if a district is selected
 $("#search-store-btn").on("click", function () {
+  closeDistrictDropdown();
   const districtName = getDistrictName();
   if (districtName && districtName != "Select Your District") {
     openStoresModal(districtName);

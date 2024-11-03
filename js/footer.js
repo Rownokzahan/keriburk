@@ -30,7 +30,7 @@ function addSliderImages(imagesContainer, images) {
   // Append each image for default display
   images.forEach((image) => {
     imagesContainer.append(`
-        <figure class="min-w-24 sm:min-w-28">
+        <figure class="w-24 sm:w-28 flex-shrink-0">
           <img
             alt="Sliding Image"
             loading="lazy"
@@ -44,7 +44,7 @@ function addSliderImages(imagesContainer, images) {
   // Duplicate images for larger screens
   images.forEach((image) => {
     imagesContainer.append(`
-        <figure class="min-w-24 sm:min-w-28">
+        <figure class="w-24 sm:w-28 flex-shrink-0">
           <img
             alt="Sliding Image"
             loading="lazy"
@@ -58,7 +58,7 @@ function addSliderImages(imagesContainer, images) {
   // Duplicate images again for extra-large screens
   images.forEach((image) => {
     imagesContainer.append(`
-        <figure class="min-w-24 sm:min-w-28">
+        <figure class="w-24 sm:w-28 flex-shrink-0">
           <img
             alt="Sliding Image"
             loading="lazy"
