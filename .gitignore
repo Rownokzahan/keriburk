@@ -1,9 +1,6 @@
 # Node modules
 node_modules/
 
-# Tailwind's output CSS file (auto-generated, no need to track)
-output.css
-
 # Lock files (specific to your environment, not necessary to track)
 package-lock.json
 yarn.lock
