@@ -36,15 +36,18 @@
 }
 
 /* Hero slider dots styles */
-#hero-slider .slick-dots {
+#hero-slider .slick-dots,
+#offer-desktop-slider .slick-dots {
   @apply bottom-4;
 }
 
-#hero-slider .slick-dots li button:before {
+#hero-slider .slick-dots li button:before,
+#offer-desktop-slider .slick-dots li button:before {
   @apply text-[10px];
 }
 
-#hero-slider .slick-dots li.slick-active button:before {
+#hero-slider .slick-dots li.slick-active button:before,
+#offer-desktop-slider .slick-dots li.slick-active button:before {
   @apply text-ui-white opacity-100;
 }
 

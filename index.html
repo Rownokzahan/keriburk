@@ -44,7 +44,9 @@
     style="font-family: 'Roboto Flex', sans-serif"
     class="bg-ui-white text-ui-black"
   >
-    <header>
+    <header
+      class="w-full fixed top-0 left-0 z-50 bg-white shadow transition duration-500"
+    >
       <!-- Desktop Navigation -->
       <nav class="hidden md:block">
         <div class="flex items-center justify-between py-2 container">
@@ -82,14 +84,14 @@
       </nav>
 
       <!-- Mobile Navigation -->
-      <nav class="md:hidden w-full px-4 py-3 border-b bg-ui-white">
+      <nav class="md:hidden w-full px-4 py-2 border-b bg-ui-white">
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <a href="/">
             <img
               alt="Keriburk Logo"
               loading="lazy"
-              class="w-[85px]"
+              class="w-[90px]"
               src="assets/images/logo.png"
             />
           </a>
@@ -108,13 +110,13 @@
 
         <!-- Mobile Sidebar - Hidden by default -->
         <div id="sidebar" class="sidebar sidebar-closed">
-          <div class="flex items-center justify-between px-4 py-3 border-b">
+          <div class="flex items-center justify-between px-4 py-2 border-b">
             <!-- Mobile Sidebar Logo -->
             <a href="/">
               <img
                 alt="logo"
                 loading="lazy"
-                class="w-[85px]"
+                class="w-[90px]"
                 src="assets/images/logo.png"
               />
             </a>
@@ -154,16 +156,16 @@
       </nav>
     </header>
 
-    <main>
+    <main class="mt-[64px] md:mt-[66px]">
       <!-- Hero slider section start -->
       <section
-        class="overflow-hidden h-[calc(100vh-69px)] md:h-[calc(100vh-66px)]"
+        class="overflow-hidden h-[calc(100vh-64px)] md:h-[calc(100vh-66px)]"
       >
         <div id="hero-slider">
           <!-- Slider 1 -->
           <div>
             <div
-              class="h-[calc(100vh-69px)] md:h-[calc(100vh-66px)] overflow-hidden"
+              class="h-[calc(100vh-64px)] md:h-[calc(100vh-66px)] overflow-hidden"
             >
               <!-- Mobile Image - visible on small screens -->
               <figure class="w-full h-full md:hidden">
@@ -206,7 +208,7 @@
           <!-- Slider 2 -->
           <div>
             <div
-              class="h-[calc(100vh-69px)] md:h-[calc(100vh-66px)] overflow-hidden"
+              class="h-[calc(100vh-64px)] md:h-[calc(100vh-66px)] overflow-hidden"
             >
               <!-- Mobile Image - visible on small screens -->
               <figure class="w-full h-full md:hidden">
@@ -250,6 +252,141 @@
       <!-- Hero slider section end -->
 
       <!-- Offer banners start -->
+      <!-- Desktop Offer Banners Section -->
+      <section class="hidden sm:block">
+        <!-- Desktop Offer Slider -->
+        <div class="h-[50vh] overflow-hidden">
+          <div id="offer-desktop-slider">
+            <!-- Offer Slide 1 -->
+            <div>
+              <div
+                class="h-[50vh] container bg-cover bg-center relative flex"
+                style="
+                  background-image: url('assets/images/background/red-bg.png');
+                "
+              >
+                <div
+                  class="h-min w-full self-center flex justify-between items-center"
+                >
+                  <div class="sm:w-[40%] space-y-8">
+                    <h2
+                      class="text-4xl lg:text-5xl xl:text-6xl font-semibold uppercase text-ui-white text-center sm:text-left"
+                    >
+                      Buy More Save More!
+                    </h2>
+                    <a
+                      class="w-max mx-auto sm:ms-0 sm:me-auto text-ui-white flex items-center"
+                      href="/"
+                    >
+                      <i class="bi bi-instagram"></i>
+                      <span class="font-bold text-lg ms-2 me-1">f</span>
+                      <span>/keriburkdotcom</span>
+                    </a>
+                  </div>
+                  <figure class="sm:h-[42vh] w-auto sm:me-12">
+                    <img
+                      alt="products"
+                      loading="lazy"
+                      class="h-full object-contain"
+                      src="assets/images/offer-1-packet.png"
+                    />
+                  </figure>
+                </div>
+                <!-- Discount Ribbon -->
+                <div class="absolute top-0 right-6">
+                  <div class="w-24 relative">
+                    <img
+                      alt="Ribbon icon"
+                      loading="lazy"
+                      src="assets/icons/ribbon.svg"
+                    />
+                    <h5
+                      class="absolute bottom-9 left-1/2 -translate-x-1/2 font-bold text-3xl text-center text-ui-red uppercase"
+                    >
+                      20% Off
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Offer Slide 2 -->
+            <div>
+              <div
+                class="h-[50vh] container bg-cover bg-center flex"
+                style="
+                  background-image: url('assets/images/background/red-bg.png');
+                "
+              >
+                <div
+                  class="h-min w-full self-center flex justify-between items-center"
+                >
+                  <div class="lg:w-[40%] space-y-2 text-ui-white">
+                    <h4 class="uppercase text-2xl font-semibold">
+                      Buy Your Favourites,
+                    </h4>
+                    <h2 class="text-4xl lg:text-5xl font-bold uppercase text-left">
+                      Enjoy 20% Off All On Items!
+                    </h2>
+                  </div>
+                  <figure class="h-[42vh] w-auto">
+                    <img
+                      alt="products"
+                      loading="lazy"
+                      class="h-full object-contain"
+                      src="assets/images/offer-2-packet.png"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop Offer Banner -->
+        <div
+          class="h-screen sm:h-[50vh] container flex items-center overflow-hidden"
+        >
+          <div
+            class="w-full flex flex-col sm:flex-row items-center justify-between"
+          >
+            <div class="w-max relative h-full">
+              <figure class="h-[50vh] aspect-square">
+                <img
+                  alt="Product Showcase Image"
+                  class="w-full h-full product-showcase-image"
+                  src="assets/images/product-showcase/Achari-Fish-Tikka.png"
+                />
+              </figure>
+              <div
+                class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              >
+                <div class="w-[5000px] h-[5000px] animate-spin-slow">
+                  <img
+                    alt="swirl background"
+                    class="w-full h-full rounded-full"
+                    src="assets/icons/swirl.svg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="max-w-xl flex-1 space-y-6 flex flex-col items-end">
+              <h3
+                class="text-4xl sm:text-5xl text-ui-white font-bold text-center"
+              >
+                Get Free Delivery On Orders Above 500 Tk
+              </h3>
+              <a
+                class="w-max mx-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
+                href="/"
+                ><span>Go to Products</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Mobile Offer Banners Section -->
       <section class="sm:hidden h-screen w-full relative">
         <!-- First Mobile Offer Banner -->
@@ -262,17 +399,16 @@
               class="h-min self-center flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-8 sm:gap-0"
             >
               <div class="sm:w-[40%] space-y-6">
-                <h2
-                  class="text-5xl sm:text-6xl font-bold text-ui-white text-center sm:text-left"
-                >
-                  Get Your Value Box Now!
+                <h2 class="text-5xl font-semibold text-ui-white text-center">
+                  Buy More Save More!
                 </h2>
                 <a
-                  class="w-max mx-auto sm:ms-0 sm:me-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
+                  class="w-max mx-auto text-ui-white flex items-center"
                   href="/"
                 >
-                  <span>Go to Offers</span>
-                  <i class="bi bi-arrow-right"></i>
+                  <i class="bi bi-instagram"></i>
+                  <span class="font-bold text-lg ms-2 me-1">f</span>
+                  <span>/keriburkdotcom</span>
                 </a>
               </div>
               <figure class="sm:h-[42vh] w-auto sm:me-12">
@@ -280,7 +416,7 @@
                   alt="products"
                   loading="lazy"
                   class="w-full h-full"
-                  src="assets/images/offer-1-packets.png"
+                  src="assets/images/offer-1-packet.png"
                 />
               </figure>
             </div>
@@ -338,7 +474,7 @@
                 </h3>
                 <a
                   class="w-max mx-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
-                  href="/"
+                  href="https://www.keriburk.com/products-grid"
                   ><span>Go to Products</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
@@ -346,97 +482,33 @@
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Desktop Offer Banners Section -->
-      <section class="hidden sm:block">
-        <!-- First Desktop Offer Banner -->
-        <div
-          class="h-screen sm:h-[50vh] container bg-cover bg-center relative flex"
-          style="background-image: url('assets/images/background/red-bg.png')"
-        >
+        <!-- Third Mobile Offer Banner -->
+        <div class="mobile-offer-banner">
           <div
-            class="h-min self-center flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-8 sm:gap-0"
+            class="h-screen sm:h-[50vh] container bg-cover bg-center relative flex"
+            style="background-image: url('assets/images/background/red-bg.png')"
           >
-            <div class="sm:w-[40%] space-y-6">
-              <h2
-                class="text-5xl sm:text-6xl font-bold text-ui-white text-center sm:text-left"
-              >
-                Get Your Value Box Now!
-              </h2>
-              <a
-                class="w-max mx-auto sm:ms-0 sm:me-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
-                href="/"
-              >
-                <span>Go to Offers</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-            <figure class="sm:h-[42vh] w-auto sm:me-12">
-              <img
-                alt="products"
-                loading="lazy"
-                class="w-full h-full"
-                src="assets/images/offer-1-packets.png"
-              />
-            </figure>
-          </div>
-          <!-- Discount Ribbon -->
-          <div class="absolute top-0 right-6">
-            <div class="w-24 relative">
-              <img
-                alt="Ribbon icon"
-                loading="lazy"
-                src="assets/icons/ribbon.svg"
-              />
-              <h5
-                class="absolute bottom-9 left-1/2 -translate-x-1/2 font-bold text-3xl text-center text-ui-red uppercase"
-              >
-                20% Off
-              </h5>
-            </div>
-          </div>
-        </div>
+            <div
+              class="h-min self-center flex flex-col-reverse items-center gap-8"
+            >
+              <div class="sm:w-[40%] space-y-2 text-ui-white text-center">
+                <h4 class="uppercase text-2xl font-semibold">
+                  Buy Your Favourites,
+                </h4>
+                <h2 class="text-5xl font-bold uppercase">
+                  Enjoy 20% Off All On Items!
+                </h2>
+              </div>
 
-        <!-- Second Desktop Offer Banner -->
-        <div
-          class="h-screen sm:h-[50vh] container flex items-center overflow-hidden"
-        >
-          <div
-            class="w-full flex flex-col sm:flex-row items-center justify-between"
-          >
-            <div class="w-max relative h-full">
-              <figure class="h-[50vh] aspect-square">
+              <figure class="sm:h-[42vh] w-auto">
                 <img
-                  alt="Product Showcase Image"
-                  class="w-full h-full product-showcase-image"
-                  src="assets/images/product-showcase/Achari-Fish-Tikka.png"
+                  alt="products"
+                  loading="lazy"
+                  class="w-full h-full"
+                  src="assets/images/offer-2-packet.png"
                 />
               </figure>
-              <div
-                class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              >
-                <div class="w-[5000px] h-[5000px] animate-spin-slow">
-                  <img
-                    alt="swirl background"
-                    class="w-full h-full rounded-full"
-                    src="assets/icons/swirl.svg"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="max-w-xl flex-1 space-y-6 flex flex-col items-end">
-              <h3
-                class="text-4xl sm:text-5xl text-ui-white font-bold text-center"
-              >
-                Get Free Delivery On Orders Above 500 Tk
-              </h3>
-              <a
-                class="w-max mx-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
-                href="/"
-                ><span>Go to Products</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
             </div>
           </div>
         </div>
@@ -755,11 +827,10 @@
         <div class="py-10 sm:py-14">
           <!-- Logo and Title Section for Desktop -->
           <div class="hidden sm:flex flex-col">
-            <a href="/">
-              <figure>
-                <img alt="logo" class="w-24" src="assets/images/logo.png" />
-              </figure>
-            </a>
+            <figure>
+              <img alt="logo" class="w-24" src="assets/images/logo.png" />
+            </figure>
+
             <h3
               class="mt-1 mb-10 text-4xl sm:text-5xl text-center sm:text-left font-extrabold uppercase text-ui-green"
               style="
@@ -865,44 +936,6 @@
               </div>
             </div>
 
-            <!-- Promise Item: Quality of UAE -->
-            <div
-              class="flex flex-col sm:flex-row sm:justify-center items-center gap-2 sm:gap-4"
-            >
-              <img
-                src="assets/icons/promises/quality-uae.svg"
-                alt="Quality of UAE"
-                class="w-12 sm:w-14 aspect-square rounded-full"
-              />
-              <div
-                class="w-full sm:max-w-52 text-center sm:text-left uppercase"
-              >
-                <h4 class="font-bold text-sm">Quality of UAE</h4>
-                <p class="text-xs">
-                  Exceptional ingredients, straight from the source
-                </p>
-              </div>
-            </div>
-
-            <!-- Promise Item: Halal certified -->
-            <div
-              class="flex flex-col sm:flex-row sm:justify-center items-center gap-2 sm:gap-4"
-            >
-              <img
-                src="assets/icons/promises/halal-certified.svg"
-                alt="Halal certified"
-                class="w-12 sm:w-14 aspect-square rounded-full"
-              />
-              <div
-                class="w-full sm:max-w-52 text-center sm:text-left uppercase"
-              >
-                <h4 class="font-bold text-sm">Halal certified</h4>
-                <p class="text-xs">
-                  Our commitment to thoughtful eating preferences.
-                </p>
-              </div>
-            </div>
-
             <!-- Promise Item: ISO 9001 certified -->
             <div
               class="flex flex-col sm:flex-row sm:justify-center items-center gap-2 sm:gap-4"
@@ -940,24 +973,37 @@
 
           <!-- Order Button Section -->
           <div class="mt-12 sm:mt-16 flex items-center gap-6">
-            <button
+            <div
               class="flex-1 max-w-52 px-4 py-2 rounded-full bg-ui-red text-ui-white text-lg flex justify-between items-center"
             >
-              <span>Order Now</span>
+              <span class="text-sm sm:text-base">Order Now</span>
               <i class="bi bi-arrow-right"></i>
-            </button>
+            </div>
+
             <!-- Delivery Partner Icons Section -->
             <div class="flex items-center gap-3">
-              <img
-                alt="Daraz icon"
-                class="w-9 sm:w-12 aspect-square rounded bg-ui-black"
-                src="assets/icons/promises/daraz.svg"
-              />
-              <img
-                alt="Delivery icon"
-                class="w-9 sm:w-12 aspect-square rounded bg-ui-black"
-                src="assets/icons/promises/delivery.svg"
-              />
+              <a
+                href=""
+                target="_blank"
+                class="w-16 h-10 rounded bg-ui-black/90 backdrop-blur flex items-center"
+              >
+                <img
+                  alt="Daraz icon"
+                  class="w-full"
+                  src="assets/icons/promises/daraz.svg"
+              /></a>
+
+              <a
+                href=""
+                target="_blank"
+                class="w-16 h-10 px-1 rounded bg-ui-black/90 backdrop-blur flex items-center"
+              >
+                <img
+                  alt="Keriburk Logo"
+                  class="w-full"
+                  src="assets/images/logo.png"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -1332,14 +1378,6 @@
             Creating a Greener World <br />
             With Every Spice
           </h2>
-
-          <!-- Our Communities button -->
-          <button
-            class="w-max mx-auto mt-4 flex items-center gap-1 md:text-2xl text-ui-white font-semibold"
-          >
-            <span>Our Communities</span>
-            <i class="bi bi-arrow-right"></i>
-          </button>
         </div>
       </section>
       <!-- Grenner world banner section end -->
