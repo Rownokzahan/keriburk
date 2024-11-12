@@ -16,23 +16,27 @@ $(function () {
   setInterval(switchBanner, 5000); // Call switchBanner every 5 seconds
   switchBanner(); // For the first time
 
+  // Define the base path for the product images
+  const basePath = "./assets/images/product-showcase/";
+
   const productImagePaths = [
-    "./assets/images/product-showcase/Achari-Fish-Tikka.png",
-    "./assets/images/product-showcase/Achari-Ghost-Mix.png",
-    "./assets/images/product-showcase/Bombay-Biryani-Mix.png",
-    "./assets/images/product-showcase/Hyderabadi-haleem-Mix.png",
-    "./assets/images/product-showcase/Hyderabadi-Paya.png",
-    "./assets/images/product-showcase/Karachi-Beef-Biryani.png",
-    "./assets/images/product-showcase/karahi-Gosht-Fry.png",
-    "./assets/images/product-showcase/Lahori-Chargha.png",
-    "./assets/images/product-showcase/Mughlai-korma-Mix.png",
-    "./assets/images/product-showcase/Punjabi-fish-fry.png",
-    "./assets/images/product-showcase/Puran-Dilhi-Mix.png",
-    "./assets/images/product-showcase/Rawalpindi-Chicken-Curry.png",
-    "./assets/images/product-showcase/Shahi-Badam-Kheer.png",
-    "./assets/images/product-showcase/Sheer-Khurma.png",
-    "./assets/images/product-showcase/Sindhi-Mutton-Biryani.png",
+    "Achari-Fish-Tikka.png",
+    "Achari-Ghost-Mix.png",
+    "Bombay-Biryani-Mix.png",
+    "Hyderabadi-haleem-Mix.png",
+    "Hyderabadi-Paya.png",
+    "Karachi-Beef-Biryani.png",
+    "karahi-Gosht-Fry.png",
+    "Lahori-Chargha.png",
+    "Mughlai-korma-Mix.png",
+    "Punjabi-fish-fry.png",
+    "Puran-Dilhi-Mix.png",
+    "Rawalpindi-Chicken-Curry.png",
+    "Shahi-Badam-Kheer.png",
+    "Sheer-Khurma.png",
+    "Sindhi-Mutton-Biryani.png",
   ];
+
   const totalImages = productImagePaths.length;
   let currentImageIndex = 0;
 
@@ -40,7 +44,7 @@ $(function () {
   function switchProductImage() {
     $(".product-showcase-image").attr(
       "src",
-      productImagePaths[currentImageIndex] // set image of current index
+      `${basePath}${productImagePaths[currentImageIndex]}` // set image of current index with base path
     );
 
     // Increment the current image index and loop back to 0 if it exceeds the total number of images.

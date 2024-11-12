@@ -1,26 +1,29 @@
+// Define the base path for the images
+const basePath = "../assets/images/infinite-slider/";
+
 // Image arrays for the first and second sliders
 const sliderImages1 = [
-  "../assets/images/infinite-slider/Achari-gosht.jpg",
-  "../assets/images/infinite-slider/Bombay-chicken-biryani.jpg",
-  "../assets/images/infinite-slider/Fish-tikka.jpg",
-  "../assets/images/infinite-slider/Haleem.jpg",
-  "../assets/images/infinite-slider/Karachi-beef-biryani.jpg",
-  "../assets/images/infinite-slider/Karahi-Fry-Gosht.jpg",
-  "../assets/images/infinite-slider/Lahori-chargha.jpg",
-  "../assets/images/infinite-slider/Mughlai-Korma-mix.jpg",
-  "../assets/images/infinite-slider/Nehari.jpg",
+  "Achari-gosht.jpg",
+  "Bombay-chicken-biryani.jpg",
+  "Fish-tikka.jpg",
+  "Haleem.jpg",
+  "Karachi-beef-biryani.jpg",
+  "Karahi-Fry-Gosht.jpg",
+  "Lahori-chargha.jpg",
+  "Mughlai-Korma-mix.jpg",
+  "Nehari.jpg",
 ];
 
 const sliderImages2 = [
-  "../assets/images/infinite-slider/Mughlai-Korma-mix.jpg",
-  "../assets/images/infinite-slider/Nehari.jpg",
-  "../assets/images/infinite-slider/Paya.jpg",
-  "../assets/images/infinite-slider/Punjabi-fish-fry.jpg",
-  "../assets/images/infinite-slider/Rawalpindi.jpg",
-  "../assets/images/infinite-slider/Shahi-badam-kheer-mix.jpg",
-  "../assets/images/infinite-slider/Sheer-khurma-mix.jpg",
-  "../assets/images/infinite-slider/Sindhi-mutton.jpg",
-  "../assets/images/infinite-slider/Achari-gosht.jpg",
+  "Mughlai-Korma-mix.jpg",
+  "Nehari.jpg",
+  "Paya.jpg",
+  "Punjabi-fish-fry.jpg",
+  "Rawalpindi.jpg",
+  "Shahi-badam-kheer-mix.jpg",
+  "Sheer-khurma-mix.jpg",
+  "Sindhi-mutton.jpg",
+  "Achari-gosht.jpg",
 ];
 
 // Function to add images to the slider with duplicates for larger screens
@@ -30,43 +33,43 @@ function addSliderImages(imagesContainer, images) {
   // Append each image for default display
   images.forEach((image) => {
     imagesContainer.append(`
-        <figure class="w-24 sm:w-28 flex-shrink-0">
-          <img
-            alt="Sliding Image"
-            loading="lazy"
-            class="w-full"
-            src="${image}"
-            />
-        </figure>
-      `);
+      <figure class="w-24 sm:w-28 flex-shrink-0">
+        <img
+          alt="Sliding Image"
+          loading="lazy"
+          class="w-full"
+          src="${basePath}${image}"
+        />
+      </figure>
+    `);
   });
 
   // Duplicate images for larger screens
   images.forEach((image) => {
     imagesContainer.append(`
-        <figure class="w-24 sm:w-28 flex-shrink-0">
-          <img
-            alt="Sliding Image"
-            loading="lazy"
-            class="w-full"
-            src="${image}"
-            />
-        </figure>
-      `);
+      <figure class="w-24 sm:w-28 flex-shrink-0">
+        <img
+          alt="Sliding Image"
+          loading="lazy"
+          class="w-full"
+          src="${basePath}${image}"
+        />
+      </figure>
+    `);
   });
 
   // Duplicate images again for extra-large screens
   images.forEach((image) => {
     imagesContainer.append(`
-        <figure class="w-24 sm:w-28 flex-shrink-0">
-          <img
-            alt="Sliding Image"
-            loading="lazy"
-            class="w-full"
-            src="${image}"
-            />
-        </figure>
-      `);
+      <figure class="w-24 sm:w-28 flex-shrink-0">
+        <img
+          alt="Sliding Image"
+          loading="lazy"
+          class="w-full"
+          src="${basePath}${image}"
+        />
+      </figure>
+    `);
   });
 }
 
