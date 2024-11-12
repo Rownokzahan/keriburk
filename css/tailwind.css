@@ -17,6 +17,31 @@
   @apply mb-12 md:mb-16 lg:mb-20;
 }
 
+/* Navbar styles */
+
+.sticky-navbar {
+  -webkit-animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+  animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Sidebar styles */
 .sidebar {
   @apply fixed top-0 left-0 w-64 h-screen bg-ui-white shadow-lg overflow-y-auto transform transition-transform duration-300 z-50;
