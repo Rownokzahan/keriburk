@@ -59,6 +59,7 @@ module.exports = {
       transitionProperty: {
         height: "height",
         spacing: "margin, padding",
+        border: "border"
       },
     },
   },
