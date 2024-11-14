@@ -20,15 +20,9 @@
 /* Navbar styles */
 
 .sticky-navbar {
+  @apply fixed top-0 left-0 w-full z-40 transition-all duration-300;
   -webkit-animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  left: 0;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 
 @keyframes fadeInDown {
