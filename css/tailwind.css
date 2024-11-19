@@ -54,6 +54,10 @@
   @apply fixed inset-0 bg-ui-white bg-opacity-50 z-40;
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 0 !important;
+}
+
 /* Hero slider dots styles */
 #hero-slider .slick-dots,
 #offer-desktop-slider .slick-dots {

@@ -157,110 +157,76 @@
     <main>
       <!-- Hero slider section start -->
       <section
-        class="overflow-hidden h-[calc(100vh-64px)] md:h-[calc(100vh-66px)]"
+        id="hero-slider"
+        class="h-[calc(100vh-64px)] md:h-[calc(100vh-66px)] w-full overflow-hidden"
       >
-        <div id="hero-slider">
-          <!-- Slider 1 -->
-          <div>
-            <div
-              class="h-[calc(100vh-64px)] md:h-[calc(100vh-66px)] overflow-hidden"
-            >
-              <!-- Mobile Image - visible on small screens -->
-              <figure class="w-full h-full md:hidden">
-                <img
-                  src="assets/images/banner/banner-1-sm.jpg"
-                  alt="Banner 1"
-                  class="w-full h-full object-fit"
-                />
-              </figure>
+        <!-- Slide 1 -->
+        <div>
+          <picture>
+            <!-- Large image -->
+            <source
+              srcset="assets/images/banner/banner-1-lg.jpg"
+              media="(min-width: 1024px)"
+            />
+            <!-- Medium image -->
+            <source
+              srcset="assets/images/banner/banner-1-md.jpg"
+              media="(min-width: 768px)"
+            />
+            <!-- Default small image -->
+            <img
+              src="assets/images/banner/banner-1-sm.jpg"
+              alt="Banner 1"
+              loading="eager"
+              class="h-[calc(100vh-64px)] md:h-[calc(100vh-66px)] w-full object-cover"
+            />
+          </picture>
+        </div>
 
-              <!-- Tablet Image - visible on medium screens -->
-              <figure class="w-full h-full hidden md:block lg:hidden">
-                <img
-                  src="assets/images/banner/banner-1-md.jpg"
-                  alt="Banner 1"
-                  class="w-full h-full object-cover"
-                />
-              </figure>
+        <!-- Slide 2 -->
+        <div>
+          <picture>
+            <!-- Large image -->
+            <source
+              srcset="assets/images/banner/banner-2-lg.jpg"
+              media="(min-width: 1024px)"
+            />
+            <!-- Medium image -->
+            <source
+              srcset="assets/images/banner/banner-2-md.jpg"
+              media="(min-width: 768px)"
+            />
+            <!-- Default small image -->
+            <img
+              src="assets/images/banner/banner-2-sm.jpg"
+              alt="Banner 1"
+              loading="eager"
+              class="h-[calc(100vh-64px)] md:h-[calc(100vh-66px)] w-full object-cover"
+            />
+          </picture>
+        </div>
 
-              <!-- Larger Image - visible on large screens -->
-              <figure class="w-full h-full hidden lg:block">
-                <img
-                  src="assets/images/banner/banner-1-lg.jpg"
-                  alt="Banner 1"
-                  class="w-full h-full object-cover"
-                />
-              </figure>
-            </div>
-          </div>
-
-          <!-- Slider 2 -->
-          <div>
-            <div
-              class="h-[calc(100vh-64px)] md:h-[calc(100vh-66px)] overflow-hidden"
-            >
-              <!-- Mobile Image - visible on small screens -->
-              <figure class="w-full h-full md:hidden">
-                <img
-                  src="assets/images/banner/banner-2-sm.jpg"
-                  alt="Banner 1"
-                  class="w-full h-full object-fit"
-                />
-              </figure>
-
-              <!-- Tablet Image - visible on medium screens -->
-              <figure class="w-full h-full hidden md:block lg:hidden">
-                <img
-                  src="assets/images/banner/banner-2-md.jpg"
-                  alt="Banner 1"
-                  class="w-full h-full object-cover"
-                />
-              </figure>
-
-              <!-- Larger Image - visible on large screens -->
-              <figure class="w-full h-full hidden lg:block">
-                <img
-                  src="assets/images/banner/banner-2-lg.jpg"
-                  alt="Banner 1"
-                  class="w-full h-full object-cover"
-                />
-              </figure>
-            </div>
-          </div>
-
-          <!-- Slider 3 -->
-          <div>
-            <div
-              class="h-[calc(100vh-64px)] md:h-[calc(100vh-66px)] overflow-hidden"
-            >
-              <!-- Mobile Image - visible on small screens -->
-              <figure class="w-full h-full md:hidden">
-                <img
-                  src="assets/images/banner/banner-3-sm.jpg"
-                  alt="Banner 1"
-                  class="w-full h-full object-fit"
-                />
-              </figure>
-
-              <!-- Tablet Image - visible on medium screens -->
-              <figure class="w-full h-full hidden md:block lg:hidden">
-                <img
-                  src="assets/images/banner/banner-3-md.jpg"
-                  alt="Banner 1"
-                  class="w-full h-full object-cover"
-                />
-              </figure>
-
-              <!-- Larger Image - visible on large screens -->
-              <figure class="w-full h-full hidden lg:block">
-                <img
-                  src="assets/images/banner/banner-3-lg.jpg"
-                  alt="Banner 1"
-                  class="w-full h-full object-cover"
-                />
-              </figure>
-            </div>
-          </div>
+        <!-- Slide 3 -->
+        <div>
+          <picture>
+            <!-- Large image -->
+            <source
+              srcset="assets/images/banner/banner-3-lg.jpg"
+              media="(min-width: 1024px)"
+            />
+            <!-- Medium image -->
+            <source
+              srcset="assets/images/banner/banner-3-md.jpg"
+              media="(min-width: 768px)"
+            />
+            <!-- Default small image -->
+            <img
+              src="assets/images/banner/banner-3-sm.jpg"
+              alt="Banner 1"
+              loading="eager"
+              class="h-[calc(100vh-64px)] md:h-[calc(100vh-66px)] w-full object-cover"
+            />
+          </picture>
         </div>
       </section>
       <!-- Hero slider section end -->
@@ -1016,7 +982,7 @@
                 <img
                   alt="Keriburk Logo"
                   class="w-full"
-                  src="assets/images/logo.png"
+                  src="assets/images/logo-white.svg"
                 />
               </a>
             </div>
