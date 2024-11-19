@@ -11,11 +11,22 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+        fadeInDown: "fadeInDown 700ms ease-in-out 1",
         "infinite-slider-left": "infiniteSliderLeft 12s linear infinite",
         "infinite-slider-right": "infiniteSliderRight 12s linear infinite",
         "spin-slow": "spin-slow 60s linear infinite",
       },
       keyframes: {
+        fadeInDown: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
         infiniteSliderLeft: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(calc(-80px * 7))" },
@@ -59,7 +70,7 @@ module.exports = {
       transitionProperty: {
         height: "height",
         spacing: "margin, padding",
-        border: "border"
+        border: "border",
       },
     },
   },
