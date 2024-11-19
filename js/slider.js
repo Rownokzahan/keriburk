@@ -6,8 +6,8 @@ $(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: true,
+    autoplaySpeed: 3000,
+    useTransform: false, // Disables CSS transforms to fix flickering
   });
 
   $("#offer-desktop-slider").slick({
@@ -17,8 +17,9 @@ $(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2500,
     pauseOnHover: true,
+    useTransform: false, // Disables CSS transforms to fix flickering
   });
 
   $("#recipe-slider").slick({
