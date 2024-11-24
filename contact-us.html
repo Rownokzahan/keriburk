@@ -159,1219 +159,158 @@
       </div>
     </header>
 
-    <main>
-      <!-- Hero slider section start -->
-      <section
-        id="hero-slider"
-        class="h-[calc(100vh-70px)] md:h-[calc(100vh-80px)] w-full overflow-hidden"
+    <main class="min-h-[calc(100vh-70px)] md:min-h-[calc(100vh-80px)]">
+      <div
+        class="bg-gray-200 h-72 flex justify-center items-center bg-cover bg-center"
+        style="background-image: url(/assets//images/background/footer-bg.jpg)"
       >
-        <!-- Slide 1 -->
-        <div>
-          <picture>
-            <!-- Large image -->
-            <source
-              srcset="assets/images/banner/banner-1-lg.jpg"
-              media="(min-width: 1024px)"
-            />
-            <!-- Medium image -->
-            <source
-              srcset="assets/images/banner/banner-1-md.jpg"
-              media="(min-width: 768px)"
-            />
-            <!-- Default small image -->
-            <img
-              src="assets/images/banner/banner-1-sm.jpg"
-              alt="Banner 1"
-              loading="eager"
-              class="h-[calc(100vh-70px)] md:h-[calc(100vh-80px)] w-full object-cover"
-            />
-          </picture>
-        </div>
+        <h2 class="text-4xl text-center font-bold text-white">Contact Us</h2>
+      </div>
 
-        <!-- Slide 2 -->
-        <div>
-          <picture>
-            <!-- Large image -->
-            <source
-              srcset="assets/images/banner/banner-2-lg.jpg"
-              media="(min-width: 1024px)"
-            />
-            <!-- Medium image -->
-            <source
-              srcset="assets/images/banner/banner-2-md.jpg"
-              media="(min-width: 768px)"
-            />
-            <!-- Default small image -->
-            <img
-              src="assets/images/banner/banner-2-sm.jpg"
-              alt="Banner 1"
-              loading="eager"
-              class="h-[calc(100vh-70px)] md:h-[calc(100vh-80px)] w-full object-cover"
-            />
-          </picture>
-        </div>
-
-        <!-- Slide 3 -->
-        <div>
-          <picture>
-            <!-- Large image -->
-            <source
-              srcset="assets/images/banner/banner-3-lg.jpg"
-              media="(min-width: 1024px)"
-            />
-            <!-- Medium image -->
-            <source
-              srcset="assets/images/banner/banner-3-md.jpg"
-              media="(min-width: 768px)"
-            />
-            <!-- Default small image -->
-            <img
-              src="assets/images/banner/banner-3-sm.jpg"
-              alt="Banner 1"
-              loading="eager"
-              class="h-[calc(100vh-70px)] md:h-[calc(100vh-80px)] w-full object-cover"
-            />
-          </picture>
-        </div>
-      </section>
-      <!-- Hero slider section end -->
-
-      <!-- Offer banners start -->
-      <!-- Desktop Offer Banners Section -->
-      <section class="hidden sm:block">
-        <!-- Desktop Offer Slider -->
-        <div class="h-[50vh] overflow-hidden">
-          <div id="offer-desktop-slider">
-            <!-- Offer Slide 1 -->
-            <div>
-              <div
-                class="h-[50vh] container bg-cover bg-center relative flex"
-                style="
-                  background-image: url('assets/images/background/red-bg.png');
-                "
-              >
-                <div
-                  class="h-min w-full self-center flex justify-between items-center"
-                >
-                  <div class="sm:w-[40%] space-y-8">
-                    <h2
-                      class="text-4xl lg:text-5xl xl:text-6xl font-semibold uppercase text-ui-white text-center sm:text-left"
-                    >
-                      Buy More Save More!
-                    </h2>
-                    <a
-                      class="w-max mx-auto sm:ms-0 sm:me-auto text-ui-white flex items-center"
-                      href="https://www.instagram.com/keriburkdotcom/"
-                    >
-                      <i class="bi bi-instagram"></i>
-                      <span class="font-bold text-lg ms-2 me-1">f</span>
-                      <span>/keriburkdotcom</span>
-                    </a>
-                  </div>
-                  <figure class="sm:h-[42vh] w-auto sm:me-12">
-                    <img
-                      alt="products"
-                      loading="lazy"
-                      class="h-full object-contain"
-                      src="assets/images/offer-1-packet.png"
-                    />
-                  </figure>
-                </div>
-                <!-- Discount Ribbon -->
-                <div class="absolute top-0 right-6">
-                  <div class="w-24 relative">
-                    <img
-                      alt="Ribbon icon"
-                      loading="lazy"
-                      src="assets/icons/ribbon.svg"
-                    />
-                    <h5
-                      class="absolute bottom-9 left-1/2 -translate-x-1/2 font-bold text-3xl text-center text-ui-red uppercase"
-                    >
-                      20% Off
-                    </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Offer Slide 2 -->
-            <div>
-              <div
-                class="h-[50vh] container bg-cover bg-center flex"
-                style="
-                  background-image: url('assets/images/background/red-bg.png');
-                "
-              >
-                <div
-                  class="h-min w-full self-center flex justify-between items-center"
-                >
-                  <div class="lg:w-[40%] space-y-2 text-ui-white">
-                    <h4 class="uppercase text-2xl font-semibold">
-                      Buy Your Favourites,
-                    </h4>
-                    <h2
-                      class="text-4xl lg:text-5xl font-bold uppercase text-left"
-                    >
-                      Enjoy 20% Off All On Items!
-                    </h2>
-                  </div>
-                  <figure class="h-[42vh] w-auto">
-                    <img
-                      alt="products"
-                      loading="lazy"
-                      class="h-full object-contain"
-                      src="assets/images/offer-2-packet.png"
-                    />
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Desktop Offer Banner -->
-        <div
-          class="h-screen sm:h-[50vh] container flex items-center overflow-hidden"
-        >
-          <div
-            class="w-full flex flex-col sm:flex-row items-center justify-between"
-          >
-            <div class="w-max relative h-full">
-              <figure class="h-[50vh] aspect-square">
-                <img
-                  alt="Product Showcase Image"
-                  class="w-full h-full product-showcase-image"
-                  src="assets/images/product-showcase/Achari-Fish-Tikka.png"
-                />
-              </figure>
-              <div
-                class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              >
-                <div class="w-[5000px] h-[5000px] animate-spin-slow">
-                  <img
-                    alt="swirl background"
-                    class="w-full h-full rounded-full"
-                    src="assets/icons/swirl.svg"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="max-w-xl flex-1 space-y-6 flex flex-col items-end">
-              <h3
-                class="text-4xl sm:text-5xl text-ui-white font-bold text-center"
-              >
-                Get Free Delivery On Orders Above 500 Tk
-              </h3>
-              <a
-                class="w-max mx-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
-                href="/"
-                ><span>Go to Products</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Mobile Offer Banners Section -->
-      <section class="sm:hidden h-screen w-full relative">
-        <!-- First Mobile Offer Banner -->
-        <div class="mobile-offer-banner">
-          <div
-            class="h-screen sm:h-[50vh] container bg-cover bg-center relative flex"
-            style="background-image: url('assets/images/background/red-bg.png')"
-          >
-            <div
-              class="h-min self-center flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-8 sm:gap-0"
-            >
-              <div class="sm:w-[40%] space-y-6">
-                <h2 class="text-5xl font-semibold text-ui-white text-center">
-                  Buy More Save More!
-                </h2>
-                <a
-                  class="w-max mx-auto text-ui-white flex items-center"
-                  href="https://www.instagram.com/keriburkdotcom/"
-                >
-                  <i class="bi bi-instagram"></i>
-                  <span class="font-bold text-lg ms-2 me-1">f</span>
-                  <span>/keriburkdotcom</span>
-                </a>
-              </div>
-              <figure class="sm:h-[42vh] w-auto sm:me-12">
-                <img
-                  alt="products"
-                  loading="lazy"
-                  class="w-full h-full"
-                  src="assets/images/offer-1-packet.png"
-                />
-              </figure>
-            </div>
-            <!-- Discount Ribbon -->
-            <div class="absolute top-0 right-6">
-              <div class="w-24 relative">
-                <img
-                  alt="Ribbon icon"
-                  loading="lazy"
-                  src="assets/icons/ribbon.svg"
-                />
-                <h5
-                  class="absolute bottom-9 left-1/2 -translate-x-1/2 font-bold text-3xl text-center text-ui-red uppercase"
-                >
-                  20% Off
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Second Mobile Offer Banner -->
-        <div class="mobile-offer-banner active">
-          <div
-            class="h-screen sm:h-[50vh] container flex items-center overflow-hidden"
-          >
-            <div
-              class="w-full flex flex-col sm:flex-row items-center justify-between"
-            >
-              <div class="w-max relative h-full">
-                <figure class="h-[50vh] aspect-square">
-                  <img
-                    alt="Product Showcase Image"
-                    class="w-full h-full product-showcase-image"
-                    src="assets/images/product-showcase/Achari-Fish-Tikka.png"
-                  />
-                </figure>
-                <div
-                  class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                >
-                  <div class="w-[5000px] h-[5000px] animate-spin-slow">
-                    <img
-                      alt="swirl background"
-                      class="w-full h-full rounded-full"
-                      src="assets/icons/swirl.svg"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="max-w-xl flex-1 space-y-6 flex flex-col items-end">
-                <h3
-                  class="text-4xl sm:text-5xl text-ui-white font-bold text-center"
-                >
-                  Get Free Delivery On Orders Above 500 Tk
-                </h3>
-                <a
-                  class="w-max mx-auto border-b-2 text-xl text-ui-white flex items-center gap-2"
-                  href="https://www.keriburk.com/products-grid"
-                  ><span>Go to Products</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Third Mobile Offer Banner -->
-        <div class="mobile-offer-banner">
-          <div
-            class="h-screen sm:h-[50vh] container bg-cover bg-center relative flex"
-            style="background-image: url('assets/images/background/red-bg.png')"
-          >
-            <div
-              class="h-min self-center flex flex-col-reverse items-center gap-8"
-            >
-              <div class="sm:w-[40%] space-y-2 text-ui-white text-center">
-                <h4 class="uppercase text-2xl font-semibold">
-                  Buy Your Favourites,
-                </h4>
-                <h2 class="text-5xl font-bold uppercase">
-                  Enjoy 20% Off All On Items!
-                </h2>
-              </div>
-
-              <figure class="sm:h-[42vh] w-auto">
-                <img
-                  alt="products"
-                  loading="lazy"
-                  class="w-full h-full"
-                  src="assets/images/offer-2-packet.png"
-                />
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Offer banners end -->
-
-      <!-- What to cook section start -->
-      <section
-        class="h-screen container bg-ui-yellow flex flex-col items-center justify-center relative z-0 overflow-hidden"
+      <div
+        class="mx-auto max-w-[1240px] my-20 container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center"
       >
-        <!-- Section Title -->
-        <h3
-          class="mb-8 lg:mb-12 text-4xl sm:text-5xl font-extrabold uppercase text-center"
-        >
-          What To Cook <br />
-          This Week
-        </h3>
-
-        <!-- Recipe Slider -->
-        <div class="w-full h-auto overflow-hidden relative">
-          <div id="recipe-slider" class="relative">
-            <!-- Recipe Card 1 -->
-            <div>
-              <div class="px-1 lg:px-4 pb-2 rounded-2xl">
-                <div
-                  class="px-5 py-8 bg-ui-green-light rounded-3xl relative mt-8"
-                  style="box-shadow: 0px 14px 12px -10px rgba(0, 0, 0, 0.12)"
-                >
-                  <!-- Logo Image -->
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2">
-                    <img
-                      alt="logo"
-                      class="w-24 mx-auto"
-                      src="assets/images/logo.png"
-                    />
-                  </div>
-
-                  <!-- Recipe Title -->
-                  <h4
-                    class="text-center font-semibold text-lg mb-3 text-ui-white"
-                  >
-                    Sindhi Mutton
-                  </h4>
-                  <figure class="w-full h-[42vh] relative cursor-pointer">
-                    <!-- Recipe Image -->
-                    <img
-                      alt="Sindhi Mutton"
-                      loading="lazy"
-                      src="assets/images/what-to-cook/Sindhi-Mutton-Biryani.jpg"
-                      class="w-full h-full object-cover"
-                    />
-
-                    <!-- Play Button for Video Modal -->
-                    <button
-                      onclick="openRecipeModal({title:'Sindhi Mutton', videoUrl:`https://www.youtube.com/embed/e3fp3yNP-98`})"
-                      class="w-14 h-14 rounded-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-ui-black/20 flex items-center justify-center"
-                    >
-                      <i
-                        class="bi bi-play-fill text-4xl text-ui-white ps-1"
-                      ></i>
-                    </button>
-                  </figure>
-                </div>
-              </div>
-            </div>
-
-            <!-- Recipe Card 2 -->
-            <div>
-              <div class="px-1 lg:px-4 pb-2 rounded-2xl">
-                <div
-                  class="px-5 py-8 bg-ui-green-light rounded-3xl relative mt-8"
-                  style="box-shadow: 0px 14px 12px -10px rgba(0, 0, 0, 0.12)"
-                >
-                  <!-- Logo Image -->
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2">
-                    <img
-                      alt="logo"
-                      class="w-24 mx-auto"
-                      src="assets/images/logo.png"
-                    />
-                  </div>
-
-                  <!-- Recipe Title -->
-                  <h4
-                    class="text-center font-semibold text-lg mb-3 text-ui-white"
-                  >
-                    Lahori Charga
-                  </h4>
-                  <figure class="w-full h-[42vh] relative cursor-pointer">
-                    <!-- Recipe Image -->
-                    <img
-                      alt="Lahori Charga"
-                      loading="lazy"
-                      src="assets/images/what-to-cook/Lahori-Chargha.jpg"
-                      class="w-full h-full object-cover"
-                    />
-
-                    <!-- Play Button for Video Modal -->
-                    <button
-                      onclick="openRecipeModal({title:'Lahori Charga', videoUrl:`https://www.youtube.com/embed/HYY663qxCBg`})"
-                      class="w-14 h-14 rounded-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-ui-black/20 flex items-center justify-center"
-                    >
-                      <i
-                        class="bi bi-play-fill text-4xl text-ui-white ps-1"
-                      ></i>
-                    </button>
-                  </figure>
-                </div>
-              </div>
-            </div>
-
-            <!-- Recipe Card 3 -->
-            <div>
-              <div class="px-1 lg:px-4 pb-2 rounded-2xl">
-                <div
-                  class="px-5 py-8 bg-ui-green-light rounded-3xl relative mt-8"
-                  style="box-shadow: 0px 14px 12px -10px rgba(0, 0, 0, 0.12)"
-                >
-                  <!-- Logo Image -->
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2">
-                    <img
-                      alt="logo"
-                      class="w-24 mx-auto"
-                      src="assets/images/logo.png"
-                    />
-                  </div>
-
-                  <!-- Recipe Title -->
-                  <h4
-                    class="text-center font-semibold text-lg mb-3 text-ui-white"
-                  >
-                    Bombay Chicken
-                  </h4>
-                  <figure class="w-full h-[42vh] relative cursor-pointer">
-                    <!-- Recipe Image -->
-                    <img
-                      alt="Bombay Chicken"
-                      loading="lazy"
-                      src="assets/images/what-to-cook/Bombay-Chicken-Biryani.jpg"
-                      class="w-full h-full object-cover"
-                    />
-
-                    <!-- Play Button for Video Modal -->
-                    <button
-                      onclick="openRecipeModal({title:'Bombay Chicken', videoUrl:`https://www.youtube.com/embed/DVVR2wzFNAk`})"
-                      class="w-14 h-14 rounded-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-ui-black/20 flex items-center justify-center"
-                    >
-                      <i
-                        class="bi bi-play-fill text-4xl text-ui-white ps-1"
-                      ></i>
-                    </button>
-                  </figure>
-                </div>
-              </div>
-            </div>
-
-            <!-- Recipe Card 4 -->
-            <div>
-              <div class="px-1 lg:px-4 pb-2 rounded-2xl">
-                <div
-                  class="px-5 py-8 bg-ui-green-light rounded-3xl relative mt-8"
-                  style="box-shadow: 0px 14px 12px -10px rgba(0, 0, 0, 0.12)"
-                >
-                  <!-- Logo Image -->
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2">
-                    <img
-                      alt="logo"
-                      class="w-24 mx-auto"
-                      src="assets/images/logo.png"
-                    />
-                  </div>
-
-                  <!-- Recipe Title -->
-                  <h4
-                    class="text-center font-semibold text-lg mb-3 text-ui-white"
-                  >
-                    Achari Fish Tikka
-                  </h4>
-                  <figure class="w-full h-[42vh] relative cursor-pointer">
-                    <!-- Recipe Image -->
-                    <img
-                      alt="Achari Fish Tikka"
-                      loading="lazy"
-                      src="assets/images/what-to-cook/Achari-Fish-Tikka.jpg"
-                      class="w-full h-full object-cover"
-                    />
-
-                    <!-- Play Button for Video Modal -->
-                    <button
-                      onclick="openRecipeModal({title:'Achari Fish Tikka', videoUrl:`https://www.youtube.com/embed/sAuf7FYlQLw`})"
-                      class="w-14 h-14 rounded-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-ui-black/20 flex items-center justify-center"
-                    >
-                      <i
-                        class="bi bi-play-fill text-4xl text-ui-white ps-1"
-                      ></i>
-                    </button>
-                  </figure>
-                </div>
-              </div>
-            </div>
-
-            <!-- Recipe Card 5 -->
-            <div>
-              <div class="px-1 lg:px-4 pb-2 rounded-2xl">
-                <div
-                  class="px-5 py-8 bg-ui-green-light rounded-3xl relative mt-8"
-                  style="box-shadow: 0px 14px 12px -10px rgba(0, 0, 0, 0.12)"
-                >
-                  <!-- Logo Image -->
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2">
-                    <img
-                      alt="logo"
-                      class="w-24 mx-auto"
-                      src="assets/images/logo.png"
-                    />
-                  </div>
-
-                  <!-- Recipe Title -->
-                  <h4
-                    class="text-center font-semibold text-lg mb-3 text-ui-white"
-                  >
-                    Haleem
-                  </h4>
-                  <figure class="w-full h-[42vh] relative cursor-pointer">
-                    <!-- Recipe Image -->
-                    <img
-                      alt="Haleem"
-                      loading="lazy"
-                      src="assets/images/what-to-cook/Hyderabadi-Haleem mix.jpg"
-                      class="w-full h-full object-cover"
-                    />
-
-                    <!-- Play Button for Video Modal -->
-                    <button
-                      onclick="openRecipeModal({title:'Haleem', videoUrl:`https://www.youtube.com/embed/OnRxccx6ppE`})"
-                      class="w-14 h-14 rounded-full absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-ui-black/20 flex items-center justify-center"
-                    >
-                      <i
-                        class="bi bi-play-fill text-4xl text-ui-white ps-1"
-                      ></i>
-                    </button>
-                  </figure>
-                </div>
-              </div>
-            </div>
+        <div class="py-8 border rounded-md shadow-md relative">
+          <div
+            class="w-max mx-auto mb-4 p-4 rounded-full text-5xl bg-ui-green text-white"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.9381 8H21C22.1046 8 23 8.89543 23 10V14C23 15.1046 22.1046 16 21 16H19.9381C19.446 19.9463 16.0796 23 12 23V21C15.3137 21 18 18.3137 18 15V9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9V16H3C1.89543 16 1 15.1046 1 14V10C1 8.89543 1.89543 8 3 8H4.06189C4.55399 4.05369 7.92038 1 12 1C16.0796 1 19.446 4.05369 19.9381 8ZM3 10V14H4V10H3ZM20 10V14H21V10H20ZM7.75944 15.7849L8.81958 14.0887C9.74161 14.6662 10.8318 15 12 15C13.1682 15 14.2584 14.6662 15.1804 14.0887L16.2406 15.7849C15.0112 16.5549 13.5576 17 12 17C10.4424 17 8.98882 16.5549 7.75944 15.7849Z"
+              ></path>
+            </svg>
           </div>
 
-          <!-- Navigation Buttons for Recipe Slider -->
-          <button
-            id="recipe-slider-next"
-            class="absolute top-1/2 transform -translate-y-1/2 right-0 z-20 w-10 h-10 rounded-full bg-ui-white flex items-center justify-center"
-          >
-            <i class="bi bi-arrow-right-short text-4xl"></i>
-          </button>
+          <div class="px-8">
+            <h3
+              class="mb-2 text-xl font-bold capitalize h-[56px] flex items-center justify-center"
+            >
+              Talk to a member of our Sales Team
+            </h3>
+            <p>We'll help you with query about product or orders.</p>
+          </div>
 
-          <button
-            id="recipe-slider-prev"
-            class="absolute top-1/2 transform -translate-y-1/2 left-0 z-20 w-10 h-10 rounded-full bg-ui-white flex items-center justify-center"
-          >
-            <i class="bi bi-arrow-left-short text-4xl"></i>
-          </button>
+          <div class="px-8 mt-4 grid items-center gap-2">
+            <a
+              class="py-2 px-4 border border-ui-green text-ui-green flex-1 font-semibold"
+              href="https://wa.me/8801332811950"
+              target="_blank"
+            >
+              <i class="bi bi-whatsapp me-1"></i>
+              Whatsapp Us
+            </a>
+            <a
+              class="py-2 px-4 border border-ui-green text-ui-white bg-ui-green flex-1 font-semibold"
+              href="mailto:care@keriburk.com"
+            >
+              <i class="bi bi-envelope me-1"></i>
+              Email Us
+            </a>
+          </div>
         </div>
 
-        <!-- Background Pattern Image -->
-        <img
-          src="assets/images/background/pattern-2.png"
-          alt="Background pattern"
-          class="w-full h-full mix-blend-overlay absolute inset-0 scale-[3] md:scale-[1.5] object-contain -z-10"
-        />
-      </section>
+        <div class="py-8 border rounded-md shadow-md relative">
+          <div
+            class="w-max mx-auto mb-4 p-4 rounded-full text-5xl bg-ui-green text-white"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.96456 18C8.72194 19.6961 7.26324 21 5.5 21C3.73676 21 2.27806 19.6961 2.03544 18H1V6C1 5.44772 1.44772 5 2 5H16C16.5523 5 17 5.44772 17 6V8H20L23 12.0557V18H20.9646C20.7219 19.6961 19.2632 21 17.5 21C15.7368 21 14.2781 19.6961 14.0354 18H8.96456ZM15 7H3V15.0505C3.63526 14.4022 4.52066 14 5.5 14C6.8962 14 8.10145 14.8175 8.66318 16H14.3368C14.5045 15.647 14.7296 15.3264 15 15.0505V7ZM17 13H21V12.715L18.9917 10H17V13ZM17.5 19C18.1531 19 18.7087 18.5826 18.9146 18C18.9699 17.8436 19 17.6753 19 17.5C19 16.6716 18.3284 16 17.5 16C16.6716 16 16 16.6716 16 17.5C16 17.6753 16.0301 17.8436 16.0854 18C16.2913 18.5826 16.8469 19 17.5 19ZM7 17.5C7 16.6716 6.32843 16 5.5 16C4.67157 16 4 16.6716 4 17.5C4 17.6753 4.03008 17.8436 4.08535 18C4.29127 18.5826 4.84689 19 5.5 19C6.15311 19 6.70873 18.5826 6.91465 18C6.96992 17.8436 7 17.6753 7 17.5Z"
+              ></path>
+            </svg>
+          </div>
 
-      <!-- Recipe Modal -->
-      <div id="recipe-modal" class="fixed z-50 inset-0 bg-ui-black/70 hidden">
-        <div
-          class="w-full md:w-96 mx-2 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-        >
-          <div class="bg-ui-white relative">
-            <div class="p-4 flex items-center justify-between">
-              <!-- Modal Title -->
-              <h3
-                id="recipe-modal-title"
-                class="font-extrabold text-center text-ui-green uppercase text-lg"
-              >
-                Panjabi Fish Fry
-              </h3>
+          <div class="px-8">
+            <h3
+              class="mb-2 text-xl font-bold capitalize h-[56px] flex items-center justify-center"
+            >
+              Become a Distributer
+            </h3>
+            <p>We'll help you with query about product or orders.</p>
+          </div>
 
-              <!-- Close Button -->
-              <button onclick="closeRecipeModal()">
-                <i class="bi bi-x-lg"></i>
-              </button>
-            </div>
+          <div class="px-8 mt-4 grid items-center gap-2">
+            <a
+              class="py-2 px-4 border border-ui-green text-ui-green flex-1 font-semibold"
+              href="https://wa.me/8801332811950"
+              target="_blank"
+            >
+              <i class="bi bi-whatsapp me-1"></i>
+              Whatsapp Us
+            </a>
+            <a
+              class="py-2 px-4 border border-ui-green text-ui-white bg-ui-green flex-1 font-semibold"
+              href="mailto:care@keriburk.com"
+            >
+              <i class="bi bi-envelope me-1"></i>
+              Email Us
+            </a>
+          </div>
+        </div>
 
-            <!-- Video Iframe -->
-            <div className="w-full">
-              <iframe
-                id="recipe-modal-iframe"
-                width="100%"
-                height="500"
-                src="https://www.youtube.com/embed/Xrea_9uMOuQ"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
-            </div>
+        <div class="py-8 border rounded-md shadow-md relative">
+          <div
+            class="w-max mx-auto mb-4 p-4 rounded-full text-5xl bg-ui-green text-white"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="px-8">
+            <h3
+              class="mb-2 text-xl font-bold capitalize h-[56px] flex items-center justify-center"
+            >
+              Export Enquiries
+            </h3>
+            <p>We'll help you with query related to Export of our products.</p>
+          </div>
+
+          <div class="px-8 mt-4 grid items-center gap-2">
+            <a
+              class="py-2 px-4 border border-ui-green text-ui-green flex-1 font-semibold"
+              href="https://wa.me/8801332811950"
+              target="_blank"
+            >
+              <i class="bi bi-whatsapp me-1"></i>
+              Whatsapp Us
+            </a>
+            <a
+              class="py-2 px-4 border border-ui-green text-ui-white bg-ui-green flex-1 font-semibold"
+              href="mailto:care@keriburk.com"
+            >
+              <i class="bi bi-envelope me-1"></i>
+              Email Us
+            </a>
           </div>
         </div>
       </div>
-      <!-- What to cook section end -->
-
-      <!-- Promises section start -->
-      <section
-        class="min-h-screen sm:h-screen container bg-cover xl:bg-right flex items-center"
-        style="
-          background-image: url('assets/images/background/promises-bg.png');
-        "
-      >
-        <div class="py-10 sm:py-14">
-          <!-- Logo and Title Section for Desktop -->
-          <div class="hidden sm:flex flex-col">
-            <figure>
-              <img alt="logo" class="w-24" src="assets/images/logo.png" />
-            </figure>
-
-            <h3
-              class="mt-1 mb-10 text-4xl sm:text-5xl text-center sm:text-left font-extrabold uppercase text-ui-green"
-              style="
-                text-shadow: 1px -1px 0px #ffffff, -1px -1px 0px #ffffff,
-                  -1px 1px 0px #ffffff, 1px 1px 0px #ffffff;
-              "
-            >
-              Promises
-            </h3>
-          </div>
-
-          <!-- Logo and Title Section for Mobile -->
-          <div
-            class="sm:hidden flex flex-col items-center justify-c gap-2 mb-8"
-          >
-            <figure>
-              <img
-                alt="logo"
-                class="w-[85px] mx-auto"
-                src="assets/images/logo.png"
-              />
-            </figure>
-
-            <h3
-              class="text-4xl sm:text-5xl text-center font-extrabold uppercase text-ui-green"
-              style="
-                text-shadow: 1px -1px 0px #ffffff, -1px -1px 0px #ffffff,
-                  -1px 1px 0px #ffffff, 1px 1px 0px #ffffff;
-              "
-            >
-              Promises
-            </h3>
-          </div>
-
-          <!-- Promises Features -->
-          <div class="sm:w-max grid grid-cols-2 gap-y-4 gap-x-2 sm:gap-12">
-            <!-- Promise Item: Zero MSG -->
-            <div
-              class="flex flex-col sm:flex-row sm:justify-center items-center gap-2 sm:gap-4"
-            >
-              <img
-                src="assets/icons/promises/zero-msg.svg"
-                alt="Zero MSG"
-                class="w-12 sm:w-14 aspect-square rounded-full"
-              />
-              <div
-                class="w-full sm:max-w-52 text-center sm:text-left uppercase"
-              >
-                <h4 class="font-bold text-sm">Zero MSG</h4>
-                <p class="text-xs">Pure flavors, no compromises</p>
-              </div>
-            </div>
-
-            <!-- Promise Item: Flavor-locking packaging -->
-            <div
-              class="flex flex-col sm:flex-row sm:justify-center items-center gap-2 sm:gap-4"
-            >
-              <img
-                src="assets/icons/promises/flavor-locking-packaging.svg"
-                alt="Flavor-locking packaging"
-                class="w-12 sm:w-14 aspect-square rounded-full"
-              />
-              <div
-                class="w-full sm:max-w-52 text-center sm:text-left uppercase"
-              >
-                <h4 class="font-bold text-sm">Flavor-locking packaging</h4>
-                <p class="text-xs">A taste that stays fresh, always.</p>
-              </div>
-            </div>
-
-            <!-- Promise Item: No added color -->
-            <div
-              class="flex flex-col sm:flex-row sm:justify-center items-center gap-2 sm:gap-4"
-            >
-              <img
-                src="assets/icons/promises/no-added-color.svg"
-                alt="No added color"
-                class="w-12 sm:w-14 aspect-square rounded-full"
-              />
-              <div
-                class="w-full sm:max-w-52 text-center sm:text-left uppercase"
-              >
-                <h4 class="font-bold text-sm">No added color</h4>
-                <p class="text-xs">Natural, vibrant, and true to form.</p>
-              </div>
-            </div>
-
-            <!-- Promise Item: No preservative -->
-            <div
-              class="flex flex-col sm:flex-row sm:justify-center items-center gap-2 sm:gap-4"
-            >
-              <img
-                src="assets/icons/promises/no-preservative.svg"
-                alt="No preservative"
-                class="w-12 sm:w-14 aspect-square rounded-full"
-              />
-              <div
-                class="w-full sm:max-w-52 text-center sm:text-left uppercase"
-              >
-                <h4 class="font-bold text-sm">No preservative</h4>
-                <p class="text-xs">Freshness you can trust, every time.</p>
-              </div>
-            </div>
-
-            <!-- Promise Item: ISO 9001 certified -->
-            <div
-              class="flex flex-col sm:flex-row sm:justify-center items-center gap-2 sm:gap-4"
-            >
-              <img
-                src="assets/icons/promises/iso-certified.svg"
-                alt="ISO 9001 certified"
-                class="w-12 sm:w-14 aspect-square rounded-full"
-              />
-              <div
-                class="w-full sm:max-w-52 text-center sm:text-left uppercase"
-              >
-                <h4 class="font-bold text-sm">ISO 9001 certified</h4>
-                <p class="text-xs">Ensuring excellence in every detail.</p>
-              </div>
-            </div>
-
-            <!-- Promise Item: BSTI approved -->
-            <div
-              class="flex flex-col sm:flex-row sm:justify-center items-center gap-2 sm:gap-4"
-            >
-              <img
-                src="assets/icons/promises/bsti-approved.svg"
-                alt="BSTI approved"
-                class="w-12 sm:w-14 aspect-square rounded-full"
-              />
-              <div
-                class="w-full sm:max-w-52 text-center sm:text-left uppercase"
-              >
-                <h4 class="font-bold text-sm">BSTI approved</h4>
-                <p class="text-xs">Quality assurance, beyond expectations.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Order Button Section -->
-          <div
-            class="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center gap-4 sm:gap-6"
-          >
-            <h4
-              class="font-semibold w-max text-xl text-nowrap text-ui-white bg-ui-red flex items-center gap-3 rounded-full px-5 h-10"
-            >
-              Order Now
-              <i class="bi bi-arrow-right"></i>
-            </h4>
-
-            <!-- Delivery Partner Icons Section -->
-            <div class="w-full flex items-center gap-3">
-              <!-- Link to daraz -->
-              <a
-                href="https://tinyurl.com/4hh22pvv"
-                target="_blank"
-                class="w-full sm:w-24 h-10 rounded-full bg-ui-red backdrop-blur flex items-center"
-              >
-                <img
-                  alt="Daraz icon"
-                  class="h-full w-full py-1 px-2 object-contain"
-                  src="assets/images/daraz.png"
-                />
-              </a>
-
-              <!-- Link to messenger -->
-              <a
-                href="https://m.me/keriburkdotcom"
-                target="_blank"
-                class="w-full sm:w-24 h-10 rounded-full bg-ui-red backdrop-blur flex items-center"
-              >
-                <img
-                  alt="Keriburk Logo"
-                  class="w-full h-full py-1 px-2 object-contain"
-                  src="assets/images/logo-white.svg"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Promises section end -->
-
-      <!-- Find Stores section start -->
-      <section
-        class="container md:h-screen py-12 bg-cover bg-center flex overflow-hidden"
-        style="
-          background-image: url('assets/images/background/find-store-bg.jpg');
-        "
-      >
-        <div
-          class="self-center w-full flex flex-col sm:flex-row justify-between"
-        >
-          <!-- Left Section -->
-          <div class="my-10 lg:flex-grow xl:self-center">
-            <h3
-              class="max-w-4xl mb-6 text-4xl xl:text-5xl font-bold uppercase text-ui-white"
-            >
-              Find The Nearest Store With Keriburk Products
-            </h3>
-
-            <!-- District Selection Dropdown -->
-            <div class="max-w-lg min-w-max lg:w-9/12 flex gap-4 items-center">
-              <div class="flex-1 relative">
-                <div class="relative">
-                  <!-- Dropdown Toggle Button-->
-                  <button
-                    id="select-district-btn"
-                    type="button"
-                    class="w-full px-4 py-2 rounded-full flex-1 flex justify-between items-center bg-ui-red text-ui-white relative z-20"
-                    aria-expanded="false"
-                    aria-controls="district-dropdown"
-                  >
-                    <span
-                      id="district-name"
-                      class="uppercase text-sm font-medium"
-                    >
-                      Select Your District
-                    </span>
-                    <i class="w-6">
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        stroke-width="0"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path fill="none" d="M0 0h24v24H0V0z"></path>
-                        <path
-                          d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                        ></path>
-                      </svg>
-                    </i>
-                  </button>
-
-                  <p
-                    id="select-district-error"
-                    class="text-ui-red font-bold absolute left-4 top-[calc(100%+6px)] flex items-center gap-1 capitalize text-sm hidden"
-                  >
-                    <i class="bi bi-exclamation-circle"></i>
-                    <span>Please select a district first</span>
-                  </p>
-                </div>
-
-                <!-- Dropdown Menu-->
-                <div id="district-dropdown" class="closed">
-                  <div
-                    class="px-4 py-2 border-b border-black/40 shadow flex items-center gap-2"
-                  >
-                    <div class="text-ui-black/40">
-                      <i class="bi bi-search"></i>
-                    </div>
-                    <input
-                      id="district-search"
-                      type="text"
-                      placeholder="Search District..."
-                      class="flex-1 bg-transparent placeholder:text-ui-black/40 focus:outline-none"
-                    />
-                  </div>
-                  <ul
-                    id="district-list"
-                    class="max-h-44 -mt-px list-none overflow-y-auto"
-                  ></ul>
-                </div>
-              </div>
-
-              <button
-                id="search-store-btn"
-                class="bg-ui-red text-ui-white w-10 h-10 rounded-full flex items-center justify-center"
-              >
-                <i class="bi bi-search text-lg"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Right Section -->
-          <figure class="xl:h-[90vh] aspect-square">
-            <img
-              alt="Map showing store locations"
-              loading="lazy"
-              src="assets/images/map.png"
-              class="w-full md:h-full"
-            />
-          </figure>
-        </div>
-
-        <!-- Stores Modal -->
-        <div
-          id="stores-modal"
-          class="fixed inset-0 bg-[#0a0909] bg-opacity-70 z-50 hidden"
-          role="dialog"
-          aria-labelledby="stores-modal-title"
-          aria-hidden="true"
-        >
-          <div
-            class="w-full md:w-96 max-h-screen mx-2 overflow-y-auto bg-ui-white absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-          >
-            <div class="p-4 pt-6 border-b relative">
-              <figure class="flex justify-center mb-2">
-                <img
-                  alt="Keriburk Logo"
-                  loading="lazy"
-                  src="assets/images/logo.png"
-                  class="w-24"
-                />
-              </figure>
-
-              <h4 id="stores-modal-title" class="text-xl font-bold text-center">
-                Stores in <span id="stores-modal-district">Bandarban</span>
-              </h4>
-
-              <button
-                id="stores-modal-close-btn"
-                class="absolute top-3 right-3"
-                aria-label="Close stores modal"
-              >
-                <i class="bi bi-x-lg"></i>
-              </button>
-            </div>
-
-            <ul id="store-list" class="p-6 pt-4 space-y-2"></ul>
-          </div>
-        </div>
-      </section>
-      <!-- Find Stores section end -->
-
-      <!-- Socials section start -->
-
-      <!-- Desktop socials with background image -->
-      <section
-        class="hidden sm:block h-screen container bg-cover bg-left"
-        style="background-image: url('assets/images/background/socials-bg.jpg')"
-      >
-        <div class="py-16">
-          <!-- Section title -->
-          <h3 class="mb-12 text-5xl font-bold">Find Us On Socials</h3>
-
-          <!-- Grid of social media cards -->
-          <div class="max-w-max h-full grid grid-cols-2 gap-y-10 gap-x-16">
-            <!-- Instagram card -->
-            <div
-              class="relative w-60 aspect-[5/4] border border-ui-white rounded-3xl"
-              style="
-                box-shadow: 4px 4px 12px 8px rgba(0, 0, 0, 0.1),
-                  -4px -4px 12px 8px rgba(0, 0, 0, 0.1);
-              "
-            >
-              <figure class="w-full h-full rounded-3xl overflow-hidden">
-                <img
-                  alt="Instagram image"
-                  loading="lazy"
-                  src="assets/images/insta.jpg"
-                  class="w-full h-full object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-              <!-- Instagram icon -->
-              <img
-                alt="Instagram icon"
-                loading="lazy"
-                src="assets/icons/instagram.svg"
-                class="absolute w-12 rounded-full -top-4 -left-4"
-              />
-            </div>
-
-            <!-- Facebook card -->
-            <div
-              class="relative w-60 aspect-[5/4] border border-ui-white rounded-3xl"
-              style="
-                box-shadow: 4px 4px 12px 8px rgba(0, 0, 0, 0.1),
-                  -4px -4px 12px 8px rgba(0, 0, 0, 0.1);
-              "
-            >
-              <figure class="w-full h-full rounded-3xl overflow-hidden">
-                <img
-                  alt="Facebook"
-                  loading="lazy"
-                  src="assets/images/insta.jpg"
-                  class="w-full h-full object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-              <img
-                alt="Facebook icon"
-                loading="lazy"
-                src="assets/icons/facebook.svg"
-                class="absolute w-12 rounded-full -top-4 -left-4"
-              />
-            </div>
-
-            <!-- TikTok card -->
-            <div
-              class="relative w-60 aspect-[5/4] border border-ui-white rounded-3xl left-8"
-              style="
-                box-shadow: 4px 4px 12px 8px rgba(0, 0, 0, 0.1),
-                  -4px -4px 12px 8px rgba(0, 0, 0, 0.1);
-              "
-            >
-              <figure class="w-full h-full rounded-3xl overflow-hidden">
-                <img
-                  alt="TikTok"
-                  loading="lazy"
-                  src="assets/images/insta.jpg"
-                  class="w-full h-full object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-              <img
-                alt="TikTok icon"
-                loading="lazy"
-                src="assets/icons/tiktok.svg"
-                class="absolute w-12 rounded-full -top-4 -left-4"
-              />
-            </div>
-
-            <!-- YouTube card -->
-            <div
-              class="relative w-60 aspect-[5/4] border border-ui-white rounded-3xl left-8"
-              style="
-                box-shadow: 4px 4px 12px 8px rgba(0, 0, 0, 0.1),
-                  -4px -4px 12px 8px rgba(0, 0, 0, 0.1);
-              "
-            >
-              <figure class="w-full h-full rounded-3xl overflow-hidden">
-                <img
-                  alt="YouTube"
-                  loading="lazy"
-                  src="assets/images/insta.jpg"
-                  class="w-full h-full object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-              <img
-                alt="YouTube icon"
-                loading="lazy"
-                src="assets/icons/youtube.svg"
-                class="absolute w-12 rounded-full -top-4 -left-4"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Mobile socials slider -->
-      <section
-        class="sm:hidden container mt-responsive mb-responsive pb-6 flex flex-col relative"
-      >
-        <h3 class="mb-4 text-3xl font-bold text-center">Find Us On Socials</h3>
-
-        <div id="socials-slider">
-          <!-- Instagram slide -->
-          <div>
-            <div class="pt-6 px-6 relative overflow-hidden">
-              <figure class="w-full h-[50vh] rounded-3xl overflow-hidden">
-                <img
-                  alt="Instagram"
-                  loading="lazy"
-                  src="assets/images/insta.jpg"
-                  class="w-full h-full object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-              <img
-                alt="Instagram icon"
-                loading="lazy"
-                src="assets/icons/instagram.svg"
-                class="absolute w-12 rounded-full top-0 right-0"
-              />
-            </div>
-          </div>
-
-          <!-- Facebook slide -->
-          <div>
-            <div class="pt-6 px-6 relative overflow-hidden">
-              <figure class="w-full h-[50vh] rounded-3xl overflow-hidden">
-                <img
-                  alt="Facebook"
-                  loading="lazy"
-                  src="assets/images/insta.jpg"
-                  class="w-full h-full object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-              <img
-                alt="Facebook icon"
-                loading="lazy"
-                src="assets/icons/facebook.svg"
-                class="absolute w-12 rounded-full top-0 right-0"
-              />
-            </div>
-          </div>
-
-          <!-- TikTok slide -->
-          <div>
-            <div class="pt-6 px-6 relative overflow-hidden">
-              <figure class="w-full h-[50vh] rounded-3xl overflow-hidden">
-                <img
-                  alt="TikTok"
-                  loading="lazy"
-                  src="assets/images/insta.jpg"
-                  class="w-full h-full object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-              <img
-                alt="TikTok icon"
-                loading="lazy"
-                src="assets/icons/tiktok.svg"
-                class="absolute w-12 rounded-full top-0 right-0"
-              />
-            </div>
-          </div>
-
-          <!-- YouTube slide -->
-          <div>
-            <div class="pt-6 px-6 relative overflow-hidden">
-              <figure class="w-full h-[50vh] rounded-3xl overflow-hidden">
-                <img
-                  alt="YouTube"
-                  loading="lazy"
-                  src="assets/images/insta.jpg"
-                  class="w-full h-full object-cover hover:scale-110 duration-1000"
-                />
-              </figure>
-              <img
-                alt="YouTube icon"
-                loading="lazy"
-                src="assets/icons/youtube.svg"
-                class="absolute w-12 rounded-full top-0 right-0"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation buttons for slider -->
-        <button id="socials-slider-next" class="absolute top-1/2 right-2 z-20">
-          <i class="bi bi-arrow-right-circle-fill text-3xl text-ui-green"></i>
-        </button>
-        <button id="socials-slider-prev" class="absolute top-1/2 left-2 z-20">
-          <i class="bi bi-arrow-left-circle-fill text-3xl text-ui-green"></i>
-        </button>
-      </section>
-      <!-- Socials section end -->
-
-      <!-- Grenner world banner section start -->
-      <section
-        class="h-screen flex items-center justify-center bg-cover bg-center bg-ui-green/10 bg-blend-overlay"
-        style="background-image: url('assets/images/background/farmer-bg.jpg')"
-      >
-        <div
-          class="w-full md:w-max px-6 md:px-16 py-12 bg-ui-white/70 backdrop-blur-sm"
-        >
-          <h2
-            class="flex flex-col md:gap-2 items-center justify-center text-4xl md:text-5xl text-center font-bold capitalize"
-          >
-            <span>Creating a Greener World</span>
-            <span>With Every Spice</span>
-          </h2>
-        </div>
-      </section>
-      <!-- Grenner world banner section end -->
     </main>
 
     <!-- Footer start -->
