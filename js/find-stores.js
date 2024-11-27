@@ -1,33 +1,65 @@
-import { stores } from "./stores-data.js";
+import {
+  getDistrictsByDivision,
+  getDivisions,
+  getStoresByDistrict,
+} from "./stores-data.js";
 
-// Get a list of districts and initialize main UI elements
-const districts = stores.map((item) => item.district);
-const districtDropdown = $("#district-dropdown");
-const storesModal = $("#stores-modal");
+const getAccordionLabel = (label) => {
+  return `<button class="accordion-label">
+            <span>${label}</span>
+            <i class="w-6 text-ui-red rotate-0 duration-300">
+                <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                ></path>
+                </svg>
+            </i>
+        </button>`;
+};
 
-// Display the list of districts in the dropdown
-function displayDistricts(districts) {
+const getAccordionContent = (division) => {
+  const districts = getDistrictsByDivision(division);
+  const districtItems = districts
+    .map(
+      (district) =>
+        `<button data-district=${district}>
+            <i class="bi bi-geo-alt-fill text-ui-red me-1"></i>
+            <span>${district}</span>
+        </button>`
+    )
+    .join("");
+
+  return `<div class="accordion-content close">${districtItems}</div>`;
+};
+
+const getAccordionItem = (division) => {
+  const accordionItem =
+    getAccordionLabel(division) + getAccordionContent(division);
+
+  return accordionItem;
+};
+
+const createDistrictDropdown = () => {
   const districtList = $("#district-list");
   districtList.empty();
+  const divisions = getDivisions();
 
-  if (districts.length === 0) {
-    districtList.append(
-      `<li class="block px-4 py-2 w-full text-left border-t border-ui-black">No District Found</li>`
-    );
-  } else {
-    districts.forEach((district) => {
-      districtList.append(`
-        <li>
-          <button class="block px-4 py-2 w-full text-left border-t border-ui-black" data-district="${district}">
-            ${district}
-          </button>
-        </li>
-      `);
-    });
-  }
-}
+  const accordion = divisions
+    .map((division) => getAccordionItem(division))
+    .join("");
 
-displayDistricts(districts); // Initial display of districts
+  districtList.append(accordion);
+};
+createDistrictDropdown();
+
+const districtDropdown = $("#district-dropdown");
 
 // Open the district dropdown menu
 function openDistrictDropdown() {
@@ -49,39 +81,6 @@ function setDistrictName(districtName) {
   $("#district-name").text(districtName);
 }
 
-// Open the stores modal for the selected district
-function openStoresModal(districtName) {
-  const district = stores.find((item) => item.district === districtName);
-  const districtStores = district?.stores || [];
-  const storeList = $("#store-list");
-  storeList.empty();
-
-  storesModal.removeClass("hidden");
-  $("body").addClass("overflow-hidden");
-  $("#stores-modal-district").text(district.district);
-
-  if (districtStores.length === 0) {
-    storeList.append(`<li>No Store Found</li>`);
-  } else {
-    districtStores.forEach((store) => {
-      storeList.append(`
-        <li>
-          <h5 class="font-semibold">${store?.name}</h5>
-          <div class="flex gap-1 items-baseline">          
-            <div class="mt-px"><i class="bi bi-geo-alt text-sm"></i></div>
-            <p>Address: ${store?.address}</p>
-          </div>
-
-          <div class="flex gap-1 items-start">
-            <div class="-mt-2"><i class="bi bi-telephone text-xs"></i></div>            
-            <p>Phone: ${store?.phone}</p>
-          </div>
-        </li>
-      `);
-    });
-  }
-}
-
 // Toggle district dropdown visibility on button click
 $("#select-district-btn").on("click", function () {
   districtDropdown.hasClass("open")
@@ -89,14 +88,29 @@ $("#select-district-btn").on("click", function () {
     : openDistrictDropdown();
 });
 
-// Filter and display districts based on search input
-$("#district-search").on("input", function () {
-  const searchQuery = $(this).val().toLowerCase();
-  const filteredDistricts = districts.filter((district) =>
-    district.toLowerCase().includes(searchQuery)
-  );
-  displayDistricts(filteredDistricts);
-});
+const storesModal = $("#stores-modal");
+
+const openStoresModal = (district) => {
+  const districtStores = getStoresByDistrict(district);
+  const storeList = $("#store-list");
+  storeList.empty();
+
+  storesModal.removeClass("hidden");
+  $("body").addClass("overflow-hidden");
+  $("#stores-modal-district").text(district);
+
+  districtStores.forEach((store, index) => {
+    storeList.append(`
+        <li>
+          <h5>
+            <span class="font-medium">${index + 1}. </span>
+            <span class="font-semibold">${store?.name} </span>
+            <span>(${store?.storeType})</span>
+           </h5>
+        </li>
+      `);
+  });
+};
 
 // Close the stores modal and reset district name
 function closeStoresModal() {
@@ -105,11 +119,25 @@ function closeStoresModal() {
   setDistrictName("Select Your District");
 }
 
-$("#stores-modal-close-btn").on("click", closeStoresModal); // Close modal button
+$("#district-dropdown .accordion-label").on("click", function () {
+  const accordionContent = $(this).next(".accordion-content");
 
-// Set selected district name from dropdown and close dropdown
-$("#district-list").on("click", function (event) {
-  const districtName = $(event.target).data("district");
+  // Close other open accordion contents
+  $("#district-dropdown .accordion-content.open")
+    .not(accordionContent)
+    .removeClass("open")
+    .addClass("close");
+
+  // Toggle the current one
+  if (accordionContent.hasClass("close")) {
+    accordionContent.removeClass("close").addClass("open");
+  } else {
+    accordionContent.removeClass("open").addClass("close");
+  }
+});
+
+$("#district-dropdown .accordion-content button").on("click", (event) => {
+  const districtName = $(event.currentTarget).data("district");
   if (districtName) {
     setDistrictName(districtName);
     closeDistrictDropdown();
@@ -128,3 +156,5 @@ $("#search-store-btn").on("click", function () {
     $("#select-district-error").removeClass("hidden");
   }
 });
+
+$("#stores-modal-close-btn").on("click", closeStoresModal);

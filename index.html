@@ -1003,7 +1003,7 @@
 
       <!-- Find Stores section start -->
       <section
-        class="container md:h-screen py-12 bg-cover bg-center flex overflow-hidden"
+        class="container md:h-screen py-12 bg-cover bg-center flex"
         style="
           background-image: url('assets/images/background/find-store-bg.jpg');
         "
@@ -1053,34 +1053,25 @@
                     </i>
                   </button>
 
-                  <p
+                  <div
                     id="select-district-error"
-                    class="text-ui-red font-bold absolute left-4 top-[calc(100%+6px)] flex items-center gap-1 capitalize text-sm hidden"
+                    class="absolute left-4 top-[calc(100%+6px)] hidden"
                   >
-                    <i class="bi bi-exclamation-circle"></i>
-                    <span>Please select a district first</span>
-                  </p>
+                    <p
+                      class="flex items-center gap-1 capitalize text-sm text-ui-red font-bold"
+                    >
+                      <i class="bi bi-exclamation-circle"></i>
+                      <span>Please select a district first</span>
+                    </p>
+                  </div>
                 </div>
 
                 <!-- Dropdown Menu-->
                 <div id="district-dropdown" class="closed">
                   <div
-                    class="px-4 py-2 border-b border-black/40 shadow flex items-center gap-2"
-                  >
-                    <div class="text-ui-black/40">
-                      <i class="bi bi-search"></i>
-                    </div>
-                    <input
-                      id="district-search"
-                      type="text"
-                      placeholder="Search District..."
-                      class="flex-1 bg-transparent placeholder:text-ui-black/40 focus:outline-none"
-                    />
-                  </div>
-                  <ul
                     id="district-list"
-                    class="max-h-44 -mt-px list-none overflow-y-auto"
-                  ></ul>
+                    class="max-h-52 -mt-px list-none overflow-y-auto bg-ui-white"
+                  ></div>
                 </div>
               </div>
 
@@ -1126,7 +1117,8 @@
               </figure>
 
               <h4 id="stores-modal-title" class="text-xl font-bold text-center">
-                Stores in <span id="stores-modal-district">Bandarban</span>
+                Shwapno Outlets in
+                <span id="stores-modal-district">District Name</span>
               </h4>
 
               <button
@@ -1138,7 +1130,11 @@
               </button>
             </div>
 
-            <ul id="store-list" class="p-6 pt-4 space-y-2"></ul>
+            <!-- Store List -->
+            <ul
+              id="store-list"
+              class="max-h-60 overflow-y-auto p-6 space-y-2"
+            ></ul>
           </div>
         </div>
       </section>
@@ -1531,10 +1527,7 @@
 
                 <!-- Youtube Icon -->
                 <li title="Youtube">
-                  <a
-                    href="https://www.youtube.com/@KeriburkBD"
-                    target="_blank"
-                  >
+                  <a href="https://www.youtube.com/@KeriburkBD" target="_blank">
                     <i
                       class="w-8 h-8 rounded-full shadow flex justify-center items-center bg-ui-green hover:bg-ui-white hover:text-ui-green transition-colors duration-300"
                     >
@@ -1633,10 +1626,7 @@
 
                 <!-- Tiktok Icon -->
                 <li title="Tiktok">
-                  <a
-                    target="_blank"
-                    href="https://www.tiktok.com/@bdkeriburk"
-                  >
+                  <a target="_blank" href="https://www.tiktok.com/@bdkeriburk">
                     <i
                       class="w-8 h-8 rounded-full shadow flex justify-center items-center bg-ui-green hover:bg-ui-white hover:text-ui-green transition-colors duration-300"
                     >

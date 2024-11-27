@@ -1,1125 +1,322 @@
-const districts = [
-  { id: "01B01", district: "Bagerhat" },
-  { id: "02B02", district: "Bandarban" },
-  { id: "03B03", district: "Barguna" },
-  { id: "04B04", district: "Barisal" },
-  { id: "05B05", district: "Bhola" },
-  { id: "06B06", district: "Bogra" },
-  { id: "07B07", district: "Brahmanbaria" },
-  { id: "08C01", district: "Chandpur" },
-  { id: "09C02", district: "Chittagong" },
-  { id: "10C03", district: "Chuadanga" },
-  { id: "11C04", district: "Comilla" },
-  { id: "12C05", district: "Cox's Bazar" },
-  { id: "13D01", district: "Dhaka" },
-  { id: "14D02", district: "Dinajpur" },
-  { id: "15F01", district: "Faridpur" },
-  { id: "16F02", district: "Feni" },
-  { id: "17G01", district: "Gaibandha" },
-  { id: "18G02", district: "Gazipur" },
-  { id: "19G03", district: "Gopalganj" },
-  { id: "20H01", district: "Habiganj" },
-  { id: "21J01", district: "Jamalpur" },
-  { id: "22J02", district: "Jessore" },
-  { id: "23J03", district: "Jhalokati" },
-  { id: "24J04", district: "Jhenaidah" },
-  { id: "25J05", district: "Joypurhat" },
-  { id: "26K01", district: "Khagrachari" },
-  { id: "27K02", district: "Khulna" },
-  { id: "28K03", district: "Kishoreganj" },
-  { id: "29K04", district: "Kurigram" },
-  { id: "30K05", district: "Kushtia" },
-  { id: "31L01", district: "Lakshmipur" },
-  { id: "32L02", district: "Lalmonirhat" },
-  { id: "33M01", district: "Madaripur" },
-  { id: "34M02", district: "Magura" },
-  { id: "35M03", district: "Manikganj" },
-  { id: "36M04", district: "Maulvibazar" },
-  { id: "37M05", district: "Meherpur" },
-  { id: "38M06", district: "Munshiganj" },
-  { id: "39M07", district: "Mymensingh" },
-  { id: "40N01", district: "Naogaon" },
-  { id: "41N02", district: "Narail" },
-  { id: "42N03", district: "Narayanganj" },
-  { id: "43N04", district: "Narsingdi" },
-  { id: "44N05", district: "Natore" },
-  { id: "45N06", district: "Nawabganj" },
-  { id: "46N07", district: "Netrokona" },
-  { id: "47N08", district: "Nilphamari" },
-  { id: "48N09", district: "Noakhali" },
-  { id: "49P01", district: "Pabna" },
-  { id: "50P02", district: "Panchagarh" },
-  { id: "51P03", district: "Patuakhali" },
-  { id: "52P04", district: "Pirojpur" },
-  { id: "53R01", district: "Rajbari" },
-  { id: "54R02", district: "Rajshahi" },
-  { id: "55R03", district: "Rangamati" },
-  { id: "56R04", district: "Rangpur" },
-  { id: "57S01", district: "Satkhira" },
-  { id: "58S02", district: "Shariatpur" },
-  { id: "59S03", district: "Sherpur" },
-  { id: "60S04", district: "Sirajgonj" },
-  { id: "61S05", district: "Sunamganj" },
-  { id: "62S06", district: "Sylhet" },
-  { id: "63T01", district: "Tangail" },
-  { id: "64T02", district: "Thakurgaon" },
-];
-
-export const stores = [
+const storesData = [
   {
-    id: "01B01",
-    district: "Bagerhat",
-    stores: [
+    id: "1",
+    division: "Dhaka",
+    districts: [
       {
-        name: "Bagerhat Flavors",
-        address: "123 Bagerhat Rd, Bagerhat",
-        phone: "01711-123456",
+        name: "Dhaka",
+        stores: [
+          { id: "D001", name: "Postogola", storeType: "Super Store" },
+          { id: "D002", name: "Uttara-6", storeType: "Super Store" },
+          { id: "D003", name: "Uttara-11", storeType: "Mega Store" },
+          { id: "D004", name: "Malibagh", storeType: "Super Store" },
+          { id: "D005", name: "Green Road", storeType: "Super Store" },
+          { id: "D006", name: "Nazim Uddin Road", storeType: "Super Store" },
+          { id: "D007", name: "West Kafrul", storeType: "Super Store" },
+          { id: "D008", name: "Sutrapur", storeType: "Super Store" },
+          { id: "D009", name: "Khilgaon", storeType: "Super Store" },
+          { id: "D010", name: "Banani", storeType: "Super Store" },
+          { id: "D011", name: "Banani-2", storeType: "Super Store" },
+          { id: "D012", name: "Nikunja-2", storeType: "Super Store" },
+          { id: "D013", name: "Gulshan-1", storeType: "Super Store" },
+          {
+            id: "D014",
+            name: "Gulshan-2 (New & Old)",
+            storeType: "Super Store",
+          },
+          { id: "D015", name: "Shahjahan Road", storeType: "Super Store" },
+          { id: "D016", name: "Azimpur", storeType: "Super Store" },
+          { id: "D017", name: "Khilkhet Lake City", storeType: "Super Store" },
+          { id: "D018", name: "North Banasree", storeType: "Super Store" },
+          { id: "D019", name: "Central Basabo-2", storeType: "Mega Store" },
+          { id: "D020", name: "Sontek Kajla", storeType: "Super Store" },
+          { id: "D021", name: "Mohanagar", storeType: "Super Store" },
+          { id: "D022", name: "Mirpur-1", storeType: "Super Store" },
+          { id: "D023", name: "Mirpur-2", storeType: "Super Store" },
+          { id: "D024", name: "Mirpur-6 (New)", storeType: "Super Store" },
+          { id: "D025", name: "Mirpur-10", storeType: "Super Store" },
+          { id: "D026", name: "Mirpur-11", storeType: "Super Store" },
+          { id: "D027", name: "Mirpur-12", storeType: "Super Store" },
+          { id: "D028", name: "Mirpur Borobagh", storeType: "Super Store" },
+          { id: "D029", name: "Mirpur-12 Bus Stand", storeType: "Super Store" },
+          { id: "D030", name: "Taltola Agargaon", storeType: "Super Store" },
+          { id: "D031", name: "Bashundhara Block-G", storeType: "Mega Store" },
+          { id: "D032", name: "Kamrangir Chor", storeType: "Super Store" },
+          {
+            id: "D033",
+            name: "Aftab Nagar (Siraj Community Center)",
+            storeType: "Super Store",
+          },
+          {
+            id: "D034",
+            name: "Konapara Demra",
+            storeType: "Convenience Store",
+          },
+          { id: "D035", name: "Golapbagh", storeType: "Convenience Store" },
+          { id: "D036", name: "Saterkul", storeType: "Convenience Store" },
+          {
+            id: "D037",
+            name: "Hasnabad Outlet",
+            storeType: "Convenience Store",
+          },
+          {
+            id: "D038",
+            name: "Ashkona Outlet",
+            storeType: "Convenience Store",
+          },
+          {
+            id: "D039",
+            name: "Mohammadpur (Ring Road & Bosila)",
+            storeType: "Convenience Store",
+          },
+          { id: "D040", name: "Moddho Badda", storeType: "Convenience Store" },
+          { id: "D041", name: "Dhaka Housing", storeType: "Super Store" },
+          { id: "D042", name: "Kaderabad Housing", storeType: "Super Store" },
+          { id: "D043", name: "Dhanmondi-27", storeType: "Mega Store" },
+          { id: "D044", name: "Panthapath (New)", storeType: "Super Store" },
+        ],
       },
       {
-        name: "Herbal Market",
-        address: "45 Main St, Bagerhat",
-        phone: "01811-654321",
-      },
-    ],
-  },
-  {
-    id: "02B02",
-    district: "Bandarban",
-    stores: [
-      {
-        name: "Bandarban Essence",
-        address: "12 Hill Top, Bandarban",
-        phone: "01611-987654",
-      },
-      {
-        name: "Nature's Bounty",
-        address: "7 Green Valley, Bandarban",
-        phone: "01722-345678",
-      },
-    ],
-  },
-  {
-    id: "03B03",
-    district: "Barguna",
-    stores: [
-      {
-        name: "Barguna Delights",
-        address: "99 Riverbank St, Barguna",
-        phone: "01911-234567",
+        name: "Gazipur",
+        stores: [
+          {
+            id: "G001",
+            name: "Joydebpur Outlet",
+            storeType: "Convenience Store",
+          },
+          { id: "G002", name: "Tongi Outlet", storeType: "Super Store" },
+          {
+            id: "G003",
+            name: "Tongi College Road",
+            storeType: "Convenience Store",
+          },
+        ],
       },
       {
-        name: "Local Treasures",
-        address: "88 Sea View Rd, Barguna",
-        phone: "01511-765432",
-      },
-    ],
-  },
-  {
-    id: "04B04",
-    district: "Barisal",
-    stores: [
-      {
-        name: "Barisal Bazaar",
-        address: "456 Market St, Barisal",
-        phone: "01811-987123",
+        name: "Manikganj",
+        stores: [
+          { id: "M001", name: "Manikganj Bus Stand", storeType: "Super Store" },
+        ],
       },
       {
-        name: "Taste of Barisal",
-        address: "22 Riverside Ave, Barisal",
-        phone: "01733-890123",
+        name: "Narayanganj",
+        stores: [
+          { id: "N001", name: "Masdair Narayanganj", storeType: "Super Store" },
+          { id: "N002", name: "Narayanganj Outlet", storeType: "Super Store" },
+        ],
+      },
+      {
+        name: "Savar",
+        stores: [
+          { id: "S001", name: "Savar Cantonment", storeType: "Super Store" },
+          { id: "S002", name: "Savar Thana Road", storeType: "Super Store" },
+          { id: "S003", name: "Savar New Market", storeType: "Super Store" },
+        ],
       },
     ],
   },
   {
-    id: "05B05",
-    district: "Bhola",
-    stores: [
+    id: "2",
+    division: "Chattogram",
+    districts: [
       {
-        name: "Bhola Harvest",
-        address: "32 Bhola St, Bhola",
-        phone: "01922-123456",
+        name: "Chattogram",
+        stores: [
+          { id: "C001", name: "Gol Pahar", storeType: "Super Store" },
+          { id: "C002", name: "Hali Shohor", storeType: "Super Store" },
+          { id: "C003", name: "Khulshi", storeType: "Super Store" },
+          { id: "C004", name: "Jamal Khan", storeType: "Super Store" },
+          {
+            id: "C005",
+            name: "Kolatoli (Cox's Bazar)",
+            storeType: "Super Store",
+          },
+          {
+            id: "C006",
+            name: "Jhautola (Cox's Bazar)",
+            storeType: "Super Store",
+          },
+        ],
       },
       {
-        name: "Island Flavors",
-        address: "78 Coastal Rd, Bhola",
-        phone: "01522-654321",
-      },
-    ],
-  },
-  {
-    id: "06B06",
-    district: "Bogra",
-    stores: [
-      {
-        name: "Bogra Gourmet",
-        address: "34 Bogura Rd, Bogra",
-        phone: "01744-567890",
+        name: "Feni",
+        stores: [{ id: "F001", name: "Feni Outlet", storeType: "Super Store" }],
       },
       {
-        name: "Spice Route",
-        address: "9 Main Plaza, Bogra",
-        phone: "01833-789012",
-      },
-    ],
-  },
-  {
-    id: "07B07",
-    district: "Brahmanbaria",
-    stores: [
-      {
-        name: "Brahmanbaria Kitchen",
-        address: "21 Brahmanbaria St, Brahmanbaria",
-        phone: "01911-345678",
+        name: "Noakhali",
+        stores: [
+          {
+            id: "N001",
+            name: "Maijdee Outlet",
+            storeType: "Convenience Store",
+          },
+        ],
       },
       {
-        name: "Culinary Heritage",
-        address: "54 Heritage Rd, Brahmanbaria",
-        phone: "01711-876543",
-      },
-    ],
-  },
-
-  {
-    id: "08C01",
-    district: "Chandpur",
-    stores: [
-      {
-        name: "Chandpur Harvest",
-        address: "10 Riverbank Rd, Chandpur",
-        phone: "01944-123456",
-      },
-      {
-        name: "Spice Haven",
-        address: "5 Main Market, Chandpur",
-        phone: "01711-654321",
+        name: "Comilla",
+        stores: [
+          { id: "C001", name: "Comilla Outlet", storeType: "Super Store" },
+          { id: "C002", name: "Comilla-2 Outlet", storeType: "Super Store" },
+          {
+            id: "C003",
+            name: "Chandina Outlet",
+            storeType: "Convenience Store",
+          },
+        ],
       },
     ],
   },
   {
-    id: "09C02",
-    district: "Chittagong",
-    stores: [
+    id: "3",
+    division: "Khulna",
+    districts: [
       {
-        name: "Chittagong Flavors",
-        address: "25 Port Rd, Chittagong",
-        phone: "01611-987654",
+        name: "Khulna",
+        stores: [
+          { id: "K001", name: "Boyra", storeType: "Super Store" },
+          { id: "K002", name: "South Central Road", storeType: "Super Store" },
+          { id: "K003", name: "Sonadanga", storeType: "Super Store" },
+        ],
       },
       {
-        name: "Taste of Chittagong",
-        address: "88 Ocean Ave, Chittagong",
-        phone: "01722-345678",
-      },
-      {
-        name: "Spice Market",
-        address: "30 Bazaar St, Chittagong",
-        phone: "01911-234567",
-      },
-    ],
-  },
-  {
-    id: "10C03",
-    district: "Chuadanga",
-    stores: [
-      {
-        name: "Chuadanga Essentials",
-        address: "14 Main Rd, Chuadanga",
-        phone: "01922-765432",
-      },
-      {
-        name: "Local Delights",
-        address: "33 River Rd, Chuadanga",
-        phone: "01733-890123",
+        name: "Kushtia",
+        stores: [
+          {
+            id: "K004",
+            name: "Shapla Chattar Outlet",
+            storeType: "Convenience Store",
+          },
+        ],
       },
     ],
   },
   {
-    id: "11C04",
-    district: "Comilla",
-    stores: [
+    id: "4",
+    division: "Rajshahi",
+    districts: [
       {
-        name: "Comilla Marketplace",
-        address: "19 Comilla St, Comilla",
-        phone: "01911-987654",
+        name: "Rajshahi",
+        stores: [
+          { id: "R001", name: "Alupatti", storeType: "Super Store" },
+          { id: "R002", name: "Nagar Bhaban Outlet", storeType: "Super Store" },
+          {
+            id: "R003",
+            name: "Naogaon Outlet",
+            storeType: "Convenience Store",
+          },
+        ],
       },
       {
-        name: "Comilla Flavors",
-        address: "22 Market Plaza, Comilla",
-        phone: "01711-123456",
-      },
-    ],
-  },
-  {
-    id: "12C05",
-    district: "Cox's Bazar",
-    stores: [
-      {
-        name: "Cox's Bazar Delight",
-        address: "44 Beach Rd, Cox's Bazar",
-        phone: "01622-345678",
-      },
-      {
-        name: "Coastal Treasures",
-        address: "27 Sunset Ave, Cox's Bazar",
-        phone: "01811-678901",
+        name: "Bagura",
+        stores: [
+          {
+            id: "B001",
+            name: "Malati Nagar Outlet",
+            storeType: "Convenience Store",
+          },
+        ],
       },
     ],
   },
   {
-    id: "13D01",
-    district: "Dhaka",
-    stores: [
+    id: "5",
+    division: "Barishal",
+    districts: [
       {
-        name: "Dhaka Flavors",
-        address: "101 Dhaka St, Dhaka",
-        phone: "01911-123456",
-      },
-      {
-        name: "Bengal Taste",
-        address: "45 City Center, Dhaka",
-        phone: "01711-654321",
-      },
-      {
-        name: "Urban Spices",
-        address: "78 New Market Rd, Dhaka",
-        phone: "01622-987654",
+        name: "Barishal",
+        stores: [{ id: "B001", name: "Sadar Road", storeType: "Super Store" }],
       },
     ],
   },
   {
-    id: "14D02",
-    district: "Dinajpur",
-    stores: [
+    id: "6",
+    division: "Sylhet",
+    districts: [
       {
-        name: "Dinajpur Harvest",
-        address: "12 Dinajpur Rd, Dinajpur",
-        phone: "01933-765432",
+        name: "Sylhet",
+        stores: [
+          { id: "S001", name: "Shahjalal Outlet", storeType: "Super Store" },
+          { id: "S002", name: "Shibgong Outlet", storeType: "Super Store" },
+          {
+            id: "S003",
+            name: "Pathantola Outlet",
+            storeType: "Convenience Store",
+          },
+          { id: "S004", name: "Zinda Bazar", storeType: "Super Store" },
+          { id: "S005", name: "Amberkhana Outlet", storeType: "Super Store" },
+          {
+            id: "S006",
+            name: "Beanibazar Outlet",
+            storeType: "Convenience Store",
+          },
+        ],
       },
       {
-        name: "Taste of Dinajpur",
-        address: "34 Main St, Dinajpur",
-        phone: "01744-890123",
-      },
-    ],
-  },
-  {
-    id: "15F01",
-    district: "Faridpur",
-    stores: [
-      {
-        name: "Faridpur Flavors",
-        address: "24 Main Rd, Faridpur",
-        phone: "01911-345678",
+        name: "Moulvibazar",
+        stores: [
+          {
+            id: "M001",
+            name: "Moulvibazar Outlet",
+            storeType: "Convenience Store",
+          },
+        ],
       },
       {
-        name: "Herbal Delights",
-        address: "36 Riverside Ave, Faridpur",
-        phone: "01722-456789",
-      },
-    ],
-  },
-  {
-    id: "16F02",
-    district: "Feni",
-    stores: [
-      {
-        name: "Feni Essence",
-        address: "15 Feni St, Feni",
-        phone: "01811-234567",
-      },
-      {
-        name: "Feni Treasures",
-        address: "77 Market Rd, Feni",
-        phone: "01733-890123",
+        name: "Habiganj",
+        stores: [
+          {
+            id: "H001",
+            name: "Habiganj Outlet",
+            storeType: "Convenience Store",
+          },
+        ],
       },
     ],
   },
   {
-    id: "17G01",
-    district: "Gaibandha",
-    stores: [
-      {
-        name: "Gaibandha Essentials",
-        address: "30 Main Rd, Gaibandha",
-        phone: "01911-567890",
-      },
-      {
-        name: "Rural Flavors",
-        address: "10 Riverbank St, Gaibandha",
-        phone: "01722-678901",
-      },
-    ],
-  },
-  {
-    id: "18G02",
-    district: "Gazipur",
-    stores: [
-      {
-        name: "Gazipur Gourmet",
-        address: "25 Gazipur Rd, Gazipur",
-        phone: "01611-234567",
-      },
-      {
-        name: "Taste of Gazipur",
-        address: "78 Market St, Gazipur",
-        phone: "01811-890123",
-      },
-      {
-        name: "Herbal Hub",
-        address: "43 New Market, Gazipur",
-        phone: "01922-456789",
-      },
-    ],
-  },
-  {
-    id: "19G03",
-    district: "Gopalganj",
-    stores: [
-      {
-        name: "Gopalganj Harvest",
-        address: "22 Gopalganj Rd, Gopalganj",
-        phone: "01733-123456",
-      },
-      {
-        name: "Local Flavors",
-        address: "36 Riverside Ave, Gopalganj",
-        phone: "01911-987654",
-      },
-    ],
-  },
-  {
-    id: "20H01",
-    district: "Habiganj",
-    stores: [
-      {
-        name: "Habiganj Essence",
-        address: "15 Habiganj St, Habiganj",
-        phone: "01911-345678",
-      },
-      {
-        name: "Herbal Treats",
-        address: "29 Market Rd, Habiganj",
-        phone: "01711-654321",
-      },
-    ],
-  },
-  {
-    id: "21J01",
-    district: "Jamalpur",
-    stores: [
-      {
-        name: "Jamalpur Flavors",
-        address: "50 Jamalpur Rd, Jamalpur",
-        phone: "01922-765432",
-      },
-      {
-        name: "Taste of Jamalpur",
-        address: "28 Main St, Jamalpur",
-        phone: "01733-890123",
-      },
-    ],
-  },
-  {
-    id: "22J02",
-    district: "Jessore",
-    stores: [
-      {
-        name: "Jessore Essence",
-        address: "11 Jessore St, Jessore",
-        phone: "01933-987654",
-      },
-      {
-        name: "Local Delights",
-        address: "70 Main Market, Jessore",
-        phone: "01822-456789",
-      },
-    ],
-  },
-  {
-    id: "23J03",
-    district: "Jhalokati",
-    stores: [
-      {
-        name: "Jhalokati Harvest",
-        address: "33 Jhalokati Rd, Jhalokati",
-        phone: "01622-123456",
-      },
-      {
-        name: "Riverside Flavors",
-        address: "47 Market St, Jhalokati",
-        phone: "01911-345678",
-      },
-    ],
-  },
-  {
-    id: "24J04",
-    district: "Jhenaidah",
-    stores: [
-      {
-        name: "Jhenaidah Treasures",
-        address: "14 Jhenaidah Rd, Jhenaidah",
-        phone: "01711-654321",
-      },
-      {
-        name: "Jhenaidah Delights",
-        address: "30 Main St, Jhenaidah",
-        phone: "01922-678901",
-      },
-    ],
-  },
-  {
-    id: "25J05",
-    district: "Joypurhat",
-    stores: [
-      {
-        name: "Joypurhat Essence",
-        address: "18 Joypurhat Rd, Joypurhat",
-        phone: "01911-987654",
-      },
-      {
-        name: "Local Treats",
-        address: "22 Market St, Joypurhat",
-        phone: "01722-345678",
-      },
-    ],
-  },
-  {
-    id: "26K01",
-    district: "Khagrachari",
-    stores: [
-      {
-        name: "Khagrachari Flavors",
-        address: "20 Khagrachari Rd, Khagrachari",
-        phone: "01911-234567",
-      },
-      {
-        name: "Herbal Corner",
-        address: "42 Market St, Khagrachari",
-        phone: "01833-876543",
-      },
-    ],
-  },
-  {
-    id: "27K02",
-    district: "Khulna",
-    stores: [
-      {
-        name: "Khulna Gourmet",
-        address: "55 Khulna Rd, Khulna",
-        phone: "01922-345678",
-      },
-      {
-        name: "Taste of Khulna",
-        address: "90 Main St, Khulna",
-        phone: "01711-654321",
-      },
-      {
-        name: "Coastal Flavors",
-        address: "12 Riverside Rd, Khulna",
-        phone: "01811-234567",
-      },
-    ],
-  },
-  {
-    id: "28K03",
-    district: "Kishoreganj",
-    stores: [
-      {
-        name: "Kishoreganj Delights",
-        address: "22 Kishoreganj Rd, Kishoreganj",
-        phone: "01922-456789",
-      },
-      {
-        name: "Herbal Haven",
-        address: "40 Market St, Kishoreganj",
-        phone: "01733-567890",
-      },
-    ],
-  },
-  {
-    id: "29K04",
-    district: "Kurigram",
-    stores: [
-      {
-        name: "Kurigram Treasures",
-        address: "10 Kurigram Rd, Kurigram",
-        phone: "01911-765432",
-      },
-      {
-        name: "Kurigram Harvest",
-        address: "25 Main St, Kurigram",
-        phone: "01711-890123",
-      },
-    ],
-  },
-  {
-    id: "30K05",
-    district: "Kushtia",
-    stores: [
-      {
-        name: "Kushtia Essence",
-        address: "33 Kushtia Rd, Kushtia",
-        phone: "01922-345678",
-      },
-      {
-        name: "Kushtia Flavors",
-        address: "29 Market St, Kushtia",
-        phone: "01711-654321",
-      },
-    ],
-  },
-  {
-    id: "31L01",
-    district: "Lakshmipur",
-    stores: [
-      {
-        name: "Lakshmipur Delights",
-        address: "12 Lakshmipur Rd, Lakshmipur",
-        phone: "01911-234567",
-      },
-      {
-        name: "Local Essence",
-        address: "45 Main St, Lakshmipur",
-        phone: "01811-678901",
-      },
-    ],
-  },
-  {
-    id: "32L02",
-    district: "Lalmonirhat",
-    stores: [
-      {
-        name: "Lalmonirhat Harvest",
-        address: "22 Lalmonirhat Rd, Lalmonirhat",
-        phone: "01922-765432",
-      },
-      {
-        name: "Lalmonirhat Flavors",
-        address: "10 Main St, Lalmonirhat",
-        phone: "01733-890123",
-      },
-    ],
-  },
-  {
-    id: "33M01",
-    district: "Madaripur",
-    stores: [
-      {
-        name: "Madaripur Essence",
-        address: "30 Madaripur Rd, Madaripur",
-        phone: "01911-345678",
-      },
-      {
-        name: "Herbal Treasures",
-        address: "25 Market St, Madaripur",
-        phone: "01722-456789",
-      },
-    ],
-  },
-  {
-    id: "34M02",
-    district: "Magura",
-    stores: [
-      {
-        name: "Magura Flavors",
-        address: "22 Magura Rd, Magura",
-        phone: "01911-987654",
-      },
-      {
-        name: "Local Delights",
-        address: "18 Market St, Magura",
-        phone: "01733-890123",
-      },
-    ],
-  },
-  {
-    id: "35M03",
-    district: "Manikganj",
-    stores: [
-      {
-        name: "Manikganj Harvest",
-        address: "15 Manikganj Rd, Manikganj",
-        phone: "01911-234567",
-      },
-      {
-        name: "Herbal Haven",
-        address: "35 Market St, Manikganj",
-        phone: "01722-678901",
-      },
-    ],
-  },
-  {
-    id: "36M04",
-    district: "Maulvibazar",
-    stores: [
-      {
-        name: "Maulvibazar Essence",
-        address: "10 Maulvibazar Rd, Maulvibazar",
-        phone: "01911-123456",
-      },
-      {
-        name: "Maulvibazar Treasures",
-        address: "20 Market St, Maulvibazar",
-        phone: "01811-345678",
-      },
-    ],
-  },
-  {
-    id: "37M05",
-    district: "Meherpur",
-    stores: [
-      {
-        name: "Meherpur Delights",
-        address: "12 Meherpur Rd, Meherpur",
-        phone: "01922-456789",
-      },
-      {
-        name: "Herbal Essence",
-        address: "25 Main St, Meherpur",
-        phone: "01711-678901",
-      },
-    ],
-  },
-  {
-    id: "38M06",
-    district: "Munshiganj",
-    stores: [
-      {
-        name: "Munshiganj Flavors",
-        address: "30 Munshiganj Rd, Munshiganj",
-        phone: "01911-345678",
-      },
-      {
-        name: "Herbal Market",
-        address: "22 Market St, Munshiganj",
-        phone: "01722-890123",
-      },
-    ],
-  },
-  {
-    id: "39M07",
-    district: "Mymensingh",
-    stores: [
-      {
-        name: "Mymensingh Essence",
-        address: "10 Mymensingh Rd, Mymensingh",
-        phone: "01922-234567",
-      },
-      {
-        name: "Mymensingh Treasures",
-        address: "33 Market St, Mymensingh",
-        phone: "01733-678901",
-      },
-    ],
-  },
-  {
-    id: "40N01",
-    district: "Naogaon",
-    stores: [
-      {
-        name: "Naogaon Flavors",
-        address: "40 Naogaon Rd, Naogaon",
-        phone: "01922-345678",
-      },
-      {
-        name: "Naogaon Delights",
-        address: "25 Main St, Naogaon",
-        phone: "01711-567890",
-      },
-    ],
-  },
-  {
-    id: "41N02",
-    district: "Narail",
-    stores: [
-      {
-        name: "Narail Essence",
-        address: "15 Narail Rd, Narail",
-        phone: "01911-678901",
-      },
-      {
-        name: "Local Treasures",
-        address: "20 Market St, Narail",
-        phone: "01722-456789",
-      },
-    ],
-  },
-  {
-    id: "42N03",
-    district: "Narayanganj",
-    stores: [
-      {
-        name: "Narayanganj Gourmet",
-        address: "60 Narayanganj Rd, Narayanganj",
-        phone: "01933-987654",
-      },
-      {
-        name: "Taste of Narayanganj",
-        address: "10 River St, Narayanganj",
-        phone: "01711-123456",
-      },
-      {
-        name: "Narayanganj Delights",
-        address: "25 Main Market, Narayanganj",
-        phone: "01811-678901",
-      },
-    ],
-  },
-  {
-    id: "43N04",
-    district: "Narsingdi",
-    stores: [
-      {
-        name: "Narsingdi Harvest",
-        address: "45 Narsingdi Rd, Narsingdi",
-        phone: "01911-234567",
-      },
-      {
-        name: "Herbal Haven",
-        address: "10 Main St, Narsingdi",
-        phone: "01722-890123",
-      },
-    ],
-  },
-  {
-    id: "44N05",
-    district: "Natore",
-    stores: [
-      {
-        name: "Natore Essence",
-        address: "30 Natore Rd, Natore",
-        phone: "01922-567890",
-      },
-      {
-        name: "Natore Flavors",
-        address: "12 Market St, Natore",
-        phone: "01711-678901",
-      },
-    ],
-  },
-  {
-    id: "45N06",
-    district: "Nawabganj",
-    stores: [
-      {
-        name: "Nawabganj Treasures",
-        address: "25 Nawabganj Rd, Nawabganj",
-        phone: "01911-765432",
-      },
-      {
-        name: "Local Essence",
-        address: "40 Market St, Nawabganj",
-        phone: "01722-890123",
-      },
-    ],
-  },
-  {
-    id: "46N07",
-    district: "Netrokona",
-    stores: [
-      {
-        name: "Netrokona Flavors",
-        address: "15 Netrokona Rd, Netrokona",
-        phone: "01922-345678",
-      },
-      {
-        name: "Netrokona Essentials",
-        address: "50 Market St, Netrokona",
-        phone: "01711-234567",
-      },
-    ],
-  },
-  {
-    id: "47N08",
-    district: "Nilphamari",
-    stores: [
-      {
-        name: "Nilphamari Harvest",
-        address: "30 Nilphamari Rd, Nilphamari",
-        phone: "01922-567890",
-      },
-      {
-        name: "Nilphamari Essence",
-        address: "22 Market St, Nilphamari",
-        phone: "01711-678901",
-      },
-    ],
-  },
-  {
-    id: "48N09",
-    district: "Noakhali",
-    stores: [
-      {
-        name: "Noakhali Flavors",
-        address: "20 Noakhali Rd, Noakhali",
-        phone: "01911-123456",
-      },
-      {
-        name: "Coastal Treasures",
-        address: "11 River St, Noakhali",
-        phone: "01722-345678",
-      },
-    ],
-  },
-  {
-    id: "49P01",
-    district: "Pabna",
-    stores: [
-      {
-        name: "Pabna Essence",
-        address: "18 Pabna Rd, Pabna",
-        phone: "01922-765432",
-      },
-      {
-        name: "Pabna Flavors",
-        address: "12 Market St, Pabna",
-        phone: "01733-890123",
-      },
-    ],
-  },
-  {
-    id: "50P02",
-    district: "Panchagarh",
-    stores: [
-      {
-        name: "Panchagarh Harvest",
-        address: "14 Panchagarh Rd, Panchagarh",
-        phone: "01911-234567",
-      },
-      {
-        name: "Local Delights",
-        address: "40 Market St, Panchagarh",
-        phone: "01711-678901",
-      },
-    ],
-  },
-  {
-    id: "51P03",
-    district: "Patuakhali",
-    stores: [
-      {
-        name: "Patuakhali Flavors",
-        address: "22 Patuakhali Rd, Patuakhali",
-        phone: "01922-345678",
-      },
-      {
-        name: "Patuakhali Treasures",
-        address: "15 Market St, Patuakhali",
-        phone: "01733-678901",
-      },
-    ],
-  },
-  {
-    id: "52P04",
-    district: "Pirojpur",
-    stores: [
-      {
-        name: "Pirojpur Essence",
-        address: "10 Pirojpur Rd, Pirojpur",
-        phone: "01911-234567",
-      },
-      {
-        name: "Pirojpur Delights",
-        address: "35 Market St, Pirojpur",
-        phone: "01711-890123",
-      },
-    ],
-  },
-  {
-    id: "53R01",
-    district: "Rajbari",
-    stores: [
-      {
-        name: "Rajbari Harvest",
-        address: "25 Rajbari Rd, Rajbari",
-        phone: "01911-123456",
-      },
-      {
-        name: "Rajbari Treasures",
-        address: "12 Market St, Rajbari",
-        phone: "01722-345678",
-      },
-    ],
-  },
-  {
-    id: "54R02",
-    district: "Rajshahi",
-    stores: [
-      {
-        name: "Rajshahi Essence",
-        address: "55 Rajshahi Rd, Rajshahi",
-        phone: "01922-345678",
-      },
-      {
-        name: "Local Flavors",
-        address: "30 Main St, Rajshahi",
-        phone: "01711-678901",
-      },
-    ],
-  },
-  {
-    id: "55R03",
-    district: "Rangamati",
-    stores: [
-      {
-        name: "Rangamati Flavors",
-        address: "40 Rangamati Rd, Rangamati",
-        phone: "01922-123456",
-      },
-      {
-        name: "Rangamati Treasures",
-        address: "15 Market St, Rangamati",
-        phone: "01722-678901",
-      },
-    ],
-  },
-  {
-    id: "56R04",
-    district: "Rangpur",
-    stores: [
-      {
-        name: "Rangpur Essence",
-        address: "30 Rangpur Rd, Rangpur",
-        phone: "01911-765432",
-      },
-      {
-        name: "Rangpur Flavors",
-        address: "22 Main St, Rangpur",
-        phone: "01733-890123",
-      },
-    ],
-  },
-
-  {
-    id: "57S01",
-    district: "Satkhira",
-    stores: [
-      {
-        name: "Satkhira Delights",
-        address: "10 Satkhira Rd, Satkhira",
-        phone: "01922-678901",
-      },
-      {
-        name: "Satkhira Essence",
-        address: "25 Main St, Satkhira",
-        phone: "01711-890123",
-      },
-    ],
-  },
-  {
-    id: "58S02",
-    district: "Shariatpur",
-    stores: [
-      {
-        name: "Shariatpur Flavors",
-        address: "30 Shariatpur Rd, Shariatpur",
-        phone: "01911-234567",
-      },
-      {
-        name: "Shariatpur Harvest",
-        address: "15 Market St, Shariatpur",
-        phone: "01733-678901",
-      },
-    ],
-  },
-  {
-    id: "59S03",
-    district: "Sherpur",
-    stores: [
-      {
-        name: "Sherpur Essence",
-        address: "20 Sherpur Rd, Sherpur",
-        phone: "01922-456789",
-      },
-      {
-        name: "Sherpur Delights",
-        address: "35 Market St, Sherpur",
-        phone: "01711-678901",
-      },
-    ],
-  },
-  {
-    id: "60S04",
-    district: "Sirajgonj",
-    stores: [
-      {
-        name: "Sirajgonj Harvest",
-        address: "40 Sirajgonj Rd, Sirajgonj",
-        phone: "01911-345678",
-      },
-      {
-        name: "Sirajgonj Treasures",
-        address: "22 Main St, Sirajgonj",
-        phone: "01722-890123",
-      },
-    ],
-  },
-  {
-    id: "61S05",
-    district: "Sunamganj",
-    stores: [
-      {
-        name: "Sunamganj Flavors",
-        address: "12 Sunamganj Rd, Sunamganj",
-        phone: "01922-567890",
-      },
-      {
-        name: "Sunamganj Essence",
-        address: "25 Market St, Sunamganj",
-        phone: "01711-234567",
-      },
-    ],
-  },
-  {
-    id: "62S06",
-    district: "Sylhet",
-    stores: [
-      {
-        name: "Sylhet Treasures",
-        address: "55 Sylhet Rd, Sylhet",
-        phone: "01911-987654",
-      },
-      {
-        name: "Sylhet Essence",
-        address: "30 Market St, Sylhet",
-        phone: "01722-345678",
-      },
-      {
-        name: "Sylhet Delights",
-        address: "10 Main St, Sylhet",
-        phone: "01811-678901",
-      },
-    ],
-  },
-  {
-    id: "63T01",
-    district: "Tangail",
-    stores: [
-      {
-        name: "Tangail Flavors",
-        address: "22 Tangail Rd, Tangail",
-        phone: "01911-456789",
-      },
-      {
-        name: "Tangail Harvest",
-        address: "15 Market St, Tangail",
-        phone: "01711-890123",
-      },
-    ],
-  },
-  {
-    id: "64T02",
-    district: "Thakurgaon",
-    stores: [
-      {
-        name: "Thakurgaon Essence",
-        address: "40 Thakurgaon Rd, Thakurgaon",
-        phone: "01922-234567",
-      },
-      {
-        name: "Thakurgaon Delights",
-        address: "12 Market St, Thakurgaon",
-        phone: "01722-678901",
+    id: "7",
+    division: "Rangpur",
+    districts: [
+      {
+        name: "Rangpur",
+        stores: [
+          { id: "R001", name: "Shyamoli Outlet", storeType: "Super Store" },
+        ],
       },
     ],
   },
 ];
+
+export function getDivisions() {
+  const divisions = storesData.map((item) => item.division);
+  return divisions;
+}
+
+export function getDistrictsByDivision(division) {
+  const divisionData = storesData.find((item) => item.division === division);
+
+  if (
+    divisionData?.districts === undefined ||
+    divisionData.districts.length === 0
+  ) {
+    return [];
+  }
+
+  const districts = divisionData.districts.map((item) => item.name);
+  return districts;
+}
+
+export function getStoresByDistrict(district) {
+  const division = storesData.find((division) =>
+    division.districts.some((item) => item.name === district)
+  );
+
+  if (division) {
+    const districtData = division.districts.find(
+      (item) => item.name === district
+    );
+    return districtData.stores;
+  }
+
+  return [];
+}

@@ -66,7 +66,7 @@
 
 /* District Dropdown styles */
 #district-dropdown {
-  @apply w-full shadow-lg rounded-lg absolute top-12 z-10 bg-ui-white/60 backdrop-blur-md overflow-hidden transition-all duration-300;
+  @apply w-full shadow-lg rounded-lg absolute top-12 z-10 bg-ui-white/60 backdrop-blur-md overflow-y-hidden transition-all duration-300;
 }
 
 #district-dropdown.closed {
@@ -74,7 +74,31 @@
 }
 
 #district-dropdown.open {
-  @apply max-h-56;
+  @apply max-h-screen;
+}
+
+#district-dropdown button {
+  @apply w-full px-4 py-2 text-left border-x flex items-center gap-1 font-medium;
+}
+
+#district-dropdown .accordion-label {
+  @apply justify-between border;
+}
+
+#district-dropdown .accordion-content {
+  @apply border-s-4 border-ui-red overflow-hidden transition-all duration-300;
+}
+
+#district-dropdown .accordion-content button {
+  @apply hover:bg-gray-200;
+}
+
+#district-dropdown .accordion-content.open {
+  @apply max-h-screen;
+}
+
+#district-dropdown .accordion-content.close {
+  @apply max-h-0;
 }
 
 /* Socials slider dots styles */
