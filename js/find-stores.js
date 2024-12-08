@@ -2,6 +2,7 @@ import {
   getDistrictsByDivision,
   getDivisions,
   getStoresByDistrict,
+  getDistrictCoordinates,
 } from "./stores-data.js";
 
 // Function to create the HTML for an accordion label
@@ -68,46 +69,63 @@ const createDistrictDropdown = () => {
   // Add the accordion to the dropdown container
   districtList.append(accordion);
 };
-createDistrictDropdown(); // Initialize district dropdown
+
+// Function to update map pin position
+const updateMapPinPosition = (district) => {
+  const districtCoordinates = getDistrictCoordinates();
+  const coordinates =
+    districtCoordinates[district] || districtCoordinates["Dhaka"];
+
+  const mapPin = $("#map-pin");
+  const mapImage = $("#map-image");
+
+  const originalWidth = Math.ceil(mapImage.prop("naturalWidth")); // Original width of the map
+  const originalHeight = Math.ceil(mapImage.prop("naturalHeight")); // Original height of the map
+  const currentWidth = Math.ceil(mapImage.width()); // Current visible width
+  const currentHeight = Math.ceil(mapImage.height()); // Current visible height
+
+  // Calculate relative positions
+  const relativeX = (coordinates.x / originalWidth) * currentWidth;
+  const relativeY = (coordinates.y / originalHeight) * currentHeight;
+
+  // Update marker's position
+  mapPin.css({
+    left: `${relativeX}px`,
+    top: `${relativeY}px`,
+    position: "absolute",
+  });
+};
 
 // References to district dropdown menu
 const districtDropdown = $("#district-dropdown");
 
 // Open the district dropdown menu
-function openDistrictDropdown() {
+const openDistrictDropdown = () => {
   districtDropdown.removeClass("closed").addClass("open");
-}
+};
 
 // Close the district dropdown menu
-function closeDistrictDropdown() {
+const closeDistrictDropdown = () => {
   districtDropdown.removeClass("open").addClass("closed");
-}
+};
 
 // Get selected district name
-function getDistrictName() {
+const getDistrictName = () => {
   return $("#district-name").text().trim();
-}
+};
 
 // Set selected district name in the UI
-function setDistrictName(districtName) {
+const setDistrictName = (districtName) => {
   $("#district-name").text(districtName);
-}
+};
 
-// Toggle district dropdown visibility on button click
-$("#select-district-btn").on("click", function () {
-  districtDropdown.hasClass("open")
-    ? closeDistrictDropdown()
-    : openDistrictDropdown();
-});
-
-// References to the stores modal
-const storesModal = $("#stores-modal");
-
-// Open the stores modal and populate it with store data for the selected district
+// Function to open stores modal and populate it with store data for the selected district
 const openStoresModal = (district) => {
   const districtStores = getStoresByDistrict(district);
   const storeList = $("#store-list");
   storeList.empty(); // Clear existing content
+
+  const storesModal = $("#stores-modal");
 
   // Show the modal and disable scrolling on the body
   storesModal.removeClass("hidden");
@@ -129,13 +147,50 @@ const openStoresModal = (district) => {
 };
 
 // Close the stores modal and reset district name
-function closeStoresModal() {
-  storesModal.addClass("hidden");
+const closeStoresModal = () => {
+  $("#stores-modal").addClass("hidden");
   $("body").removeClass("overflow-hidden");
   setDistrictName("Select Your District");
-}
+};
 
-$("#district-dropdown .accordion-label").on("click", function () {
+// Open district dropdown on button click
+const openDistrictDropdownHandler = () => {
+  districtDropdown.hasClass("open")
+    ? closeDistrictDropdown()
+    : openDistrictDropdown();
+};
+
+// Handle district selection from the dropdown
+const selectDistrictHandler = (event) => {
+  const districtName = $(event.currentTarget).data("district");
+  if (districtName) {
+    setDistrictName(districtName); // Update the selected district name
+    updateMapPinPosition(districtName); // Update map pin position
+    closeDistrictDropdown(); // Close the dropdown
+    $("#select-district-error").addClass("hidden"); // Hide any error messages
+  }
+};
+
+// Open stores modal if a district is selected
+const searchStoreHandler = () => {
+  closeDistrictDropdown(); // Ensure the dropdown is closed
+
+  const districtName = getDistrictName(); // Get the selected district name
+  if (districtName && districtName != "Select Your District") {
+    openStoresModal(districtName); // Open the stores modal
+    $("#select-district-error").addClass("hidden"); // Hide errors
+  } else {
+    $("#select-district-error").removeClass("hidden"); // Show error if no district is selected
+  }
+};
+
+// Close the stores modal when the close button is clicked
+const storesModalCloseHandler = () => {
+  closeStoresModal();
+};
+
+// Handle accordion label click to toggle content
+const accordionLabelClickHandler = function () {
   const accordionContent = $(this).next(".accordion-content");
 
   // Close other open accordion contents
@@ -150,30 +205,41 @@ $("#district-dropdown .accordion-label").on("click", function () {
   } else {
     accordionContent.removeClass("open").addClass("close");
   }
-});
+};
 
-// Handle district selection from the dropdown
-$("#district-dropdown .accordion-content button").on("click", (event) => {
-  const districtName = $(event.currentTarget).data("district");
-  if (districtName) {
-    setDistrictName(districtName); // Update the selected district name
-    closeDistrictDropdown(); // Close the dropdown
-    $("#select-district-error").addClass("hidden"); // Hide any error messages
-  }
-});
+// Handle window resize to update map pin position
+const windowResizeHandler = () => {
+  const districtName = getDistrictName();
 
-// Open stores modal if a district is selected
-$("#search-store-btn").on("click", function () {
-  closeDistrictDropdown(); // Ensure the dropdown is closed
-
-  const districtName = getDistrictName(); // Get the selected district name
-  if (districtName && districtName != "Select Your District") {
-    openStoresModal(districtName); // Open the stores modal
-    $("#select-district-error").addClass("hidden"); // Hide errors
+  if (districtName === "Select Your District") {
+    // If no district is selected, set the map pin to the default location (Dhaka)
+    updateMapPinPosition("Dhaka");
   } else {
-    $("#select-district-error").removeClass("hidden"); // Show error if no district is selected
+    updateMapPinPosition(districtName);
   }
-});
+};
 
-// Close the stores modal when the close button is clicked
-$("#stores-modal-close-btn").on("click", closeStoresModal);
+$(document).ready(function () {
+  // Initialize district dropdown
+  createDistrictDropdown();
+
+  // Initialize map pin position (set to Dhaka initially)
+  const mapImage = $("#map-image");
+  mapImage.on("load", function () {
+    updateMapPinPosition("Dhaka"); // This will only run after the image has loaded
+  });
+
+  // Event handlers
+  $("#select-district-btn").on("click", openDistrictDropdownHandler);
+  $("#district-dropdown .accordion-label").on(
+    "click",
+    accordionLabelClickHandler
+  );
+  $("#district-dropdown .accordion-content button").on(
+    "click",
+    selectDistrictHandler
+  );
+  $("#search-store-btn").on("click", searchStoreHandler);
+  $("#stores-modal-close-btn").on("click", storesModalCloseHandler);
+  $(window).on("resize", windowResizeHandler);
+});

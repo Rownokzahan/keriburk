@@ -5,6 +5,7 @@ const storesData = [
     districts: [
       {
         name: "Dhaka",
+        coordinates: { x: 466, y: 480 },
         stores: [
           {
             name: "Aftab Nagar (Siraj Community Center)",
@@ -74,6 +75,7 @@ const storesData = [
       },
       {
         name: "Gazipur",
+        coordinates: { x: 495, y: 450 },
         stores: [
           { name: "Joydebpur Outlet", storeType: "Convenience Store" },
           {
@@ -85,24 +87,16 @@ const storesData = [
       },
       {
         name: "Manikganj",
+        coordinates: { x: 420, y: 530 },
         stores: [{ name: "Manikganj Bus Stand", storeType: "Super Store" }],
       },
       {
         name: "Narayanganj",
+        coordinates: { x: 541, y: 470 },
         stores: [
           { name: "Masdair Narayanganj", storeType: "Super Store" },
           { name: "Narayangong", storeType: "Convenience Store" },
           { name: "Narayanganj Outlet", storeType: "Super Store" },
-        ],
-      },
-      {
-        name: "Brahmanbaria",
-        stores: [
-          {
-            name: "Brahmanbaria Outlet",
-            storeType: "Convenience Store",
-          },
-          { name: "Brahmanbaria Sadar", storeType: "Super Store" },
         ],
       },
     ],
@@ -113,6 +107,7 @@ const storesData = [
     districts: [
       {
         name: "Chittagong",
+        coordinates: { x: 810, y: 850 },
         stores: [
           { name: "Gol Pahar", storeType: "Super Store" },
           { name: "Hali Shohor", storeType: "Super Store" },
@@ -124,10 +119,12 @@ const storesData = [
       },
       {
         name: "Feni",
+        coordinates: { x: 700, y: 640 },
         stores: [{ name: "Feni Outlet", storeType: "Convenience Store" }],
       },
       {
         name: "Noakhali",
+        coordinates: { x: 645, y: 747 },
         stores: [
           {
             name: "Maijdee Outlet",
@@ -137,6 +134,7 @@ const storesData = [
       },
       {
         name: "Comilla",
+        coordinates: { x: 660, y: 580 },
         stores: [
           {
             name: "Chandina Outlet",
@@ -148,12 +146,24 @@ const storesData = [
       },
       {
         name: "Chandpur",
+        coordinates: { x: 599, y: 600 },
         stores: [
           { name: "Hajigonj Outlet", storeType: "Super Store" },
           {
             name: "Mission Road Outlet",
             storeType: "Convenience Store",
           },
+        ],
+      },
+      {
+        name: "Brahmanbaria",
+        coordinates: { x: 625, y: 440 },
+        stores: [
+          {
+            name: "Brahmanbaria Outlet",
+            storeType: "Convenience Store",
+          },
+          { name: "Brahmanbaria Sadar", storeType: "Super Store" },
         ],
       },
     ],
@@ -164,6 +174,7 @@ const storesData = [
     districts: [
       {
         name: "Khulna",
+        coordinates: { x: 387, y: 730 },
         stores: [
           { name: "Boyra", storeType: "Super Store" },
           { name: "South Central Road", storeType: "Super Store" },
@@ -172,6 +183,7 @@ const storesData = [
       },
       {
         name: "Kushtia",
+        coordinates: { x: 319, y: 550 },
         stores: [
           {
             name: "Shapla Chattar Outlet",
@@ -187,6 +199,7 @@ const storesData = [
     districts: [
       {
         name: "Rajshahi",
+        coordinates: { x: 220, y: 300 },
         stores: [
           { name: "Alupatti", storeType: "Super Store" },
           { name: "Naogaon Outlet", storeType: "Super Store" },
@@ -195,6 +208,7 @@ const storesData = [
       },
       {
         name: "Bogura",
+        coordinates: { x: 336, y: 290 },
         stores: [
           {
             name: "Malati Nagar Outlet",
@@ -210,6 +224,7 @@ const storesData = [
     districts: [
       {
         name: "Barishal",
+        coordinates: { x: 387, y: 757 },
         stores: [{ name: "Sadar Road", storeType: "Super Store" }],
       },
     ],
@@ -220,6 +235,7 @@ const storesData = [
     districts: [
       {
         name: "Sylhet",
+        coordinates: { x: 789, y: 250 },
         stores: [
           { name: "Amberkhana Outlet", storeType: "Super Store" },
           { name: "Beanibazar Outlet", storeType: "Super Store" },
@@ -231,6 +247,7 @@ const storesData = [
       },
       {
         name: "Moulvibazar",
+        coordinates: { x: 780, y: 320 },
         stores: [
           {
             name: "Moulvibazar Outlet",
@@ -240,6 +257,7 @@ const storesData = [
       },
       {
         name: "Habiganj",
+        coordinates: { x: 720, y: 360 },
         stores: [
           {
             name: "Habiganj Outlet",
@@ -255,6 +273,7 @@ const storesData = [
     districts: [
       {
         name: "Rangpur",
+        coordinates: { x: 330, y: 110 },
         stores: [{ name: "Shyamoli Outlet", storeType: "Super Store" }],
       },
     ],
@@ -295,13 +314,14 @@ export function getStoresByDistrict(district) {
   return [];
 }
 
-export function getAllDistricts() {
-  const allDistricts = storesData.reduce((districts, division) => {
-    const divisionDistricts = division.districts.map(
-      (district) => district.name
-    );
-    return districts.concat(divisionDistricts);
-  }, []);
+export function getDistrictCoordinates() {
+  const districtCoordinates = {};
 
-  return allDistricts;
+  storesData.forEach((division) => {
+    division.districts.forEach((district) => {
+      districtCoordinates[district.name] = district.coordinates;
+    });
+  });
+
+  return districtCoordinates;
 }

@@ -1085,14 +1085,25 @@
           </div>
 
           <!-- Right Section -->
-          <figure class="xl:h-[90vh] aspect-square">
+          <!-- Map Container -->
+          <div class="xl:h-[90vh] relative aspect-square inline-block">
+            <!-- Map Image -->
             <img
+              id="map-image"
+              src="assets/images/map.png"
               alt="Map showing store locations"
               loading="lazy"
-              src="assets/images/map.png"
-              class="w-full md:h-full"
+              class="h-full aspect-square object-contain"
             />
-          </figure>
+
+            <!-- Marker -->
+            <div
+              id="map-pin"
+              class="absolute transform -translate-x-1/2 -translate-y-full transition-all duration-500 text-3xl md:text-4xl xl:text-5xl"
+            >
+              <i class="bi bi-geo-alt-fill text-ui-red"></i>
+            </div>
+          </div>
         </div>
 
         <!-- Stores Modal -->
